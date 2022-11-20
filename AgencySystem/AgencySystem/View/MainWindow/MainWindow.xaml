@@ -95,9 +95,9 @@
                        HorizontalAlignment="Left">
 
                 <Label
-                    Name="LbDashBoard"
+                    Name="LbHomePage"
                     Style="{StaticResource NavItemStyle}"
-                    Content="Dashboard">
+                    Content="Home Page">
                 </Label>
 
                 <Label

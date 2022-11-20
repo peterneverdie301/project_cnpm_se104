@@ -8,7 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="View\Assets\icons" />
     <Folder Include="View\Components" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Assets\image\test.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

@@ -2,9 +2,9 @@
 
 namespace AgencySystem.View.Pages;
 
-public partial class LapPhieuThuTien : Page
+public partial class AddingAgency : Page
 {
-    public LapPhieuThuTien()
+    public AddingAgency()
     {
         InitializeComponent();
     }

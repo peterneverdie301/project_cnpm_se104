@@ -8,12 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="View\Assets\icons" />
-    <Folder Include="View\Components" />
+    <Resource Include="View\Assets\image\test.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="View\Assets\image\test.jpg">
+    <Resource Include="View\Assets\icons\ic_close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Assets\icons\ic_minimize.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

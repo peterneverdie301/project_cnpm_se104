@@ -2,9 +2,9 @@
 
 namespace AgencySystem.View.Pages;
 
-public partial class LapPhieuXuatHang : Page
+public partial class AddingReceipt : Page
 {
-    public LapPhieuXuatHang()
+    public AddingReceipt()
     {
         InitializeComponent();
     }

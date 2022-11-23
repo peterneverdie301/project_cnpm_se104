@@ -70,53 +70,95 @@
     </Window.Resources>
 
     <Border
-        Background="#5041BC"
+        Background="#4880FF"
         CornerRadius="20"
         BorderThickness="0.3"
         BorderBrush="white">
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="8*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="9*" />
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0"
-                   Style="{StaticResource NavItemStyle}"
-                   Foreground="#ffffff"
-                   VerticalAlignment="Center"
-                   HorizontalContentAlignment="Stretch"
-                   Content="Agency"
-                   FontWeight="Bold"
-                   FontSize="40" />
-            <WrapPanel Grid.Row="1"
-                       Orientation="Vertical"
-                       VerticalAlignment="Stretch"
-                       HorizontalAlignment="Left">
+            <!--Navbar-->
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
 
+                <!--Logo-->
                 <Label
-                    Name="LbHomePage"
-                    Style="{StaticResource NavItemStyle}"
-                    Content="Home Page">
+                    Grid.Column="0"
+                    Name="LbLogo"
+                    Content="Logo"
+                    FontFamily="Epilogue"
+                    FontSize="40"
+                    Margin="10 0"
+                    VerticalAlignment="Center">
                 </Label>
 
-                <Label
-                    Style="{StaticResource NavItemStyle}"
-                    Content="Receive">
-                </Label>
+                <!--Navigation items-->
+                <WrapPanel
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
 
-                <Label
-                    Style="{StaticResource NavItemStyle}"
-                    Content="Stock Up">
-                </Label>
+                    <!--Home Page item-->
+                    <Label
+                        Name="LbHomePage"
+                        Style="{StaticResource NavItemStyle}"
+                        Content="Home Page">
+                    </Label>
 
-                <Label
-                    Style="{StaticResource NavItemStyle}"
-                    Content="Month Report">
-                </Label>
+                    <!--Adding Agency item-->
+                    <Label
+                        Name="LbAddingAgency"
+                        Style="{StaticResource NavItemStyle}"
+                        Content="Adding Agency">
+                    </Label>
 
+                    <!--Adding Receipts item-->
+                    <Label
+                        Name="LbAddingReceipts"
+                        Style="{StaticResource NavItemStyle}"
+                        Content="Adding Receipts">
+                    </Label>
 
-            </WrapPanel>
+                    <!--View item-->
+                    <Label
+                        Name="LbView"
+                        Style="{StaticResource NavItemStyle}"
+                        Content="View">
+                    </Label>
+
+                </WrapPanel>
+
+                <!--Navbar buttons-->
+                <WrapPanel Grid.Column="2" HorizontalAlignment="Right">
+                    <Image
+                        Name="BtnMinimize"
+                        Style="{StaticResource NavBtnStyle}"
+                        Source="../Assets/icons/ic_minimize.png">
+                    </Image>
+
+                    <Image
+                        Name="BtnClose"
+                        Style="{StaticResource NavBtnStyle}"
+                        Source="../Assets/icons/ic_close.png"
+                        Margin="0 0 5 0">
+                    </Image>
+                </WrapPanel>
+            </Grid>
+
+            <!--Frame container-->
+            <Frame
+                Grid.Row="1"
+                Name="FrContainer"
+                NavigationUIVisibility="Hidden">
+            </Frame>
         </Grid>
     </Border>
 </Window>

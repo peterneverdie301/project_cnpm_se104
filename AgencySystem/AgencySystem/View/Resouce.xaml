@@ -91,6 +91,4 @@
         <Setter Property="FontSize" Value="20" />
         <Setter Property="FontFamily" Value="Mulish" />
     </Style>
-
-
 </ResourceDictionary>

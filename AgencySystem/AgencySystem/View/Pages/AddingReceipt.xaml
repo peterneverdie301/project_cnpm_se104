@@ -6,7 +6,10 @@
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
       mc:Ignorable="d"
       Height="800" Width="1280">
-      <Grid>
+    <Page.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="4*" />
@@ -14,14 +17,14 @@
 
         <!--Confirm Button-->
         <Border Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Right"
-            Margin="60 150"
-            CornerRadius="10"
-            Width="120"
-            Height="40"
-            BorderThickness="4"
-            Background="#3CA1FF">
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="60 150"
+                CornerRadius="10"
+                Width="120"
+                Height="40"
+                BorderThickness="4"
+                Background="#3CA1FF">
             <Label Content="Confirm"
                    Margin="0 -8 0 -5"
                    Width="wrap"
@@ -131,8 +134,7 @@
                                         BorderBrush="white">
                                         <DatePicker
                                             Name="TbProfit"
-                                            BorderThickness="0"
-                                            Style="{StaticResource TextBoxStyle}" />
+                                            BorderThickness="0" />
                                     </Border>
                                 </WrapPanel>
                             </Grid>
@@ -184,7 +186,7 @@
                             BorderBrush="white"
                             Background="White"
                             Margin="20 0">
-                            
+
                             <Image
                                 Name="ImgPicture"
                                 Style="{StaticResource IconAddStyle}"
@@ -213,7 +215,7 @@
                     Orientation="Vertical"
                     VerticalAlignment="Top"
                     Margin="20 10 0 0">
-                    
+
                     <!--Districts label-->
                     <Label
                         Content="District"
@@ -233,7 +235,7 @@
                             Style="{StaticResource ComboBoxStyle}">
                         </ComboBox>
                     </Border>
-                    
+
                     <!--Address label-->
                     <Label
                         Content="Address"
@@ -250,7 +252,6 @@
                             BorderThickness="0"
                             Style="{StaticResource TextBoxStyle}" />
                     </Border>
-
 
 
                     <!--Address label-->

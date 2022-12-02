@@ -1,4 +1,6 @@
-﻿using AgencySystem.View;
+﻿using AgencySystem.Controller;
+using AgencySystem.View;
+using AgencySystem.View.MainWindow;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -18,9 +20,14 @@ namespace AgencySystem
         {
             base.OnStartup(e);
             HomePage window = new HomePage();
-            HomePageController homePageController = new HomePageController();
-            window.DataContext = homePageController;
-            window.Show();
+            //HomePageController homePageController = new HomePageController();
+            //window.DataContext = homePageController;
+            //window.Show();
+
+            MainWindow main = new MainWindow();
+            MainWindowController mainWindowController = new MainWindowController();
+            main.DataContext = mainWindowController;
+            main.Show();
         }
     }
 }

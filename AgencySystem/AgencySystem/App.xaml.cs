@@ -19,10 +19,6 @@ namespace AgencySystem
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            HomePage window = new HomePage();
-            //HomePageController homePageController = new HomePageController();
-            //window.DataContext = homePageController;
-            //window.Show();
 
             MainWindow main = new MainWindow();
             MainWindowController mainWindowController = new MainWindowController();

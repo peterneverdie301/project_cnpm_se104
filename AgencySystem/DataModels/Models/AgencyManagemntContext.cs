@@ -61,6 +61,15 @@ namespace DataModels.Models
                 entity.Property(e => e.PhoneNumber)
                     .HasMaxLength(15)
                     .IsUnicode(false);
+
+                entity.Property(e => e.TypeId)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.Type)
+                    .WithMany(p => p.Agencies)
+                    .HasForeignKey(d => d.TypeId)
+                    .HasConstraintName("FK__Agency__TypeId__286302EC");
             });
 
             modelBuilder.Entity<AgencyDebt>(entity =>
@@ -82,13 +91,13 @@ namespace DataModels.Models
                     .WithMany()
                     .HasForeignKey(d => d.AgencyId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__AgencyDeb__Agenc__25869641");
+                    .HasConstraintName("FK__AgencyDeb__Agenc__2A4B4B5E");
             });
 
             modelBuilder.Entity<DebtsReport>(entity =>
             {
                 entity.HasKey(e => e.DebtsId)
-                    .HasName("PK__DebtsRep__9A1D87160467B087");
+                    .HasName("PK__DebtsRep__9A1D87163FE78DE3");
 
                 entity.ToTable("DebtsReport");
 
@@ -118,7 +127,7 @@ namespace DataModels.Models
                     .WithMany(p => p.ExportSlips)
                     .HasForeignKey(d => d.AgencyId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__ExportSli__Agenc__2A4B4B5E");
+                    .HasConstraintName("FK__ExportSli__Agenc__300424B4");
             });
 
             modelBuilder.Entity<ExportSlipDetail>(entity =>
@@ -141,19 +150,19 @@ namespace DataModels.Models
                     .WithMany()
                     .HasForeignKey(d => d.ExportSlipId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__ExportSli__Expor__2D27B809");
+                    .HasConstraintName("FK__ExportSli__Expor__32E0915F");
 
                 entity.HasOne(d => d.Items)
                     .WithMany()
                     .HasForeignKey(d => d.ItemsId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__ExportSli__Items__2C3393D0");
+                    .HasConstraintName("FK__ExportSli__Items__31EC6D26");
             });
 
             modelBuilder.Entity<Item>(entity =>
             {
                 entity.HasKey(e => e.ItemsId)
-                    .HasName("PK__Items__19AFBB7E68B027DE");
+                    .HasName("PK__Items__19AFBB7EE3A9CCA9");
 
                 entity.Property(e => e.ItemsId)
                     .HasMaxLength(10)
@@ -163,7 +172,14 @@ namespace DataModels.Models
 
                 entity.Property(e => e.Price).HasColumnType("money");
 
-                entity.Property(e => e.Unit).HasMaxLength(20);
+                entity.Property(e => e.UnitId)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.Unit)
+                    .WithMany(p => p.Items)
+                    .HasForeignKey(d => d.UnitId)
+                    .HasConstraintName("FK__Items__UnitId__2D27B809");
             });
 
             modelBuilder.Entity<Receipt>(entity =>
@@ -185,15 +201,16 @@ namespace DataModels.Models
                     .WithMany(p => p.Receipts)
                     .HasForeignKey(d => d.AgencyId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Receipts__Procee__300424B4");
+                    .HasConstraintName("FK__Receipts__Procee__35BCFE0A");
             });
 
             modelBuilder.Entity<Reference>(entity =>
             {
-                entity.HasKey(e => new { e.Name, e.Value })
-                    .HasName("PK__Referenc__53081F4BDA269768");
-
                 entity.ToTable("Reference");
+
+                entity.Property(e => e.Id)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Name).HasMaxLength(100);
             });
@@ -201,7 +218,7 @@ namespace DataModels.Models
             modelBuilder.Entity<TurnoverReport>(entity =>
             {
                 entity.HasKey(e => e.TurnoverId)
-                    .HasName("PK__Turnover__F0EEF8B36CD72DBD");
+                    .HasName("PK__Turnover__F0EEF8B3B30FB783");
 
                 entity.ToTable("TurnoverReport");
 
@@ -212,22 +229,20 @@ namespace DataModels.Models
 
             modelBuilder.Entity<TypeOfAgency>(entity =>
             {
-                entity.HasKey(e => e.Type)
-                    .HasName("PK__TypeOfAg__F9B8A48A2F7B219C");
-
                 entity.ToTable("TypeOfAgency");
 
-                entity.Property(e => e.Type).ValueGeneratedNever();
+                entity.Property(e => e.Id)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Unit>(entity =>
             {
-                entity.HasKey(e => e.Unit1)
-                    .HasName("PK__Units__5EF93413C8DDC323");
+                entity.Property(e => e.Id)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
-                entity.Property(e => e.Unit1)
-                    .HasMaxLength(20)
-                    .HasColumnName("Unit");
+                entity.Property(e => e.Value).HasMaxLength(20);
             });
 
             OnModelCreatingPartial(modelBuilder);

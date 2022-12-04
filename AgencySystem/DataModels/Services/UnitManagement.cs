@@ -47,7 +47,7 @@ namespace DataModels.Services
             try
             {
                 var myStockDB = new AgencyManagemntContext();
-                Unit = myStockDB.Units.SingleOrDefault(Unit => Unit.Unit1 == UnitID);
+                Unit = myStockDB.Units.SingleOrDefault(Unit => Unit.Id == UnitID);
             }
             catch (Exception ex)
             {
@@ -59,7 +59,7 @@ namespace DataModels.Services
         {
             try
             {
-                Unit _Unit = GetUnitByID((string)Unit.Unit1);
+                Unit _Unit = GetUnitByID((string)Unit.Id);
                 if (_Unit == null)
                 {
                     var myStockDB = new AgencyManagemntContext();
@@ -80,12 +80,12 @@ namespace DataModels.Services
         {
             try
             {
-                Unit c = GetUnitByID((string)Unit.Unit1);
+                Unit c = GetUnitByID((string)Unit.Id);
                 if (c != null)
                 {
                     var myStockDB = new AgencyManagemntContext();
                     myStockDB.Entry<Unit>(Unit).State = EntityState.Modified;
-
+                    myStockDB.SaveChanges();
                 }
                 else
                 {
@@ -101,7 +101,7 @@ namespace DataModels.Services
         {
             try
             {
-                Unit _Unit = GetUnitByID((string)Unit.Unit1);
+                Unit _Unit = GetUnitByID((string)Unit.Id);
                 if (_Unit != null)
                 {
                     var myStockDB = new AgencyManagemntContext();

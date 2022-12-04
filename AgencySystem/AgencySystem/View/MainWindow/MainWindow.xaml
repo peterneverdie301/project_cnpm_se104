@@ -108,13 +108,15 @@
 
                     <!--Home Page item-->
                     <Label
+                        MouseDown="handleChangePage"
                         Name="LbHomePage"
                         Style="{StaticResource NavItemStyle}"
-                        Content="Home Page">
+                        Content= "Home Page">
                     </Label>
 
                     <!--Adding Agency item-->
                     <Label
+                        MouseDown="handleChangePage"
                         Name="LbAddingAgency"
                         Style="{StaticResource NavItemStyle}"
                         Content="Adding Agency">
@@ -122,6 +124,7 @@
 
                     <!--Adding Receipts item-->
                     <Label
+                        MouseDown="handleChangePage"
                         Name="LbAddingReceipts"
                         Style="{StaticResource NavItemStyle}"
                         Content="Adding Receipts">
@@ -143,8 +146,8 @@
                         Style="{StaticResource NavBtnStyle}"
                         Source="../Assets/icons/ic_minimize.png">
                     </Image>
-
                     <Image
+                        MouseDown="handleClose"
                         Name="BtnClose"
                         Style="{StaticResource NavBtnStyle}"
                         Source="../Assets/icons/ic_close.png"
@@ -156,7 +159,7 @@
             <!--Frame container-->
             <Frame
                 Grid.Row="1"
-                Name="FrContainer"
+                x:Name="FrContainer"
                 NavigationUIVisibility="Hidden">
             </Frame>
         </Grid>

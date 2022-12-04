@@ -1,5 +1,4 @@
-﻿using AgencySystem.Controller;
-using AgencySystem.View;
+﻿using AgencySystem.View;
 using AgencySystem.View.MainWindow;
 using System;
 using System.Collections.Generic;
@@ -21,8 +20,6 @@ namespace AgencySystem
             base.OnStartup(e);
 
             MainWindow main = new MainWindow();
-            MainWindowController mainWindowController = new MainWindowController();
-            main.DataContext = mainWindowController;
             main.Show();
         }
     }

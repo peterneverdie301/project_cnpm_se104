@@ -26,10 +26,10 @@
             Background="#3CA1FF">
             <Label Content="Confirm"
                    Margin="0 -8 0 -5"
-                   Width="wrap"
-                   Height="wrap"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
+                   VerticalAlignment="Center" 
+                   MouseDown="handleAddAgency"
+            />
         </Border>
 
         <!--About TourAdding-->
@@ -127,7 +127,6 @@
                                     <Border
                                         CornerRadius="10"
                                         Width="160"
-                                        Height="wrap"
                                         HorizontalAlignment="Left"
                                         Margin="10 0 0 0"
                                         BorderThickness="4"
@@ -192,7 +191,7 @@
                                 Stretch="None"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
-                                Source="" />
+                                />
                         </Border>
                     </WrapPanel>
                 </Border>

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DataModels.Services
 {
-    public class TypeOfAgencyMagagement
+    public class TypeOfAgencyManagement
     {
-        private static TypeOfAgencyMagagement instance = null;
+        private static TypeOfAgencyManagement instance = null;
         private static readonly object instanceLock = new object();
-        private TypeOfAgencyMagagement() { }
-        public static TypeOfAgencyMagagement Instance
+        private TypeOfAgencyManagement() { }
+        public static TypeOfAgencyManagement Instance
         {
             get
             {
@@ -21,7 +21,7 @@ namespace DataModels.Services
                 {
                     if (instance == null)
                     {
-                        instance = new TypeOfAgencyMagagement();
+                        instance = new TypeOfAgencyManagement();
                     }
                     return instance;
                 }
@@ -41,13 +41,13 @@ namespace DataModels.Services
             }
             return TypeOfAgencys;
         }
-        public TypeOfAgency GetTypeOfAgencyByID(int Type)
+        public TypeOfAgency GetTypeOfAgencyByID(string Id)
         {
             TypeOfAgency TypeOfAgency = null;
             try
             {
                 var myStockDB = new AgencyManagemntContext();
-                TypeOfAgency = myStockDB.TypeOfAgencies.SingleOrDefault(TypeOfAgency => TypeOfAgency.Type == Type);
+                TypeOfAgency = myStockDB.TypeOfAgencies.SingleOrDefault(TypeOfAgency => TypeOfAgency.Id == Id);
             }
             catch (Exception ex)
             {
@@ -59,7 +59,7 @@ namespace DataModels.Services
         {
             try
             {
-                TypeOfAgency _TypeOfAgency = GetTypeOfAgencyByID((int)TypeOfAgency.Type);
+                TypeOfAgency _TypeOfAgency = GetTypeOfAgencyByID((string)TypeOfAgency.Id);
                 if (_TypeOfAgency == null)
                 {
                     var myStockDB = new AgencyManagemntContext();
@@ -80,12 +80,12 @@ namespace DataModels.Services
         {
             try
             {
-                TypeOfAgency c = GetTypeOfAgencyByID((int)TypeOfAgency.Type);
+                TypeOfAgency c = GetTypeOfAgencyByID((string)TypeOfAgency.Id);
                 if (c != null)
                 {
                     var myStockDB = new AgencyManagemntContext();
                     myStockDB.Entry<TypeOfAgency>(TypeOfAgency).State = EntityState.Modified;
-
+                    myStockDB.SaveChanges();
                 }
                 else
                 {
@@ -101,7 +101,7 @@ namespace DataModels.Services
         {
             try
             {
-                TypeOfAgency _TypeOfAgency = GetTypeOfAgencyByID((int)TypeOfAgency.Type);
+                TypeOfAgency _TypeOfAgency = GetTypeOfAgencyByID((string)TypeOfAgency.Id);
                 if (_TypeOfAgency != null)
                 {
                     var myStockDB = new AgencyManagemntContext();

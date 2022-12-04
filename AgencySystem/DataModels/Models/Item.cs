@@ -9,7 +9,9 @@ namespace DataModels.Models
     {
         public string ItemsId { get; set; }
         public string ItemsName { get; set; }
-        public string Unit { get; set; }
+        public string UnitId { get; set; }
         public decimal? Price { get; set; }
+
+        public virtual Unit Unit { get; set; }
     }
 }

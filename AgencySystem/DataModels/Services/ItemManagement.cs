@@ -86,7 +86,7 @@ namespace DataModels.Services
                 {
                     var myStockDB = new AgencyManagemntContext();
                     myStockDB.Entry<Item>(Item).State = EntityState.Modified;
-
+                    myStockDB.SaveChanges();
                 }
                 else
                 {

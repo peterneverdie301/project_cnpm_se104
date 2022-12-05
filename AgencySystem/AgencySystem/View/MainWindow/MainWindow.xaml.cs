@@ -18,18 +18,12 @@ public partial class MainWindow : Window
         this.Close();
     }
 
-    private void renderEgency()
-    {
-        FrContainer.Content = new UcInfoAgency();
-    }
-
     private void handleChangePage(object sender, MouseButtonEventArgs e)
     {
         Label data = (Label)sender;
         switch (data.Content)
         {
             case "Home Page":
-                renderEgency();
                 break;
             case "Adding Agency":
                 FrContainer.Content = new AddingAgency();

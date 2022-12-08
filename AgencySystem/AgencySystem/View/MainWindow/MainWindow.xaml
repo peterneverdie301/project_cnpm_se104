@@ -32,7 +32,7 @@
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="BorderThickness" Value="0 0 0 3" />
             <Setter Property="Margin" Value="0 0 20 0" />
-            <Setter Property="Foreground" Value="#ffffff" />
+            <Setter Property="Foreground" Value="#9E9E9E" />
             <Setter Property="Cursor" Value="Hand" />
         </Style>
 
@@ -40,8 +40,8 @@
         <Style x:Key="NavItemStyle" TargetType="Label" BasedOn="{StaticResource NavItemUnClickedStyle}">
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="#04103B" />
-                    <Setter Property="BorderBrush" Value="#04103B" />
+                    <Setter Property="Foreground" Value="#3780C5" />
+                    <Setter Property="BorderBrush" Value="#3780C5" />
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -70,7 +70,7 @@
     </Window.Resources>
 
     <Border
-        Background="#4880FF"
+        Background="#FFF4F4F4"
         CornerRadius="20"
         BorderThickness="0.3"
         BorderBrush="white">
@@ -106,12 +106,12 @@
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
 
-                    <!--Home Page item-->
+                    <!--View item-->
                     <Label
                         MouseDown="handleChangePage"
-                        Name="LbHomePage"
+                        Name="LbView"
                         Style="{StaticResource NavItemStyle}"
-                        Content= "Home Page">
+                        Content= "View">
                     </Label>
 
                     <!--Adding Agency item-->
@@ -130,11 +130,12 @@
                         Content="Adding Receipts">
                     </Label>
 
-                    <!--View item-->
+                    <!--Report item-->
                     <Label
-                        Name="LbView"
+                        MouseDown="handleChangePage"
+                        Name="LbReport"
                         Style="{StaticResource NavItemStyle}"
-                        Content="View">
+                        Content="Report">
                     </Label>
 
                 </WrapPanel>

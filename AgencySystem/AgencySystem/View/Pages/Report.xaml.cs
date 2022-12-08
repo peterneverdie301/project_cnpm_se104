@@ -3,13 +3,13 @@ using System.Windows.Input;
 
 namespace AgencySystem.View.Pages;
 
-public partial class OverView : Page
+public partial class Report : Page
 {
-    public OverView()
+    public Report()
     {
         InitializeComponent();
     }
-    private void handleOverView(object sender, MouseButtonEventArgs e)
+    private void handleReport(object sender, MouseButtonEventArgs e)
     {
         #region GetList
         //IEnumerable<Agency> listAgency = AgencyRepository.GetAgencyList();

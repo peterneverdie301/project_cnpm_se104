@@ -16,266 +16,160 @@
 
         <!--Confirm Button-->
         <Border Grid.Column="1"
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Right"
-            Margin="60 150"
-            CornerRadius="10"
-            Width="120"
-            Height="40"
-            BorderThickness="4"
-            Background="#3CA1FF">
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="60 150"
+                CornerRadius="10"
+                Width="120"
+                Height="40"
+                BorderThickness="4"
+                Background="#3CA1FF">
             <Label Content="Confirm"
                    Margin="0 -8 0 -5"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center" 
-                   MouseDown="handleAddAgency"
-            />
+                   VerticalAlignment="Center"
+                   MouseDown="handleAddAgency" />
         </Border>
 
-        <!--About TourAdding-->
         <Border Grid.Column="0"
-                Background="#705E8397"
+                Background="#80ECDABF"
                 CornerRadius="30"
                 BorderThickness="1"
-                BorderBrush="#705E8397"
+                BorderBrush="#ECDABF"
                 Width="650"
                 Height="500"
                 VerticalAlignment="Top"
-                HorizontalAlignment="Left"
-                Margin="70 15 30 0">
+                HorizontalAlignment="Center">
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="5.5*" />
-                    <RowDefinition Height="4.5*" />
-                </Grid.RowDefinitions>
+            <WrapPanel
+                Orientation="Vertical"
+                VerticalAlignment="center"
+                HorizontalAlignment="Center">
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3.2*" />
-                        <ColumnDefinition Width="6.8*" />
-                    </Grid.ColumnDefinitions>
+                <!--Agent's Name label-->
+                <Label
+                    Content="Agent's Name"
+                    Style="{StaticResource AddItemStyle}" />
 
-                    <!--TourName, Price, Pictures(Button) of TourAdding-->
-                    <Border Grid.Column="1"
-                            CornerRadius="30"
-                            BorderThickness="1"
-                            BorderBrush="Transparent">
-
-                        <WrapPanel
-                            Orientation="Vertical"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Stretch"
-                            Margin="25">
-
-                            <!--Agent's Name label-->
-                            <Label
-                                Content="Agent's Name"
-                                Style="{StaticResource AddItemStyle}" />
-
-                            <!--Agent's Name textBox-->
-                            <Border
-                                CornerRadius="10"
-                                BorderThickness="4"
-                                Width="350"
-                                Height="50"
-                                BorderBrush="white">
-                                <TextBox
-                                    Name="TbName"
-                                    BorderThickness="0"
-                                    Style="{StaticResource TextBoxStyle}" />
-                            </Border>
-
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
-
-                                <WrapPanel>
-                                    <!--Phone label-->
-                                    <Label
-                                        Content="Phone"
-                                        Margin=" 0 20 0 0 "
-                                        Style="{StaticResource AddItemStyle}">
-                                    </Label>
-
-                                    <!--Phone textBox-->
-                                    <Border
-                                        CornerRadius="10"
-                                        HorizontalAlignment="Left"
-                                        BorderThickness="4"
-                                        BorderBrush="white">
-                                        <TextBox
-
-                                            Name="TbPrice"
-                                            Width="160"
-                                            Height="40"
-                                            BorderThickness="0"
-                                            Style="{StaticResource TextBoxStyle}" />
-                                    </Border>
-                                </WrapPanel>
-
-                                <WrapPanel Grid.Column="1">
-                                    <!--Time label-->
-                                    <Label
-                                        Content="Time to receipts"
-                                        Margin=" 10 20 0 0 "
-                                        Style="{StaticResource AddItemStyle}" />
-
-                                    <!--Time datePicker-->
-                                    <Border
-                                        CornerRadius="10"
-                                        Width="160"
-                                        HorizontalAlignment="Left"
-                                        Margin="10 0 0 0"
-                                        BorderThickness="4"
-                                        BorderBrush="white">
-                                        <DatePicker
-                                            Name="TbProfit"
-                                            BorderThickness="0"/>
-                                    </Border>
-                                </WrapPanel>
-                            </Grid>
-                        </WrapPanel>
-                    </Border>
-                </Grid>
-
-                <!--Short Description of TourAdding-->
-                <Border Grid.Row="1">
-                    <WrapPanel
-                        Orientation="Vertical"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        Margin="40 0 0 0">
-
-                        <!--Short Description label-->
-                        <Label
-                            Content="Short Description"
-                            Style="{StaticResource AddItemStyle}" />
-
-                        <!--Short Description textBox-->
-                        <Border
-                            CornerRadius="10"
-                            BorderThickness="4"
-                            BorderBrush="white"
-                            Background="White">
-                            <TextBox
-                                Name="TbShortDescription"
-                                Width="330"
-                                Height="170"
-                                BorderThickness="0"
-                                TextWrapping="Wrap"
-                                FontSize="20"
-                                FontFamily="Mulish" />
-                        </Border>
-
-                        <!--Picture label-->
-                        <Label
-                            Content="Picture"
-                            Margin="20 0"
-                            Style="{StaticResource AddItemStyle}" />
-
-                        <!--Picture textBlock-->
-                        <Border
-                            Height="170"
-                            Width="200"
-                            CornerRadius="10"
-                            BorderThickness="4"
-                            BorderBrush="white"
-                            Background="White"
-                            Margin="20 0">
-                            
-                            <Image
-                                Name="ImgPicture"
-                                Stretch="None"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                />
-                        </Border>
-                    </WrapPanel>
+                <!--Agent's Name textBox-->
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    Width="350"
+                    Height="40"
+                    BorderBrush="white">
+                    <TextBox
+                        Name="TbName"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" />
                 </Border>
-            </Grid>
+
+                <!--Phone label-->
+                <Label
+                    Content="Phone"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Phone textBox-->
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    BorderBrush="white"
+                    Width="350"
+                    Height="40">
+                    <TextBox
+                        Name="TbPrice"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" />
+                </Border>
+
+                <!--Address label-->
+                <Label
+                    Content="Address"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Address textBox-->
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    Width="350"
+                    Height="40"
+                    BorderBrush="white">
+                    <TextBox
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" />
+                </Border>
+
+                <!--Type label-->
+                <Label
+                    Content="Type"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Type comboBox-->
+                <ComboBox
+                    Style="{DynamicResource theComboBox}"
+                    Padding="15,5,15,5"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    MaxWidth="375"
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+
+                </ComboBox>
+
+                <!--Time label-->
+                <Label
+                    Content="Time to receipts"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Time datePicker-->
+                <Border
+                    CornerRadius="10"
+                    Width="350"
+                    HorizontalAlignment="Left"
+                    Margin="10 0 0 0"
+                    BorderThickness="4"
+                    BorderBrush="white">
+                    <DatePicker
+                        Name="TbTime"
+                        BorderThickness="0" />
+                </Border>
+
+                <!--Districts label-->
+                <Label
+                    Content="District"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Districts ComboBox-->
+                <ComboBox
+                    Style="{DynamicResource theComboBox}"
+                    Padding="15,5,15,5"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    MaxWidth="375"
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
+                    <ComboBoxItem>Quan 1</ComboBoxItem>
+                    <ComboBoxItem>Quan 3</ComboBoxItem>
+                    <ComboBoxItem>Quan 10</ComboBoxItem>
+                    <ComboBoxItem>Quan 11</ComboBoxItem>
+                    <ComboBoxItem>Quan Binh Thanh</ComboBoxItem>
+                    <ComboBoxItem>Quan Phu Nhuan</ComboBoxItem>
+                </ComboBox>
+            </WrapPanel>
         </Border>
-
-        <!--Destination Planning of TourAdding-->
+        
         <Border Grid.Column="1"
-                Background="#90A6A6A6"
-                CornerRadius="30"
+                Background="#6F8875"
+                BorderBrush="#6F8875"
                 BorderThickness="1"
-                BorderBrush="#90A6A6A6"
-                Width="450"
+                CornerRadius="30"
+                Width="500"
                 Height="500"
-                Margin="0 15 50 0"
-                VerticalAlignment="Top">
-            <Grid>
-                <StackPanel
-                    Orientation="Vertical"
-                    VerticalAlignment="Top"
-                    Margin="20 10 0 0">
-                    
-                    <!--Districts label-->
-                    <Label
-                        Content="District"
-                        Style="{StaticResource AddItemStyle}" />
-
-                    <!--Districts ComboBox-->
-                    <Border
-                        CornerRadius="10"
-                        BorderThickness="4"
-                        BorderBrush="white"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
-                        <ComboBox
-                            Name="CbDistricts"
-                            Height="40"
-                            Width="330"
-                            Style="{StaticResource ComboBoxStyle}">
-                        </ComboBox>
-                    </Border>
-                    
-                    <!--Address label-->
-                    <Label
-                        Content="Address"
-                        Style="{StaticResource AddItemStyle}" />
-
-                    <!--Address textBox-->
-                    <Border
-                        CornerRadius="10"
-                        BorderThickness="4"
-                        Width="330"
-                        Height="50"
-                        BorderBrush="white">
-                        <TextBox
-                            BorderThickness="0"
-                            Style="{StaticResource TextBoxStyle}" />
-                    </Border>
-
-
-
-                    <!--Address label-->
-                    <Label
-                        Margin="0 20 0 0"
-                        Content="Type of Agent"
-                        Style="{StaticResource AddItemStyle}" />
-
-                    <!--Address comboBox-->
-                    <Border
-                        CornerRadius="10"
-                        BorderThickness="4"
-                        BorderBrush="white"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
-                        <ComboBox
-                            Height="40"
-                            Width="330"
-                            Style="{StaticResource ComboBoxStyle}">
-                        </ComboBox>
-                    </Border>
-
-
-                </StackPanel>
-            </Grid>
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+            
         </Border>
     </Grid>
 </Page>

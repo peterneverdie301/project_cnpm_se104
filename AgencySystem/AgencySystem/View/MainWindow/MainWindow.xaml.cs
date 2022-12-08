@@ -23,13 +23,17 @@ public partial class MainWindow : Window
         Label data = (Label)sender;
         switch (data.Content)
         {
-            case "Home Page":
+            case "View":
+                FrContainer.Content = new OverView();
                 break;
             case "Adding Agency":
                 FrContainer.Content = new AddingAgency();
                 break;
             case "Adding Receipts":
                 FrContainer.Content = new AddingReceipt();
+                break;
+            case "Report":
+                FrContainer.Content = new Report();
                 break;
             default:
                 break;

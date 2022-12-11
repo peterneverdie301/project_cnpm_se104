@@ -27,8 +27,9 @@ public partial class AddingAgency : Page
         #endregion
         #region Add Data
         //Agency agency = new Agency();
-        //agency.AgencyId = "dl-02";
-        //agency.AgencyName = "Linh";
+        //agency.AgencyId = "dl-04";
+        //agency.AgencyName = TbName.Text;
+        //agency.PhoneNumber = TbPhone.Text;
         //agency.DayReception = Timestamp.GetCurrentTimestamp();
         //firestore.AddData(Utils.Collection.Agency.ToString(), agency.AgencyId, agency);
         //MessageBox.Show("Thêm data thành công");

@@ -77,7 +77,7 @@
                     Width="350"
                     Height="40">
                     <TextBox
-                        Name="TbPrice"
+                        Name="TbPhone"
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" />
                 </Border>

@@ -1,18 +1,23 @@
-﻿using System;
+﻿using Google.Cloud.Firestore;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
 
 namespace DataModels.Models
 {
-    public partial class AgencyDebt
+    [FirestoreData]
+    public class AgencyDebt
     {
+        [FirestoreProperty]
         public string AgencyId { get; set; }
+        [FirestoreProperty]
         public int? Month { get; set; }
+        [FirestoreProperty]
         public int? Year { get; set; }
+        [FirestoreProperty]
         public decimal? FirsDebt { get; set; }
+        [FirestoreProperty]
         public decimal? Incurred { get; set; }
-
-        public virtual Agency Agency { get; set; }
     }
 }

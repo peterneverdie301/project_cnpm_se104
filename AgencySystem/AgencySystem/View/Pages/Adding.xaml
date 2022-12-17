@@ -1,4 +1,4 @@
-﻿<Page x:Class="AgencySystem.View.Pages.Report"
+﻿<Page x:Class="AgencySystem.View.Pages.Adding"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -6,7 +6,6 @@
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
       mc:Ignorable="d"
       Height="720" Width="1280">
-    
     <Page.Resources>
         <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
     </Page.Resources>
@@ -24,17 +23,32 @@
             HorizontalAlignment="Left">
 
             <Label
-                Name="LbTurnoverReport"
-                Style="{StaticResource NavItemStyleReport}"
-                Content= "Turnover Report ">
+                Name="LbAddingAgency"
+                Style="{StaticResource NavItemStyle}"
+                Content= "Adding Agency "
+                MouseDown="LbAddingAgency_OnMouseDown">
             </Label>
             
             <Label
-                Name="LbDebtReport"
+                Name="LbAddingReceipt"
                 Style="{StaticResource NavItemStyleReport}"
-                Content= "Debt Report">
+                Content= "Adding Receipt "
+                MouseDown="LbAddingReceipt_OnMouseDown">
+            </Label>
+            
+            <Label
+                Name="LbAddingProduct"
+                Style="{StaticResource NavItemStyleReport}"
+                Content= "Adding Product "
+                MouseDown="LbAddingProduct_OnMouseDown">
             </Label>
         </WrapPanel>
+        
+        <!--Frame container-->
+        <Frame
+            Grid.Row="1"
+            x:Name="FrContainer"
+            NavigationUIVisibility="Hidden">
+        </Frame>
     </Grid>
-
 </Page>

@@ -20,8 +20,8 @@
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="BorderThickness" Value="0 0 0 3" />
             <Setter Property="Margin" Value="0 0 20 0" />
-            <Setter Property="Foreground" Value="#9129EC" />
-            <Setter Property="BorderBrush" Value="#9129EC" />
+            <Setter Property="Foreground" Value="#3780C5" />
+            <Setter Property="BorderBrush" Value="#3780C5" />
             <Setter Property="Cursor" Value="Hand" />
         </Style>
 
@@ -90,15 +90,9 @@
                 </Grid.ColumnDefinitions>
 
                 <!--Logo-->
-                <Label
-                    Grid.Column="0"
-                    Name="LbLogo"
-                    Content="Logo"
-                    FontFamily="Epilogue"
-                    FontSize="40"
-                    Margin="10 0"
-                    VerticalAlignment="Center">
-                </Label>
+                <Image Source="../Assets/image/Agency.png"
+                       HorizontalAlignment="Left"
+                       Stretch="Uniform"></Image>
 
                 <!--Navigation items-->
                 <WrapPanel
@@ -108,34 +102,26 @@
 
                     <!--View item-->
                     <Label
-                        MouseDown="handleChangePage"
                         Name="LbView"
                         Style="{StaticResource NavItemStyle}"
-                        Content= "View">
+                        Content= "View"
+                        MouseDown="LbView_OnMouseDown">
                     </Label>
 
                     <!--Adding Agency item-->
                     <Label
-                        MouseDown="handleChangePage"
-                        Name="LbAddingAgency"
+                        Name="LbAdding"
                         Style="{StaticResource NavItemStyle}"
-                        Content="Adding Agency">
-                    </Label>
-
-                    <!--Adding Receipts item-->
-                    <Label
-                        MouseDown="handleChangePage"
-                        Name="LbAddingReceipts"
-                        Style="{StaticResource NavItemStyle}"
-                        Content="Adding Receipts">
+                        Content="Adding"
+                        MouseDown="LbAdding_OnMouseDown">
                     </Label>
 
                     <!--Report item-->
                     <Label
-                        MouseDown="handleChangePage"
                         Name="LbReport"
                         Style="{StaticResource NavItemStyle}"
-                        Content="Report">
+                        Content="Report"
+                        MouseDown="LbReport_OnMouseDown">
                     </Label>
 
                 </WrapPanel>

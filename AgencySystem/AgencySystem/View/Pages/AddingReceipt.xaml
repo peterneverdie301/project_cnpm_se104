@@ -12,20 +12,10 @@
     <Grid>
 
         <!--Confirm Button-->
-        <Border
-            VerticalAlignment="Bottom"
-            HorizontalAlignment="Right"
-            Margin="0,0,250,200"
-            CornerRadius="10"
-            Width="120"
-            Height="40"
-            BorderThickness="4"
-            Background="#3CA1FF">
-            <Label Content="Confirm"
-                   Margin="0 -8 0 -5"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
-        </Border>
+        <Button
+            Style="{StaticResource TabButton}"
+            Content="Confirm" Height="30" HorizontalAlignment="Right"
+            Margin="0 0 250 250" VerticalAlignment="Bottom" Width="90" />
 
         <!--About TourAdding-->
         <Border

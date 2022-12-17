@@ -37,4 +37,10 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Include="View\Assets\image\Agency.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

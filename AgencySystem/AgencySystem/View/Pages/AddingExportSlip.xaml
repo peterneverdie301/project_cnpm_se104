@@ -12,18 +12,27 @@
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="6*" />
         </Grid.ColumnDefinitions>
 
         <!--Confirm Button-->
         <Button
             Grid.Column="1"
             Style="{StaticResource TabButton}"
-            Content="Confirm" Height="30" HorizontalAlignment="Right"
+            Content="Export" Height="30" HorizontalAlignment="Right"
             Margin="0 0 70 160" VerticalAlignment="Bottom" Width="90" />
 
-        <Border Grid.Column="0"
+        <!--Confirm Button-->
+        <Button
+            Grid.Column="0"
+            Style="{StaticResource TabButton}"
+            Content="Confirm" Height="30" HorizontalAlignment="Right"
+            VerticalAlignment="Bottom" 
+            Margin="0 0 200 230"
+            Width="90" />
+
+        <Border Grid.Column="1"
                 Background="#80ECDABF"
                 CornerRadius="30"
                 BorderThickness="1"
@@ -48,15 +57,14 @@
             </ListView>
         </Border>
 
-        <!--listView Agency -->
-        <Border Grid.Column="1"
+        <!--lvExportSlip-->
+        <Border Grid.Column="0"
                 Background="#705E8397"
                 BorderBrush="#a6a6a6"
-                Padding="10"
                 BorderThickness="1"
                 CornerRadius="30"
                 Width="500"
-                Height="200"
+                Height="160"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Center">
             <WrapPanel
@@ -102,11 +110,79 @@
                 </Border>
             </WrapPanel>
         </Border>
-        
+
+        <Border Grid.Column="0"
+                Background="#705E8397"
+                BorderBrush="#a6a6a6"
+                BorderThickness="1"
+                CornerRadius="30"
+                Width="500"
+                Height="250"
+                Margin="0 0 0 270"
+                VerticalAlignment="bottom"
+                HorizontalAlignment="Center">
+            <WrapPanel
+                Orientation="Vertical"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Center">
+
+                <!--Product label-->
+                <Label
+                    Content="Product"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Product textBox-->
+                <ComboBox
+                    Style="{DynamicResource theComboBox}"
+                    Padding="15,5,15,5"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    MaxWidth="375"
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
+                </ComboBox>
+                
+                <!--Quantity label-->
+                <Label
+                    Content="Quantity"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Quantity textBox-->
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    BorderBrush="white"
+                    Width="350"
+                    Height="40">
+                    <TextBox
+                        Name="TbQuantity"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" />
+                </Border>
+                <!--Unit label-->
+                <Label
+                    Content="Unit"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Unit textBox-->
+                <ComboBox
+                    Style="{DynamicResource theComboBox}"
+                    Padding="15,5,15,5"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    MaxWidth="375"
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
+                </ComboBox>
+                
+            </WrapPanel>
+        </Border>
+
+        <!--Total-->
         <Border
-            Grid.Column="0"
-            Margin="50 0 0 270"
-            Height="100"
+            Grid.Column="1"
+            Margin="55  0 0 320"
+            Height="90"
             VerticalAlignment="Bottom" Width="300"
             HorizontalAlignment="Left"
             Background="White"
@@ -124,23 +200,26 @@
                 <Rectangle Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
                     <Rectangle.Fill>
 
-                        <ImageBrush/>
+                        <ImageBrush />
 
                     </Rectangle.Fill>
                 </Rectangle>
                 <WrapPanel Height="150" Width="210"
                            Margin="0 -10 0 0">
-                    <Label Content="Total" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins"
+                    <Label Content="Total" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0"
+                           FontFamily="Poppins"
                            FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
-                    <Label Name="LbTotal" Content="12.255.255" Height="48" Width="165" Margin="20,10,0,0"
+                    <Label Name="LbTotal" Content="12.255.2" Height="48" Width="165" Margin="20,10,0,0"
                            FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
                 </WrapPanel>
             </WrapPanel>
         </Border>
+
+        <!--Amount-->
         <Border
-            Grid.Column="0"
-            Margin="400 0 0 270"
-            Height="100"
+            Grid.Column="1"
+            Margin="55  0 0 210"
+            Height="90"
             VerticalAlignment="Bottom" Width="300"
             HorizontalAlignment="Left"
             Background="White"
@@ -158,23 +237,26 @@
                 <Rectangle Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
                     <Rectangle.Fill>
 
-                        <ImageBrush/>
+                        <ImageBrush />
 
                     </Rectangle.Fill>
                 </Rectangle>
                 <WrapPanel Height="150" Width="210"
                            Margin="0 -10 0 0">
-                    <Label Content="Amount" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins"
+                    <Label Content="Amount" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0"
+                           FontFamily="Poppins"
                            FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
                     <Label Name="LbAmount" Content="12.255.2" Height="48" Width="165" Margin="20,10,0,0"
                            FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
                 </WrapPanel>
             </WrapPanel>
         </Border>
+
+        <!--Remaining-->
         <Border
             Grid.Column="1"
-            Margin="0 0 0 270"
-            Height="100"
+            Margin="400 0 0 260"
+            Height="90"
             VerticalAlignment="Bottom" Width="300"
             HorizontalAlignment="Left"
             Background="White"
@@ -192,13 +274,14 @@
                 <Rectangle Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
                     <Rectangle.Fill>
 
-                        <ImageBrush/>
+                        <ImageBrush />
 
                     </Rectangle.Fill>
                 </Rectangle>
                 <WrapPanel Height="150" Width="210"
                            Margin="0 -10 0 0">
-                    <Label Content="Remaining" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins"
+                    <Label Content="Remaining" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0"
+                           FontFamily="Poppins"
                            FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
                     <Label Name="LbRemaining" Content="12.255.255" Height="48" Width="165" Margin="20,10,0,0"
                            FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
@@ -206,5 +289,5 @@
             </WrapPanel>
         </Border>
     </Grid>
-    
+
 </Page>

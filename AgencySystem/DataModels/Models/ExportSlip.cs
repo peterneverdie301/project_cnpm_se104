@@ -14,9 +14,9 @@ namespace DataModels.Models
         [FirestoreProperty]
         public string AgencyId { get; set; }
         [FirestoreProperty]
-        public DateTime? Date { get; set; }
+        public string Date { get; set; }
         [FirestoreProperty]
-        public decimal? AmountPaid { get; set; }
+        public double? AmountPaid { get; set; }
 
     }
 }

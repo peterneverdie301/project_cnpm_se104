@@ -24,10 +24,12 @@ public partial class AddingExportSlip : Page
     List<object> agences;
     List<object> products;
     List<object> units;
+    List<ProductDetail> productDetails = new List<ProductDetail>();
+    String Product = "Linh";
     public AddingExportSlip()
     {
         InitializeComponent();
-        setUp();               
+        setUp();
     }
     private async void setUp()
     {
@@ -60,9 +62,90 @@ public partial class AddingExportSlip : Page
         }
     }
 
+    private async void BtAddData_Click(object sender, RoutedEventArgs e)
+    {
+        if (cbxAgency.Text == "" || TbDate.Text == "" || productDetails.Count == 0)
+        {
+            MessageBox.Show("Bạn chưa nhập thông tin");
+            return;
+        }
+        Agency agency = (Agency)agences.Find((value) =>
+        {
+            Agency data = (Agency)value;
+            return data.AgencyName == cbxAgency.Text;
+        });
+
+        ExportSlip exportSlip = new ExportSlip()
+        {
+            AgencyId = agency.AgencyId,
+            Date = TbDate.Text,
+            AmountPaid = 0,
+            ExportSlipId = await firestore.GetIdForObject(Utils.Collection.ExportSlip.ToString()),
+        };
+        firestore.AddData(Utils.Collection.ExportSlip.ToString(), exportSlip.ExportSlipId, exportSlip);
+        foreach (var item in productDetails)
+        {
+            Item product = (Item)products.Find((value) =>
+            {
+                Item data = value as Item;
+                return data.ItemsName == CbProduct.Text;
+            });
+            ExportSlipDetail detail = new ExportSlipDetail()
+            {
+                Amount = item.Quantity,
+                ExportSlipId = exportSlip.ExportSlipId,
+                ItemsId = product?.ItemsId,
+            };
+            firestore.AddData(Utils.Collection.ExportSlipDetail.ToString(), exportSlip.ExportSlipId + "-" + item.Id, detail);
+        }
+        MessageBox.Show("Thêm dữ liệu thành công");
+    }
+
+    private void BtAddProduct_Click(object sender, RoutedEventArgs e)
+    {
+        if (CbProduct.Text == "" || CbUnit.Text == "" || TbQuantity.Text == "")
+        {
+            MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+            return;
+        }
+        Item item = (Item)products.Find((value) =>
+        {
+            Item data = value as Item;
+            return data?.ItemsName == CbProduct.Text;
+        });
+        ProductDetail productDetail = new ProductDetail()
+        {
+            Id = item.ItemsId,
+            Product = item.ItemsName,
+            Quantity = int.Parse(TbQuantity.Text),
+            Unit = CbUnit.Text,
+            UnitPrice = item.Price,
+            LastPrice = item.Price * int.Parse(TbQuantity.Text),
+        };
+        productDetails.Add(productDetail);
+        lvProduct.Items.Add(productDetail);
+    }
+
     private void TbQuantity_PreviewTextInput(object sender, TextCompositionEventArgs e)
     {
         Regex regex = new Regex("[^0-9]+");
         e.Handled = regex.IsMatch(e.Text);
+    }
+
+
+    private class ProductDetail
+    {
+        public string Id { get; set; }
+
+        public string Product { get; set; }
+
+        public int Quantity { get; set; }
+
+        public string Unit { get; set; }
+
+        public double UnitPrice { get; set; }
+
+        public double LastPrice { get; set; }
+
     }
 }

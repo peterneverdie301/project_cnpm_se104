@@ -115,7 +115,7 @@
                                 <TextBox
                                     Name="TbPhone"
                                     BorderThickness="0"
-                                    Style="{StaticResource TextBoxStyle}" />
+                                    Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbPhone_PreviewTextInput" />
                             </Border>
 
                             <!--Time label-->
@@ -152,7 +152,7 @@
                                 <TextBox
                                     Name="TbMoney"
                                     BorderThickness="0"
-                                    Style="{StaticResource TextBoxStyle}" />
+                                    Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbMoney_PreviewTextInput" />
                             </Border>
                         </WrapPanel>
                     </Border>

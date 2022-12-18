@@ -90,7 +90,7 @@
                     <TextBox
                         Name="TbQuantity"
                         BorderThickness="0"
-                        Style="{StaticResource TextBoxStyle}" />
+                        Style="{StaticResource TextBoxStyle}" Height="32" VerticalAlignment="Top" PreviewTextInput="TbQuantity_PreviewTextInput" />
                 </Border>
 
                 <!--Price-->
@@ -106,7 +106,7 @@
                     <TextBox
                         Name="TbPrice"
                         BorderThickness="0"
-                        Style="{StaticResource TextBoxStyle}" />
+                        Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbPrice_PreviewTextInput" />
                 </Border>
 
                 <!--Target Price-->

@@ -71,7 +71,7 @@
                     <TextBox
                         Name="TbPhone"
                         BorderThickness="0"
-                        Style="{StaticResource TextBoxStyle}" />
+                        Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbPhone_PreviewTextInput" />
                 </Border>
 
                 <!--Address label-->

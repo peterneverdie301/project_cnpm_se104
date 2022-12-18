@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using DataModels.Models;
@@ -32,5 +33,17 @@ public partial class AddingReceipt : Page
     private void Handle_Add(object sender, RoutedEventArgs e)
     {
 
+    }
+
+    private void TbMoney_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+    {
+        Regex regex = new Regex("[^0-9]+");
+        e.Handled = regex.IsMatch(e.Text);
+    }
+
+    private void TbPhone_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+    {
+        Regex regex = new Regex("[^0-9]+");
+        e.Handled = regex.IsMatch(e.Text);
     }
 }

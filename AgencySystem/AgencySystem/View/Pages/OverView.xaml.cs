@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
 using AgencySystem.View.Components;
+using AgencySystem.View.MainWindow;
 using DataModels.Models;
 using DataModels.Services;
 
@@ -38,9 +39,16 @@ public partial class OverView : Page
             ucInfo.LbDebt.Content = "10000$";
             ucInfo.btnDelete.Tag = ucInfo;
             ucInfo.btnDelete.Click += BtnDelete_Click;
+            ucInfo.btnEdit.Click += BtnEdit_Click;
             listBoxAgency.Items.Add(ucInfo);
         }
         viewAgency.Content = listBoxAgency;
+    }
+
+    private void BtnEdit_Click(object sender, RoutedEventArgs e)
+    {
+        AgencyEdit agencyEdit = new AgencyEdit();
+        agencyEdit.Show();
     }
 
     private void BtnDelete_Click(object sender, RoutedEventArgs e)

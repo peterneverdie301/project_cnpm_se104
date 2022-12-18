@@ -22,6 +22,6 @@ namespace DataModels.Models
         [FirestoreProperty]
         public string District { get; set; }
         [FirestoreProperty]
-        public Timestamp DayReception { get; set; }
+        public string DayReception { get; set; }
     }
 }

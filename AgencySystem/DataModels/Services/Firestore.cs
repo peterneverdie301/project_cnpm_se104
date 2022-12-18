@@ -34,9 +34,9 @@ namespace DataModels.Services
         public async Task<List<object>> GetAllDocument(string collection)
         {
             List<object> documents = new List<object>();
-            Query allCitiesQuery = db.Collection(collection);
-            QuerySnapshot allCitiesQuerySnapshot = await allCitiesQuery.GetSnapshotAsync();
-            foreach (DocumentSnapshot documentSnapshot in allCitiesQuerySnapshot.Documents)
+            Query allQuery = db.Collection(collection);
+            QuerySnapshot allQuerySnapshot = await allQuery.GetSnapshotAsync();
+            foreach (DocumentSnapshot documentSnapshot in allQuerySnapshot.Documents)
             {
                 documents.Add(Utils.ConvertData(collection, documentSnapshot));
             }
@@ -55,6 +55,14 @@ namespace DataModels.Services
         {
             DocumentReference document = db.Collection(collection).Document(id);
             await document.DeleteAsync();
+        }
+
+        public async Task<string> GetIdForProject (string collection)
+        {
+            Query allQuery = db.Collection(collection);
+            QuerySnapshot allQuerySnapshot = await allQuery.GetSnapshotAsync();
+            return Utils.GetIdForObject(collection, allQuerySnapshot.Count);
+
         }
     }
 }

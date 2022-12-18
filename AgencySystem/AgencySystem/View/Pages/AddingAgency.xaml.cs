@@ -17,41 +17,18 @@ public partial class AddingAgency : Page
         InitializeComponent();
     }
 
-    private async void handleAddAgency(object sender, MouseButtonEventArgs e)
+    private async void HandleAddAgency(object sender, RoutedEventArgs e)
     {
-        #region Get Data
-        //object data = await firestore.GetData(Utils.Collection.Agency.ToString(), "dl-01");
-        //Agency agency = (Agency)data;
-        //TbName.Text = agency.AgencyName;
-        //MessageBox.Show("Lấy data thành công");
-        #endregion
-        #region Add Data
-        //Agency agency = new Agency();
-        //agency.AgencyId = "dl-04";
-        //agency.AgencyName = TbName.Text;
-        //agency.PhoneNumber = TbPhone.Text;
-        //agency.DayReception = Timestamp.GetCurrentTimestamp();
-        //firestore.AddData(Utils.Collection.Agency.ToString(), agency.AgencyId, agency);
-        //MessageBox.Show("Thêm data thành công");
-        #endregion
-        #region Update Data
-        //Agency agency = new Agency();
-        //agency.AgencyId = "dl-01";
-        //agency.AgencyName = "Văn Linh";
-        //agency.DayReception = Timestamp.GetCurrentTimestamp();
-        //firestore.AddData(Utils.Collection.Agency.ToString(), agency.AgencyId, agency);
-        //MessageBox.Show("Cập nhật thành công");
-        #endregion
-        #region Delete Data
-        //firestore.DeleteData(Utils.Collection.Agency.ToString(), "dl-03");
-        //MessageBox.Show("Xóa thành công");
-        #endregion
-        #region Get All Collection (Table)
-        //List<object> listData = await firestore.GetAllDocument(Utils.Collection.Agency.ToString());
-        //foreach (Agency item in listData)
-        //{
-        //    MessageBox.Show(item.AgencyName);
-        //}
-        #endregion
+        Agency agency = new Agency();
+        agency.AgencyId = "dl-1";
+        agency.AgencyName = TbName.Text;
+        agency.PhoneNumber = TbPhone.Text;
+        agency.Address = TbAddress.Text;
+        agency.TypeId = cbxType.Text;
+        agency.DayReception = TbTime.Text;
+        agency.District = cbxDistrict.Text;
+        firestore.AddData(Utils.Collection.Agency.ToString(), agency.AgencyId, agency);
+        MessageBox.Show("Thêm công ty thành công", "Agency Management");
+
     }
 }

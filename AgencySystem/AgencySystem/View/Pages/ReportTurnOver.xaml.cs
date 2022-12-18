@@ -19,6 +19,6 @@ public partial class ReportTurnOver : Page
         listView.Items.Add(new UcTurnover());
         listView.Items.Add(new UcTurnover());
         listView.Items.Add(new UcTurnover());
-        WpListOfAgency.Children.Add(listView);
+        WpListOfAgency.Content = listView;
     }
 }

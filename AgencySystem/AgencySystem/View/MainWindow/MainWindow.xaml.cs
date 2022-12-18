@@ -11,8 +11,8 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        if (LbView != null) LbView.Style = Resources["NavItemClickedStyle"] as Style;
-        FrContainer.Content = new OverView();
+        if (LbViews != null) LbViews.Style = Resources["NavItemClickedStyle"] as Style;
+        FrContainer.Content = new Views();
     }
 
     private void handleClose(object sender, MouseButtonEventArgs e)
@@ -42,11 +42,11 @@ public partial class MainWindow : Window
     //     }
     // }
 
-    private void LbView_OnMouseDown(object sender, MouseButtonEventArgs e)
+    private void LbViews_OnMouseDown(object sender, MouseButtonEventArgs e)
     {
         ResetNavItemsToDefault();
-        LbView.Style = Resources["NavItemClickedStyle"] as Style;
-        FrContainer.Content = new OverView();
+        LbViews.Style = Resources["NavItemClickedStyle"] as Style;
+        FrContainer.Content = new Views();
     }
 
     private void LbAdding_OnMouseDown(object sender, MouseButtonEventArgs e)
@@ -65,7 +65,7 @@ public partial class MainWindow : Window
 
     private void ResetNavItemsToDefault()
     {
-        LbView.Style = Resources["NavItemStyle"] as Style;
+        LbViews.Style = Resources["NavItemStyle"] as Style;
         LbAdding.Style = Resources["NavItemStyle"] as Style;
         LbReport.Style = Resources["NavItemStyle"] as Style;
     }

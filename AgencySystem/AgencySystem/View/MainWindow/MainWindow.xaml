@@ -102,10 +102,10 @@
 
                     <!--View item-->
                     <Label
-                        Name="LbView"
+                        Name="LbViews"
                         Style="{StaticResource NavItemStyle}"
                         Content= "View"
-                        MouseDown="LbView_OnMouseDown">
+                        MouseDown="LbViews_OnMouseDown">
                     </Label>
 
                     <!--Adding Agency item-->

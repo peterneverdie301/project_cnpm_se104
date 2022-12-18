@@ -1,0 +1,63 @@
+﻿<Page x:Class="AgencySystem.View.Pages.Views"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:AgencySystem.View.Pages"
+      mc:Ignorable="d"
+      Height="720" Width="1280">
+    <Page.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="9*" />
+        </Grid.RowDefinitions>
+
+        <WrapPanel
+            Grid.Row="1"
+            Margin="0 -70 0 0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left">
+
+            <Label
+                Name="LbOverView"
+                Style="{StaticResource NavItemStyleReport}"
+                Content="OverView"
+                MouseDown="LbOverView_OnMouseDown">
+            </Label>
+
+            <Label
+                Name="LbViewReceipt"
+                Style="{StaticResource NavItemStyleReport}"
+                Content="View Receipt"
+                MouseDown="LbViewReceipt_OnMouseDown">
+            </Label>
+            
+            <Label
+                Name="LbViewProduct"
+                Style="{StaticResource NavItemStyleReport}"
+                Content="View Product"
+                MouseDown="LbViewProduct_OnMouseDown">
+            </Label>
+            
+            <Label
+                Name="LbViewExportSlip"
+                Style="{StaticResource NavItemStyleReport}"
+                Content="View Export Slip"
+                MouseDown="LbViewExportSlip_OnMouseDown">
+            </Label>
+            
+            
+        </WrapPanel>
+
+        <!--Frame container-->
+        <Frame
+            Grid.Row="1"
+            x:Name="FrContainer"
+            NavigationUIVisibility="Hidden">
+        </Frame>
+    </Grid>
+</Page>

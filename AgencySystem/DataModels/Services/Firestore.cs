@@ -1,4 +1,6 @@
-﻿using Google.Cloud.Firestore;
+﻿using DataModels.Models;
+using Google.Cloud.Firestore;
+using Google.Type;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -57,12 +59,24 @@ namespace DataModels.Services
             await document.DeleteAsync();
         }
 
-        public async Task<string> GetIdForProject (string collection)
+        public async Task<string> GetIdForOject (string collection)
         {
-            Query allQuery = db.Collection(collection);
-            QuerySnapshot allQuerySnapshot = await allQuery.GetSnapshotAsync();
-            return Utils.GetIdForObject(collection, allQuerySnapshot.Count);
-
+            DocumentReference document = db.Collection(collection).Document("reference-Id");
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
+            if (snapshot.Exists)
+            {
+                ReferenceId reference = snapshot.ConvertTo<ReferenceId>();
+                string id = Utils.GetIdForObject(collection, reference.Value + 1);
+                reference.Value += 1;
+                _ = document.SetAsync(reference);
+                return id;
+            } else
+            {
+                ReferenceId reference = new ReferenceId();
+                reference.Value = 1;
+                await db.Collection(collection).Document("reference-Id").SetAsync(reference);
+                return Utils.GetIdForObject(collection, 1);
+            }
         }
     }
 }

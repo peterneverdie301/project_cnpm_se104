@@ -36,15 +36,7 @@ public partial class AddingReceipt : Page
         if (cbxAgency.Text != "" && TbDate.Text != "" && TbMoney.Text != "")
         {
             Receipt receipt = new Receipt();
-            try
-            {
-              receipt.Proceeds = double.Parse(TbMoney.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Tiền nhập phải là số");
-                return;
-            }
+            receipt.Proceeds = double.Parse(TbMoney.Text);
             receipt.ReceiptId = await firestore.GetIdForObject(Utils.Collection.Receipt.ToString());
             receipt.Date = TbDate.Text;
             Agency agency = (Agency)agences.Find((a) => {

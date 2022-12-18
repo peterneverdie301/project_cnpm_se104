@@ -13,5 +13,7 @@ namespace DataModels.Models
         public string Id { get; set; }
         [FirestoreProperty]
         public int? Type { get; set; }
+        [FirestoreProperty]
+        public decimal? MaxDebt { get; set; }
     }
 }

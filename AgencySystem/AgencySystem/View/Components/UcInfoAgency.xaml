@@ -79,7 +79,5 @@
                 Foreground="White"
                 FontSize="14" />
         </Border>
-
-
     </Grid>
 </UserControl>

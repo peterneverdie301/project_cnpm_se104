@@ -265,19 +265,43 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
-    <!--Btn Confirm style-->
-    <Style TargetType="Button" x:Key="TabButton">
-            <Setter Property="Background" Value="Black" />
-            <Setter Property="TextBlock.TextAlignment" Value="Center" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="10" Background="#3CA1FF" BorderBrush="#ccc" BorderThickness="0,1,1,0" >
-                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+
+     <!--Btn Confirm style-->
+     <Style TargetType="Button" x:Key="TabButton">
+         <Setter Property="Background" Value="Black" />
+         <Setter Property="TextBlock.TextAlignment" Value="Center" />
+         <Setter Property="Template">
+             <Setter.Value>
+                 <ControlTemplate TargetType="Button">
+                     <Border CornerRadius="10" Background="#3CA1FF" BorderBrush="#ccc" BorderThickness="0,1,1,0">
+                         <ContentPresenter x:Name="contentPresenter"
+                                           ContentTemplate="{TemplateBinding ContentTemplate}"
+                                           Content="{TemplateBinding Content}"
+                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                           Margin="{TemplateBinding Padding}"
+                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                     </Border>
+                 </ControlTemplate>
+             </Setter.Value>
+         </Setter>
+     </Style>
+     <!--Btn Cancel style-->
+     <Style TargetType="Button" x:Key="TabButtonCancel">
+         <Setter Property="Background" Value="#a6a6a6" />
+         <Setter Property="TextBlock.TextAlignment" Value="Center" />
+         <Setter Property="Template">
+             <Setter.Value>
+                 <ControlTemplate TargetType="Button">
+                     <Border CornerRadius="10" Background="#a6a6a6" BorderBrush="#ccc" BorderThickness="0,1,1,0">
+                         <ContentPresenter x:Name="contentPresenter"
+                                           ContentTemplate="{TemplateBinding ContentTemplate}"
+                                           Content="{TemplateBinding Content}"
+                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                           Margin="{TemplateBinding Padding}"
+                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                     </Border>
+                 </ControlTemplate>
+             </Setter.Value>
+         </Setter>
+     </Style>
 </ResourceDictionary>

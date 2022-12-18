@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="AgencySystem.View.Components.UcTurnover"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:AgencySystem.View.Components"
+             mc:Ignorable="d"
+             Height="wrap"
+             Width="wrap">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Column="0" Content="stt" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
+        <Label Grid.Column="1" Content="Dai ly 1" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
+        <Label Grid.Column="2" Content="10" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
+        <Label Grid.Column="3" Content="150.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
+        <Label Grid.Column="4" Content="90%" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
+    </Grid>
+</UserControl>

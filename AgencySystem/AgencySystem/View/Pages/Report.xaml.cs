@@ -14,6 +14,7 @@ public partial class Report : Page
         InitializeComponent();
         if (LbTurnoverReport != null) LbTurnoverReport.Style = Resources["NavItemClickedStyle"] as Style;
         FrContainer.Content = new ReportTurnOver();
+        
     }
     // private void handleReport(object sender, MouseButtonEventArgs e)
     // {

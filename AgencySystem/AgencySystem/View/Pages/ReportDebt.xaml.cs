@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using AgencySystem.View.Components;
 
 namespace AgencySystem.View.Pages;
 

@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
+      xmlns:uc="clr-namespace:AgencySystem.View.Components"
       mc:Ignorable="d"
       Title="ReportDebt" Height="720" Width="1280">
     <Grid>
@@ -38,6 +39,7 @@
 
         <ScrollViewer
             Grid.Row="1"
+            Name="LvReportDebt"
             Width="800"
             Height="505"
             VerticalAlignment="Center"

@@ -1,0 +1,149 @@
+﻿<Window x:Class="AgencySystem.View.MainWindow.AgencyEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:AgencySystem.View.MainWindow"
+        mc:Ignorable="d"
+        Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+
+        <!--Confirm Button-->
+        <Button
+            Style="{StaticResource TabButtonCancel}"
+            Content="Cancel" Height="30" HorizontalAlignment="Right"
+            Margin="0 0 110 10" VerticalAlignment="Bottom" Width="90" />
+        <!--Confirm Button-->
+        <Button
+            Style="{StaticResource TabButton}"
+            Content="Confirm" Height="30" HorizontalAlignment="Right"
+            Margin="0 0 10 10" VerticalAlignment="Bottom" Width="90" />
+        <Border CornerRadius="20"
+                Background="#705E8397">
+
+            <WrapPanel
+                Orientation="Vertical"
+                VerticalAlignment="center"
+                HorizontalAlignment="Center">
+
+                <!--Agent's Name label-->
+                <Label
+                    Content="Agent's Name"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Agent's Name textBox-->
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    Width="350"
+                    Height="40"
+                    BorderBrush="white">
+                    <TextBox
+                        Name="TbName"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" />
+                </Border>
+
+                <!--Phone label-->
+                <Label
+                    Content="Phone"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Phone textBox-->
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    BorderBrush="white"
+                    Width="350"
+                    Height="40">
+                    <TextBox
+                        Name="TbPhone"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" />
+                </Border>
+
+                <!--Address label-->
+                <Label
+                    Content="Address"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Address textBox-->
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    Width="350"
+                    Height="40"
+                    BorderBrush="white">
+                    <TextBox
+                        Name="TbAddress"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" />
+                </Border>
+
+                <!--Type label-->
+                <Label
+                    Content="Type"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Type comboBox-->
+                <ComboBox
+                    Name="cbxType"
+                    Style="{DynamicResource theComboBox}"
+                    Padding="15,5,15,5"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    MaxWidth="375"
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+
+                </ComboBox>
+
+                <!--Time label-->
+                <Label
+                    Content="Time to receipts"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Time datePicker-->
+                <Border
+                    CornerRadius="10"
+                    Width="350"
+                    HorizontalAlignment="Left"
+                    Margin="10 0 0 0"
+                    BorderThickness="4"
+                    BorderBrush="white">
+                    <DatePicker
+                        Name="TbTime"
+                        BorderThickness="0" />
+                </Border>
+
+                <!--Districts label-->
+                <Label
+                    Content="District"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Districts ComboBox-->
+                <ComboBox
+                    Name="cbxDistrict"
+                    Style="{DynamicResource theComboBox}"
+                    Padding="15,5,15,5"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    MaxWidth="375"
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
+                    <ComboBoxItem>Quan 1</ComboBoxItem>
+                    <ComboBoxItem>Quan 3</ComboBoxItem>
+                    <ComboBoxItem>Quan 10</ComboBoxItem>
+                    <ComboBoxItem>Quan 11</ComboBoxItem>
+                    <ComboBoxItem>Quan Binh Thanh</ComboBoxItem>
+                    <ComboBoxItem>Quan Phu Nhuan</ComboBoxItem>
+                </ComboBox>
+            </WrapPanel>
+        </Border>
+    </Grid>
+</Window>

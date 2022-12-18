@@ -68,7 +68,7 @@
                     Width="350"
                     Height="40">
                     <TextBox
-                        Name="TbPhone"
+                        Name="TbUnit"
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" />
                 </Border>
@@ -86,6 +86,7 @@
                     Height="40"
                     BorderBrush="white">
                     <TextBox
+                        Name="TbQuantity"
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" />
                 </Border>
@@ -101,6 +102,7 @@
                     Height="40"
                     BorderBrush="white">
                     <TextBox
+                        Name="TbPrice"
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" />
                 </Border>

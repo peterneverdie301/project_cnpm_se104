@@ -1,5 +1,6 @@
 ﻿using DataModels.Models;
 using DataModels.Services;
+using System;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,8 +20,8 @@ public partial class AddingProduct : Page
         Item item  = new Item();
         item.ItemsId = "mh-1";
         item.ItemsName = TbItem.Text;
-        item.UnitId = TbPhone.Text;
-        item.Price = TbAddress.Text;
+        item.UnitId = TbUnit.Text;
+        item.Price = Convert.ToDecimal(TbPrice.Text);
         firestore.AddData(Utils.Collection.Items.ToString(), item.ItemsId, item);
         MessageBox.Show("Thêm công ty thành công", "item Management");
 

@@ -58,44 +58,7 @@
                                 <ComboBoxItem>1</ComboBoxItem>
                                 <ComboBoxItem>3</ComboBoxItem>
                             </ComboBox>
-                            
 
-                            <!--Proceeds label-->
-                            <Label
-                                Content="Proceeds"
-                                Style="{StaticResource AddItemStyle}" />
-
-                            <!--Proceeds textBox-->
-                            <Border
-                                CornerRadius="10"
-                                BorderThickness="4"
-                                BorderBrush="white"
-                                Width="350"
-                                Height="40">
-                                <TextBox
-                                    Name="TbProceeds"
-                                    BorderThickness="0"
-                                    Style="{StaticResource TextBoxStyle}" />
-                            </Border>
-                            
-                            <!--Time label-->
-                            <Label
-                                Content="Time to receipts"
-                                Style="{StaticResource AddItemStyle}" />
-
-                            <!--Time datePicker-->
-                            <Border
-                                CornerRadius="10"
-                                Width="350"
-                                HorizontalAlignment="Left"
-                                Margin="10 0 0 0"
-                                BorderThickness="4"
-                                BorderBrush="white">
-                                <DatePicker
-                                    Name="TbProfit"
-                                    BorderThickness="0" />
-                            </Border>
-                            
                             <!--Districts label-->
                             <Label
                                 Content="District"
@@ -117,6 +80,79 @@
                                 <ComboBoxItem>Quan Binh Thanh</ComboBoxItem>
                                 <ComboBoxItem>Quan Phu Nhuan</ComboBoxItem>
                             </ComboBox>
+
+                            <!--Proceeds label-->
+                            <Label
+                                Content="Email"
+                                Style="{StaticResource AddItemStyle}" />
+
+                            <!--Proceeds textBox-->
+                            <Border
+                                CornerRadius="10"
+                                BorderThickness="4"
+                                BorderBrush="white"
+                                Width="350"
+                                Height="40">
+                                <TextBox
+                                    Name="TbEmail"
+                                    BorderThickness="0"
+                                    Style="{StaticResource TextBoxStyle}" />
+                            </Border>
+
+                            <!--Proceeds label-->
+                            <Label
+                                Content="Phone Number"
+                                Style="{StaticResource AddItemStyle}" />
+
+                            <!--Proceeds textBox-->
+                            <Border
+                                CornerRadius="10"
+                                BorderThickness="4"
+                                BorderBrush="white"
+                                Width="350"
+                                Height="40">
+                                <TextBox
+                                    Name="TbPhone"
+                                    BorderThickness="0"
+                                    Style="{StaticResource TextBoxStyle}" />
+                            </Border>
+
+                            <!--Time label-->
+                            <Label
+                                Content="Time to receipts"
+                                Style="{StaticResource AddItemStyle}" />
+
+                            <!--Time datePicker-->
+                            <Border
+                                CornerRadius="10"
+                                Width="350"
+                                HorizontalAlignment="Left"
+                                Margin="10 0 0 0"
+                                BorderThickness="4"
+                                BorderBrush="white">
+                                <DatePicker
+                                    Name="TbDate"
+                                    BorderThickness="0" />
+                            </Border>
+                            
+                           
+                            <!--Proceeds label-->
+                            <Label
+                                Content="Money"
+                                Style="{StaticResource AddItemStyle}" />
+
+                            <!--Proceeds textBox-->
+                            <Border
+                                CornerRadius="10"
+                                BorderThickness="4"
+                                BorderBrush="white"
+                                Width="350"
+                                Height="40">
+                                <TextBox
+                                    Name="TbMoney"
+                                    BorderThickness="0"
+                                    Style="{StaticResource TextBoxStyle}" />
+                            </Border>
                         </WrapPanel>
                     </Border>
                 </Grid>

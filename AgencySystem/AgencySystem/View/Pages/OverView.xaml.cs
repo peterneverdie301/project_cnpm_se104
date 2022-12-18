@@ -1,65 +1,55 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Input;
 using AgencySystem.View.Components;
+using DataModels.Models;
+using DataModels.Services;
 
 namespace AgencySystem.View.Pages;
 
 public partial class OverView : Page
 {
+    Firestore firestore = new Firestore();
+    private List<object> listAgency;
+    ListView listBoxAgency;
     public OverView()
     {
         InitializeComponent();
-        ListBox listBox = new ListBox();
-        UcInfoAgency ucInfoAgency = new UcInfoAgency();
-        ucInfoAgency.LbName.Content = "Linh";
+        setUp();
 
-        listBox.Items.Add(new UcInfoAgency());
-        listBox.Items.Add(new UcInfoAgency());
-        listBox.Items.Add(ucInfoAgency);
-        listBox.Items.Add(new UcInfoAgency());
-        test.Content = listBox;
-        
     }
 
-    private void handleOverView(object sender, MouseButtonEventArgs e)
+    private async void setUp()
     {
-        #region GetList
-        //IEnumerable<Agency> listAgency = AgencyRepository.GetAgencyList();
-        //string name = "";
-        //foreach (var item in listAgency)
-        //{
-        //    name += item.AgencyName + " ";
-        //}
-        //MessageBox.Show(name);
-        #endregion
-        #region GetById
-        //Agency angency = AgencyRepository.GetAgencyById("1");
-        //MessageBox.Show(angency.AgencyName);
-        #endregion
-        #region Addnew
-        //Agency agencyNew = new Agency();
-        //agencyNew.AgencyName = "Linh Nguyễn";
-        //agencyNew.AgencyId = "2";
-        //AgencyRepository.AddNew(agencyNew);
-        //MessageBox.Show("Done");
-        #endregion
-        /*
-         * Update and remove là dùng theo Id 
-         * C1: Nên có thể get về để xóa/thay đổi
-         * C2: Hoặc có thể tạo object mới có Id = Id của object muốn thay đổi
-         * Lưu ý: khi update nếu dùng C2 khi muốn thay hoàn toàn mới. Nếu muốn thay đổi 1 thành phần thì nên dùng C1
-        */
-        #region Update
-        //Agency agencyUpdate = AgencyRepository.GetAgencyById("1");
-        //agencyUpdate.AgencyName = "Ngài Gấu";
-        //AgencyRepository.Update(agencyUpdate);
-        //MessageBox.Show("Done");
-        #endregion
-        #region Remove
-        //Agency agencyRemove = AgencyRepository.GetAgencyById("2");
-        //AgencyRepository.Remove(agencyRemove);
-        //MessageBox.Show("Done");
-        #endregion
+        listAgency = await firestore.GetAllDocument(Utils.Collection.Agency.ToString());
+        listBoxAgency = new ListView();
+        foreach (Agency agency in listAgency)
+        {
+            if (agency.AgencyName == null) continue;
+            UcInfoAgency ucInfo = new UcInfoAgency();
+            ucInfo.LbName.Content = agency.AgencyName;
+            ucInfo.LbCustomerId.Content = "Id: "  + agency.AgencyId;
+            ucInfo.LbCustomerId.Tag = agency.AgencyId;
+            ucInfo.LbDistrictOfAgency.Content = agency.District;
+            //ucInfo.LbTypeOfAgency.Content = agency.TypeId;
+            ucInfo.LbDebt.Content = "10000$";
+            ucInfo.btnDelete.Tag = ucInfo;
+            ucInfo.btnDelete.Click += BtnDelete_Click;
+            listBoxAgency.Items.Add(ucInfo);
+        }
+        viewAgency.Content = listBoxAgency;
+    }
 
+    private void BtnDelete_Click(object sender, RoutedEventArgs e)
+    {
+        Button btnDelete = sender as Button;
+        UcInfoAgency ucInfo = btnDelete?.Tag as UcInfoAgency;
+        listBoxAgency.Items.Remove(ucInfo);
+        viewAgency.Content = listBoxAgency;
+        firestore.DeleteData(Utils.Collection.Agency.ToString(), ucInfo?.LbCustomerId.Tag.ToString());
+        MessageBox.Show("Xóa thành công");
     }
 }

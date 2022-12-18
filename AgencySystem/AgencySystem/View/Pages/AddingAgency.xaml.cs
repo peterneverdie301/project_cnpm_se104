@@ -25,7 +25,7 @@ public partial class AddingAgency : Page
         agency.PhoneNumber = TbPhone.Text;
         agency.Address = TbAddress.Text;
         agency.TypeId = cbxType.Text;
-        agency.DayReception = TbTime.Text;
+        agency.DayReception = TbTime.Text.ToString();
         agency.District = cbxDistrict.Text;
         firestore.AddData(Utils.Collection.Agency.ToString(), agency.AgencyId, agency);
         MessageBox.Show("Thêm công ty thành công", "Agency Management");

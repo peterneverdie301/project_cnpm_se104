@@ -50,7 +50,7 @@
                     Height="40"
                     BorderBrush="white">
                     <TextBox
-                        Name="TbProduct"
+                        Name="TbItem"
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" />
                 </Border>
@@ -106,38 +106,11 @@
                 </Border>
 
                 <!--Target Price-->
-                <Label
-                    Content="Target Price"
-                    Style="{StaticResource AddItemStyle}" />
-                <Border
-                    CornerRadius="10"
-                    BorderThickness="4"
-                    Width="350"
-                    Height="40"
-                    BorderBrush="white">
-                    <TextBox
-                        BorderThickness="0"
-                        Style="{StaticResource TextBoxStyle}" />
-                </Border>
 
 
                 <!--Time label-->
-                <Label
-                    Content="Time to receipts"
-                    Style="{StaticResource AddItemStyle}" />
 
                 <!--Time datePicker-->
-                <Border
-                    CornerRadius="10"
-                    Width="350"
-                    HorizontalAlignment="Left"
-                    Margin="10 0 0 0"
-                    BorderThickness="4"
-                    BorderBrush="white">
-                    <DatePicker
-                        Name="TbTime"
-                        BorderThickness="0" />
-                </Border>
             </WrapPanel>
         </Border>
 

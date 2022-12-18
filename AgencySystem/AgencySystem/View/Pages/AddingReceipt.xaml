@@ -59,32 +59,10 @@
                                 MaxWidth="375"
                                 ItemContainerStyle="{DynamicResource theComboBoxItem}">
                             </ComboBox>
-
-                            <!--Districts label-->
-                            <Label
-                                Content="District"
-                                Style="{StaticResource AddItemStyle}" />
-
-                            <!--Districts ComboBox-->
-                            <ComboBox
-                                Style="{DynamicResource theComboBox}"
-                                Padding="15,5,15,5"
-                                HorizontalContentAlignment="Left"
-                                VerticalAlignment="Center"
-                                MinWidth="100"
-                                MaxWidth="375"
-                                ItemContainerStyle="{DynamicResource theComboBoxItem}">
-                                <ComboBoxItem>Quan 1</ComboBoxItem>
-                                <ComboBoxItem>Quan 3</ComboBoxItem>
-                                <ComboBoxItem>Quan 10</ComboBoxItem>
-                                <ComboBoxItem>Quan 11</ComboBoxItem>
-                                <ComboBoxItem>Quan Binh Thanh</ComboBoxItem>
-                                <ComboBoxItem>Quan Phu Nhuan</ComboBoxItem>
-                            </ComboBox>
-
+                           
                             <!--Proceeds label-->
                             <Label
-                                Content="Email"
+                                Content="Proceeds"
                                 Style="{StaticResource AddItemStyle}" />
 
                             <!--Proceeds textBox-->
@@ -95,29 +73,11 @@
                                 Width="350"
                                 Height="40">
                                 <TextBox
-                                    Name="TbEmail"
-                                    BorderThickness="0"
-                                    Style="{StaticResource TextBoxStyle}" />
-                            </Border>
-
-                            <!--Proceeds label-->
-                            <Label
-                                Content="Phone Number"
-                                Style="{StaticResource AddItemStyle}" />
-
-                            <!--Proceeds textBox-->
-                            <Border
-                                CornerRadius="10"
-                                BorderThickness="4"
-                                BorderBrush="white"
-                                Width="350"
-                                Height="40">
-                                <TextBox
-                                    Name="TbPhone"
+                                    Name="TbMoney"
                                     BorderThickness="0"
                                     Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbPhone_PreviewTextInput" />
                             </Border>
-
+                            
                             <!--Time label-->
                             <Label
                                 Content="Time to receipts"
@@ -136,24 +96,6 @@
                                     BorderThickness="0" />
                             </Border>
                             
-                           
-                            <!--Proceeds label-->
-                            <Label
-                                Content="Money"
-                                Style="{StaticResource AddItemStyle}" />
-
-                            <!--Proceeds textBox-->
-                            <Border
-                                CornerRadius="10"
-                                BorderThickness="4"
-                                BorderBrush="white"
-                                Width="350"
-                                Height="40">
-                                <TextBox
-                                    Name="TbMoney"
-                                    BorderThickness="0"
-                                    Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbMoney_PreviewTextInput" />
-                            </Border>
                         </WrapPanel>
                     </Border>
                 </Grid>

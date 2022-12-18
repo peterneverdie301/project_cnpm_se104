@@ -42,6 +42,12 @@
                 Content= "Adding Product "
                 MouseDown="LbAddingProduct_OnMouseDown">
             </Label>
+            <Label
+                Name="LbAddingExportSlip"
+                Style="{StaticResource NavItemStyleReport}"
+                Content= "Adding Export Slip"
+                MouseDown="LbAddingExportSlip_OnMouseDown">
+            </Label>
         </WrapPanel>
         
         <!--Frame container-->

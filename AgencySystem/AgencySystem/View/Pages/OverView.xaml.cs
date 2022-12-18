@@ -1,6 +1,6 @@
-﻿using AgencySystem.View.Components;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Windows.Input;
+using AgencySystem.View.Components;
 
 namespace AgencySystem.View.Pages;
 
@@ -18,7 +18,9 @@ public partial class OverView : Page
         listBox.Items.Add(ucInfoAgency);
         listBox.Items.Add(new UcInfoAgency());
         test.Content = listBox;
+        
     }
+
     private void handleOverView(object sender, MouseButtonEventArgs e)
     {
         #region GetList

@@ -35,10 +35,17 @@ public partial class Adding : Page
         LbAddingProduct.Style = Resources["NavItemClickedStyle"] as Style;
         FrContainer.Content = new AddingProduct();
     }
+    private void LbAddingExportSlip_OnMouseDown(object sender, MouseButtonEventArgs e)
+    {
+        ResetNavItemsToDefault();
+        LbAddingExportSlip.Style = Resources["NavItemClickedStyle"] as Style;
+        FrContainer.Content = new AddingExportSlip();
+    }
     private void ResetNavItemsToDefault()
     {
         LbAddingAgency.Style = Resources["NavItemStyle"] as Style;
         LbAddingReceipt.Style = Resources["NavItemStyle"] as Style;
         LbAddingProduct.Style = Resources["NavItemStyle"] as Style;
+        LbAddingExportSlip.Style = Resources["NavItemStyle"] as Style;
     }
 }

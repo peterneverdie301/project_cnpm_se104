@@ -94,7 +94,7 @@
                 </Border>
 
                 <!--Price-->
-                <Label
+                <Label  
                     Content="Price"
                     Style="{StaticResource AddItemStyle}" />
                 <Border
@@ -108,13 +108,6 @@
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbPrice_PreviewTextInput" />
                 </Border>
-
-                <!--Target Price-->
-
-
-                <!--Time label-->
-
-                <!--Time datePicker-->
             </WrapPanel>
         </Border>
 

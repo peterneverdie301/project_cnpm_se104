@@ -1,12 +1,210 @@
-﻿<Page x:Class="AgencySystem.View.Pages.AddingExportCard"
+﻿<Page x:Class="AgencySystem.View.Pages.AddingExportSlip"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
       mc:Ignorable="d"
-      Title="AddingExportCard" Height="450" Width="800">
+      Height="720"
+      Width="1280">
+    <Page.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </Page.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+
+        <!--Confirm Button-->
+        <Button
+            Grid.Column="1"
+            Style="{StaticResource TabButton}"
+            Content="Confirm" Height="30" HorizontalAlignment="Right"
+            Margin="0 0 70 160" VerticalAlignment="Bottom" Width="90" />
+
+        <Border Grid.Column="0"
+                Background="#80ECDABF"
+                CornerRadius="30"
+                BorderThickness="1"
+                BorderBrush="#ECDABF"
+                Width="650"
+                Height="300"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+
+            <ListView Margin="10" FontFamily="Poppins" FontWeight="Bold" Name="lvUsers" Background="Transparent"
+                      BorderBrush="Transparent">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Id" Width="30" DisplayMemberBinding="{Binding Product}" />
+                        <GridViewColumn Header="Product" Width="120" DisplayMemberBinding="{Binding Product}" />
+                        <GridViewColumn Header="Quantity" Width="70" DisplayMemberBinding="{Binding Quantity}" />
+                        <GridViewColumn Header="Unit" Width="150" DisplayMemberBinding="{Binding Unit}" />
+                        <GridViewColumn Header="Unit Price" Width="120" DisplayMemberBinding="{Binding UnitPrice}" />
+                        <GridViewColumn Header="Last Price" Width="120" DisplayMemberBinding="{Binding LastPrice}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
+
+        <!--listView Agency -->
+        <Border Grid.Column="1"
+                Background="#705E8397"
+                BorderBrush="#a6a6a6"
+                Padding="10"
+                BorderThickness="1"
+                CornerRadius="30"
+                Width="500"
+                Height="200"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+            <WrapPanel
+                Orientation="Vertical"
+                VerticalAlignment="center"
+                HorizontalAlignment="Center">
+
+                <!--Agent's Name label-->
+                <Label
+                    Content="Agent's Name"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Agent's Name textBox-->
+                <ComboBox
+                    Name="cbxAgency"
+                    Style="{DynamicResource theComboBox}"
+                    Padding="15,5,15,5"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    MaxWidth="375"
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
+                </ComboBox>
+
+                <!--Time label-->
+                <Label
+                    Content="Time to receipts"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Time datePicker-->
+                <Border
+                    CornerRadius="10"
+                    Width="375"
+                    HorizontalAlignment="Left"
+                    Margin="10 0 0 0"
+                    BorderThickness="4"
+                    BorderBrush="white">
+                    <DatePicker
+                        Name="TbDate"
+                        Padding="-20"
+                        BorderThickness="0"
+                        BorderBrush="Transparent" />
+                </Border>
+            </WrapPanel>
+        </Border>
         
+        <Border
+            Grid.Column="0"
+            Margin="50 0 0 270"
+            Height="100"
+            VerticalAlignment="Bottom" Width="300"
+            HorizontalAlignment="Left"
+            Background="White"
+            CornerRadius="20"
+            BorderThickness="0.3"
+            BorderBrush="white">
+            <Border.Effect>
+                <DropShadowEffect
+                    Color="Gray"
+                    BlurRadius="5"
+                    Opacity=".5"
+                    ShadowDepth="2" />
+            </Border.Effect>
+            <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330">
+                <Rectangle Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                    <Rectangle.Fill>
+
+                        <ImageBrush/>
+
+                    </Rectangle.Fill>
+                </Rectangle>
+                <WrapPanel Height="150" Width="210"
+                           Margin="0 -10 0 0">
+                    <Label Content="Total" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins"
+                           FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
+                    <Label Name="LbTotal" Content="12.255.255" Height="48" Width="165" Margin="20,10,0,0"
+                           FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
+                </WrapPanel>
+            </WrapPanel>
+        </Border>
+        <Border
+            Grid.Column="0"
+            Margin="400 0 0 270"
+            Height="100"
+            VerticalAlignment="Bottom" Width="300"
+            HorizontalAlignment="Left"
+            Background="White"
+            CornerRadius="20"
+            BorderThickness="0.3"
+            BorderBrush="white">
+            <Border.Effect>
+                <DropShadowEffect
+                    Color="Gray"
+                    BlurRadius="5"
+                    Opacity=".5"
+                    ShadowDepth="2" />
+            </Border.Effect>
+            <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330">
+                <Rectangle Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                    <Rectangle.Fill>
+
+                        <ImageBrush/>
+
+                    </Rectangle.Fill>
+                </Rectangle>
+                <WrapPanel Height="150" Width="210"
+                           Margin="0 -10 0 0">
+                    <Label Content="Amount" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins"
+                           FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
+                    <Label Name="LbAmount" Content="12.255.2" Height="48" Width="165" Margin="20,10,0,0"
+                           FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
+                </WrapPanel>
+            </WrapPanel>
+        </Border>
+        <Border
+            Grid.Column="1"
+            Margin="0 0 0 270"
+            Height="100"
+            VerticalAlignment="Bottom" Width="300"
+            HorizontalAlignment="Left"
+            Background="White"
+            CornerRadius="20"
+            BorderThickness="0.3"
+            BorderBrush="white">
+            <Border.Effect>
+                <DropShadowEffect
+                    Color="Gray"
+                    BlurRadius="5"
+                    Opacity=".5"
+                    ShadowDepth="2" />
+            </Border.Effect>
+            <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330">
+                <Rectangle Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                    <Rectangle.Fill>
+
+                        <ImageBrush/>
+
+                    </Rectangle.Fill>
+                </Rectangle>
+                <WrapPanel Height="150" Width="210"
+                           Margin="0 -10 0 0">
+                    <Label Content="Remaining" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0" FontFamily="Poppins"
+                           FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
+                    <Label Name="LbRemaining" Content="12.255.255" Height="48" Width="165" Margin="20,10,0,0"
+                           FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
+                </WrapPanel>
+            </WrapPanel>
+        </Border>
     </Grid>
+    
 </Page>

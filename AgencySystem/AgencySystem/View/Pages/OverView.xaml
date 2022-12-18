@@ -12,12 +12,13 @@
             <RowDefinition Height="2*" />
             <RowDefinition Height="8*" />
         </Grid.RowDefinitions>
+        
         <WrapPanel
             Grid.Row="0"
             Orientation="Horizontal"
             VerticalAlignment="Center"
             HorizontalAlignment="Left">
-            
+
             <!--label-->
             <Label
                 Content="Agency"
@@ -44,12 +45,7 @@
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             Margin="10 0 0 120"
-            VerticalScrollBarVisibility="Hidden">
-
-            <!--Using UserControl-->
-            <WrapPanel Name="WpListOfAgency" Orientation="Vertical">
-
-            </WrapPanel>
+            VerticalScrollBarVisibility="Hidden">   
         </ScrollViewer>
     </Grid>
 </Page>

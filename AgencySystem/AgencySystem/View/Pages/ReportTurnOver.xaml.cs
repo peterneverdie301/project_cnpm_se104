@@ -2,9 +2,9 @@
 
 namespace AgencySystem.View.Pages;
 
-public partial class ReportSales : Page
+public partial class ReportTurnOver : Page
 {
-    public ReportSales()
+    public ReportTurnOver()
     {
         InitializeComponent();
     }

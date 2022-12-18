@@ -47,52 +47,18 @@
                                 Style="{StaticResource AddItemStyle}" />
 
                             <!--Agent's Name textBox-->
-                            <Border
-                                CornerRadius="10"
-                                BorderThickness="4"
-                                Width="350"
-                                Height="40"
-                                BorderBrush="white">
-                                <TextBox
-                                    Name="TbName"
-                                    BorderThickness="0"
-                                    Style="{StaticResource TextBoxStyle}" />
-                            </Border>
-
-                            <!--Phone label-->
-                            <Label
-                                Content="Phone"
-                                Style="{StaticResource AddItemStyle}" />
-
-                            <!--Phone textBox-->
-                            <Border
-                                CornerRadius="10"
-                                BorderThickness="4"
-                                BorderBrush="white"
-                                Width="350"
-                                Height="40">
-                                <TextBox
-                                    Name="TbPrice"
-                                    BorderThickness="0"
-                                    Style="{StaticResource TextBoxStyle}" />
-                            </Border>
-
-                            <!--Address label-->
-                            <Label
-                                Content="Address"
-                                Style="{StaticResource AddItemStyle}" />
-
-                            <!--Address textBox-->
-                            <Border
-                                CornerRadius="10"
-                                BorderThickness="4"
-                                Width="350"
-                                Height="40"
-                                BorderBrush="white">
-                                <TextBox
-                                    BorderThickness="0"
-                                    Style="{StaticResource TextBoxStyle}" />
-                            </Border>
+                            <ComboBox
+                                Style="{DynamicResource theComboBox}"
+                                Padding="15,5,15,5"
+                                HorizontalContentAlignment="Left"
+                                VerticalAlignment="Center"
+                                MinWidth="100"
+                                MaxWidth="375"
+                                ItemContainerStyle="{DynamicResource theComboBoxItem}">
+                                <ComboBoxItem>1</ComboBoxItem>
+                                <ComboBoxItem>3</ComboBoxItem>
+                            </ComboBox>
+                            
 
                             <!--Proceeds label-->
                             <Label

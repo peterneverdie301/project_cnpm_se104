@@ -6,11 +6,11 @@
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
       mc:Ignorable="d"
       Height="720" Width="1280">
-    
+
     <Page.Resources>
         <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
     </Page.Resources>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -26,15 +26,24 @@
             <Label
                 Name="LbTurnoverReport"
                 Style="{StaticResource NavItemStyleReport}"
-                Content= "Turnover Report ">
+                Content="Turnover Report "
+                MouseDown="LbTurnoverReport_OnMouseDown">
             </Label>
-            
+
             <Label
                 Name="LbDebtReport"
                 Style="{StaticResource NavItemStyleReport}"
-                Content= "Debt Report">
+                Content="Debt Report"
+                MouseDown="LbDebtReport_OnMouseDown">
             </Label>
         </WrapPanel>
+
+        <!--Frame container-->
+        <Frame
+            Grid.Row="1"
+            x:Name="FrContainer"
+            NavigationUIVisibility="Hidden">
+        </Frame>
     </Grid>
 
 </Page>

@@ -15,7 +15,9 @@
         <Button
             Style="{StaticResource TabButton}"
             Content="Confirm" Height="30" HorizontalAlignment="Right"
-            Margin="0 0 250 250" VerticalAlignment="Bottom" Width="90" />
+            Margin="0 0 250 250" VerticalAlignment="Bottom" Width="90" 
+            Click="Handle_Add"
+        />
 
         <!--About TourAdding-->
         <Border
@@ -48,6 +50,7 @@
 
                             <!--Agent's Name textBox-->
                             <ComboBox
+                                Name="cbxAgency"
                                 Style="{DynamicResource theComboBox}"
                                 Padding="15,5,15,5"
                                 HorizontalContentAlignment="Left"
@@ -55,8 +58,6 @@
                                 MinWidth="100"
                                 MaxWidth="375"
                                 ItemContainerStyle="{DynamicResource theComboBoxItem}">
-                                <ComboBoxItem>1</ComboBoxItem>
-                                <ComboBoxItem>3</ComboBoxItem>
                             </ComboBox>
 
                             <!--Districts label-->

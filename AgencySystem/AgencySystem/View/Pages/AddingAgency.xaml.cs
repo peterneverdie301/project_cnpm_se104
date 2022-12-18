@@ -13,11 +13,25 @@ namespace AgencySystem.View.Pages;
 public partial class AddingAgency : Page
 {
     private Firestore firestore = new Firestore();
+    List<object> types;
     public AddingAgency()
     {
         InitializeComponent();
+        setUp();
     }
+    private async void setUp()
+    {
+        types = new List<object>();
+        types = await firestore.GetAllDocument(Utils.Collection.TypeOfAngency.ToString());
+        foreach (TypeOfAgency type in types)
+        {
+            if (type.Type != null)
+            {
+                cbxType.Items.Add(type.Type);
+            }
+        }
 
+    }
     private async void HandleAddAgency(object sender, RoutedEventArgs e)
     {
         Agency agency = new Agency();

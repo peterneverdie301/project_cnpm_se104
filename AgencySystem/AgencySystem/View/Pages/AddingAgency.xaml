@@ -107,8 +107,6 @@
                     MinWidth="100"
                     MaxWidth="375"
                     ItemContainerStyle="{DynamicResource theComboBoxItem}">
-                    <ComboBoxItem>1</ComboBoxItem>
-                    <ComboBoxItem>2</ComboBoxItem>
 
                 </ComboBox>
 

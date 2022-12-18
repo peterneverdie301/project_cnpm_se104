@@ -18,6 +18,7 @@
 
         <!--Confirm Button-->
         <Button
+            Name="BtExport"
             Grid.Column="1"
             Style="{StaticResource TabButton}"
             Content="Export" Height="30" HorizontalAlignment="Right"
@@ -25,6 +26,7 @@
 
         <!--Confirm Button-->
         <Button
+            Name="BtAdd"
             Grid.Column="0"
             Style="{StaticResource TabButton}"
             Content="Confirm" Height="30" HorizontalAlignment="Right"
@@ -133,6 +135,7 @@
 
                 <!--Product textBox-->
                 <ComboBox
+                    Name="CbProduct"
                     Style="{DynamicResource theComboBox}"
                     Padding="15,5,15,5"
                     HorizontalContentAlignment="Left"
@@ -157,7 +160,7 @@
                     <TextBox
                         Name="TbQuantity"
                         BorderThickness="0"
-                        Style="{StaticResource TextBoxStyle}" />
+                        Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbQuantity_PreviewTextInput" />
                 </Border>
                 <!--Unit label-->
                 <Label
@@ -166,6 +169,7 @@
 
                 <!--Unit textBox-->
                 <ComboBox
+                    Name="CbUnit"
                     Style="{DynamicResource theComboBox}"
                     Padding="15,5,15,5"
                     HorizontalContentAlignment="Left"

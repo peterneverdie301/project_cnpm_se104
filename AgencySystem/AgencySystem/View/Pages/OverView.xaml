@@ -39,13 +39,14 @@
         </WrapPanel>
 
         <ScrollViewer
+            Name="test"
             Grid.Row="1"
             Width="800"
             Height="505"
             VerticalAlignment="Center"
             HorizontalAlignment="Left"
             Margin="10 0 0 120"
-            VerticalScrollBarVisibility="Hidden">   
+            VerticalScrollBarVisibility="Hidden">
         </ScrollViewer>
     </Grid>
 </Page>

@@ -16,8 +16,8 @@ namespace DataModels.Models
         [FirestoreProperty]
         public int? Year { get; set; }
         [FirestoreProperty]
-        public decimal? FirsDebt { get; set; }
+        public double? FirsDebt { get; set; }
         [FirestoreProperty]
-        public decimal? Incurred { get; set; }
+        public double? Incurred { get; set; }
     }
 }

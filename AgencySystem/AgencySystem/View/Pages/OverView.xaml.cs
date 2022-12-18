@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using AgencySystem.View.Components;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace AgencySystem.View.Pages;
@@ -8,6 +9,15 @@ public partial class OverView : Page
     public OverView()
     {
         InitializeComponent();
+        ListBox listBox = new ListBox();
+        UcInfoAgency ucInfoAgency = new UcInfoAgency();
+        ucInfoAgency.LbName.Content = "Linh";
+
+        listBox.Items.Add(new UcInfoAgency());
+        listBox.Items.Add(new UcInfoAgency());
+        listBox.Items.Add(ucInfoAgency);
+        listBox.Items.Add(new UcInfoAgency());
+        test.Content = listBox;
     }
     private void handleOverView(object sender, MouseButtonEventArgs e)
     {

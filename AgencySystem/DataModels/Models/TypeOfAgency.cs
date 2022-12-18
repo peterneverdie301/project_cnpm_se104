@@ -14,6 +14,6 @@ namespace DataModels.Models
         [FirestoreProperty]
         public int? Type { get; set; }
         [FirestoreProperty]
-        public decimal? MaxDebt { get; set; }
+        public double? MaxDebt { get; set; }
     }
 }

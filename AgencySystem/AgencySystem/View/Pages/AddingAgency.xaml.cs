@@ -20,7 +20,7 @@ public partial class AddingAgency : Page
     private async void HandleAddAgency(object sender, RoutedEventArgs e)
     {
         Agency agency = new Agency();
-        agency.AgencyId = await firestore.GetIdForOject(Utils.Collection.Agency.ToString());
+        agency.AgencyId = await firestore.GetIdForObject(Utils.Collection.Agency.ToString());
         agency.AgencyName = TbName.Text;
         agency.PhoneNumber = TbPhone.Text;
         agency.Address = TbAddress.Text;

@@ -16,6 +16,6 @@ namespace DataModels.Models
         [FirestoreProperty]
         public string UnitId { get; set; }
         [FirestoreProperty]
-        public decimal? Price { get; set; }
+        public double Price { get; set; }
     }
 }

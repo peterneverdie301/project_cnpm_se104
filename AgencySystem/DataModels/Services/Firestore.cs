@@ -59,7 +59,7 @@ namespace DataModels.Services
             await document.DeleteAsync();
         }
 
-        public async Task<string> GetIdForOject (string collection)
+        public async Task<string> GetIdForObject (string collection)
         {
             DocumentReference document = db.Collection(collection).Document("reference-Id");
             DocumentSnapshot snapshot = await document.GetSnapshotAsync();

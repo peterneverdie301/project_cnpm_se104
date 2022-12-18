@@ -59,16 +59,7 @@ public partial class AddingReceipt : Page
             if (agencyDebt != null)
             {
                 double money = double.Parse(TbMoney.Text);
-                if (money < agencyDebt.Incurred)
-                {
-                    agencyDebt.Incurred -= money;
-                } else
-                {
-                    money -= (double)agencyDebt.Incurred;
-                    agencyDebt.Incurred = 0;
-                    agencyDebt.FirsDebt -= money;
-                }
-
+                agencyDebt.Incurred -= money;
                 firestore.UpdateData(Utils.Collection.AgencyDebt.ToString(), idAgencyDebt, agencyDebt);
             } else
             {

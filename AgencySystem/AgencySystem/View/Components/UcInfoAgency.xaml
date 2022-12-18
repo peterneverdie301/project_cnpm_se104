@@ -59,7 +59,8 @@
         <Border Grid.Column="6" HorizontalAlignment="Left" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center"
                 Width="81" Height="30" Grid.RowSpan="2" Background="#FF29CC97" BorderThickness="1"
                 CornerRadius="14">
-            <Label
+            <Button
+                Name="btnEdit"
                 Content="EDIT"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
@@ -70,7 +71,8 @@
                 Grid.Column="7" HorizontalAlignment="Left"
                 Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="81" Height="30" Grid.RowSpan="2"
                 Background="#FF7F57" CornerRadius="14" BorderThickness="1">
-            <Label
+            <Button
+                Name="btnDelete"
                 Content="Delete"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"

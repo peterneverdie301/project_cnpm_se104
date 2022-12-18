@@ -46,11 +46,6 @@
             HorizontalAlignment="center"
             Margin="10 0 0 120"
             VerticalScrollBarVisibility="Hidden">
-
-            <!--Using UserControl-->
-            <WrapPanel Name="WpListOfAgency" Orientation="Vertical">
-
-            </WrapPanel>
         </ScrollViewer>
     </Grid>
 </Page>

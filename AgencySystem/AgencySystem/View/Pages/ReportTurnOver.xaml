@@ -38,6 +38,7 @@
         </WrapPanel>
 
         <ScrollViewer
+            Name="LvListOfAgency"
             Grid.Row="1"
             Width="800"
             Height="505"

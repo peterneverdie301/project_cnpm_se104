@@ -51,6 +51,7 @@
         </WrapPanel>
 
         <ScrollViewer
+            Name="ScViewExportSlip"
             Grid.Row="1"
             Width="1200"
             Height="505"

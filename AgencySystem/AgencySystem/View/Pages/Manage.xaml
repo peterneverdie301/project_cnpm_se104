@@ -14,17 +14,18 @@
             <ColumnDefinition Width="6*" />
             <ColumnDefinition Width="4*" />
         </Grid.ColumnDefinitions>
-
-        <!--Manage max, type of agents-->
-        <Border Grid.Column="0"
-                Background="#80ECDABF"
-                CornerRadius="30"
-                BorderThickness="1"
-                BorderBrush="#ECDABF"
-                Width="650"
-                Height="300"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center">
+        
+        <!--Create a new agent's type-->
+        <Border
+            Grid.Column="0"
+            Background="#80ECDABF"
+            CornerRadius="30"
+            BorderThickness="1"
+            BorderBrush="#ECDABF"
+            Width="650"
+            Height="300"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center">
 
             <WrapPanel
                 Orientation="Vertical"
@@ -34,7 +35,7 @@
 
                 <!--Max number of agents-->
                 <Label
-                    Content="Max number of Agents"
+                    Content="Create a new agent's type"
                     Style="{StaticResource AddItemStyle}" />
                 <Border
                     CornerRadius="10"
@@ -46,64 +47,7 @@
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" />
                 </Border>
-
-                <!--Number of agent' type-->
-                <Label
-                    Content="Number of Agent's type"
-                    Style="{StaticResource AddItemStyle}" />
-                <Border
-                    CornerRadius="10"
-                    BorderThickness="4"
-                    Width="350"
-                    Height="40"
-                    BorderBrush="white">
-                    <TextBox
-                        BorderThickness="0"
-                        Style="{StaticResource TextBoxStyle}" />
-                </Border>
-
-                <!--change and confirm Button-->
-                <WrapPanel VerticalAlignment="Bottom" HorizontalAlignment="Right"
-                           Margin="0 20 0 0">
-                    <Button
-                        Style="{StaticResource TabButtonCancel}"
-                        Content="Change" Height="30" Width="90" />
-
-                    <Button
-                        Style="{StaticResource TabButton}"
-                        Content="Confirm" Height="30" Width="90" />
-                </WrapPanel>
-            </WrapPanel>
-        </Border>
-
-        <!--Mange maxDebt of Agents' type-->
-        <Border Grid.Column="1"
-                Background="#705E8397"
-                BorderBrush="#a6a6a6"
-                BorderThickness="1"
-                CornerRadius="30"
-                Width="500"
-                Height="220"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center">
-            <WrapPanel
-                Orientation="Vertical"
-                VerticalAlignment="center"
-                HorizontalAlignment="Center">
-
-                <!--pick Agent's type-->
-                <Label
-                    Content="Agent's Type"
-                    Style="{StaticResource AddItemStyle}" />
-                <ComboBox
-                    Style="{DynamicResource theComboBox}"
-                    Padding="15,5,15,5"
-                    HorizontalContentAlignment="Left"
-                    VerticalAlignment="Center"
-                    MinWidth="80"
-                    MaxWidth="375"
-                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
-                </ComboBox>
+                
                 
                 <Label
                     Content="Max Debt"
@@ -119,35 +63,37 @@
                         Style="{StaticResource TextBoxStyle}" />
                 </Border>
                 
-                <!--Confirm Button-->
+                <!--Add Button-->
                 <Button
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Margin="0 20  0 0"
                     Style="{StaticResource TabButton}"
-                    Content="Confirm" Height="30" HorizontalAlignment="Right"
-                    VerticalAlignment="Bottom"
-                    Margin="0 20 0 0"
-                    Width="90" />
+                    Content="Add" Height="30" Width="90" />
+                
             </WrapPanel>
         </Border>
         
-        
-        <Border Grid.Column="1"
-                Background="#705E8397"
-                BorderBrush="#a6a6a6"
-                BorderThickness="1"
-                CornerRadius="30"
-                Width="500"
-                Height="250"
-                VerticalAlignment="center"
-                HorizontalAlignment="Center"
-                Margin="0 120 0 0">
+        <!--Manage Agency-->
+        <Border
+            Grid.Column="1"
+            Background="#705E8397"
+            BorderBrush="#a6a6a6"
+            BorderThickness="1"
+            CornerRadius="30"
+            Width="500"
+            Height="200"
+            VerticalAlignment="top"
+            HorizontalAlignment="Center"
+            Margin="0 0 0 100">
             <WrapPanel
                 Orientation="Vertical"
                 VerticalAlignment="center"
                 HorizontalAlignment="Center">
 
-                <!--set number of products and unit-->
+                <!--set number of Agents and unit-->
                 <Label
-                    Content="Number of Products"
+                    Content="Number of Agents"
                     Style="{StaticResource AddItemStyle}" />
                 <Border
                     CornerRadius="10"
@@ -159,6 +105,36 @@
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" />
                 </Border>
+
+                <!--Add Button-->
+                <Button
+                    Style="{StaticResource TabButton}"
+                    Content="Add" Height="30" HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin=" 0 20 0 0 "
+                    Width="90" />
+
+            </WrapPanel>
+        </Border>
+        
+        <!--Manage Unit-->
+        <Border
+            Grid.Column="1"
+            Background="#705E8397"
+            BorderBrush="#a6a6a6"
+            BorderThickness="1"
+            CornerRadius="30"
+            Width="500"
+            Height="150"
+            VerticalAlignment="bottom"
+            HorizontalAlignment="Center"
+            Margin="0 100 0 0">
+            <WrapPanel
+                Orientation="Vertical"
+                VerticalAlignment="center"
+                HorizontalAlignment="Center">
+
+                <!--set number of unit-->
                 <Label
                     Content="Number of Units"
                     Style="{StaticResource AddItemStyle}" />
@@ -172,23 +148,15 @@
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" />
                 </Border>
-                
-                <WrapPanel VerticalAlignment="bottom" HorizontalAlignment="Right"
-                            Margin=" 0 20 0 0">
-                    
-                    <!--Change Button-->
-                    <Button
-                        Style="{StaticResource TabButtonCancel}"
-                        Content="Change" Height="30" Width="90" />
-                    <!--Confirm Button-->
-                    <Button
-                        Style="{StaticResource TabButton}"
-                        Content="Confirm" Height="30" HorizontalAlignment="Right"
-                        VerticalAlignment="Bottom"
-                        Width="90" />
-                </WrapPanel>
-                
+                <!--Add Button-->
+                <Button
+                    Style="{StaticResource TabButton}"
+                    Content="Add" Height="30" HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0 20 0 0"
+                    Width="90" />
             </WrapPanel>
         </Border>
     </Grid>
+    
 </Page>

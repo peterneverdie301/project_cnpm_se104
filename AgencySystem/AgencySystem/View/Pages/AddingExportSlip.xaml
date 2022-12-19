@@ -230,7 +230,7 @@
             Height="90"
             VerticalAlignment="Bottom" Width="300"
             HorizontalAlignment="Left"
-            Background="White"
+            Background="#705E8397"
             CornerRadius="20"
             BorderThickness="0.3"
             BorderBrush="white">
@@ -253,9 +253,17 @@
                            Margin="0 -10 0 0">
                     <Label Content="Amount" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0"
                            FontFamily="Poppins"
-                           FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
-                    <Label Name="LbAmount" Content="12.255.2" Height="48" Width="165" Margin="20,10,0,0"
-                           FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
+                           FontSize="18" FontWeight="Bold" Foreground="#FFFFFF" />
+                    <Border
+                        CornerRadius="10"
+                        BorderThickness="4"
+                        BorderBrush="white"
+                        Width="170"
+                        Height="40">
+                        <TextBox
+                            BorderThickness="0"
+                            Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbQuantity_PreviewTextInput" />
+                    </Border>
                 </WrapPanel>
             </WrapPanel>
         </Border>

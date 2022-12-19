@@ -5,8 +5,55 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
       mc:Ignorable="d"
-      Title="ViewReceipt" Height="450" Width="800">
+      Title="ViewReceipt" Height="720" Width="1280">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
         
+        <WrapPanel
+            Grid.Row="0"
+            Orientation="Horizontal"
+            Margin="10 60 0 0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left">
+
+            <!--label-->
+            <Label
+                Content="Agency"
+                FontWeight="Bold"
+                Margin="50 0" />
+            <Label
+                Content="Type of Agency"
+                FontWeight="Bold"
+                Margin="80 0" />
+            <Label
+                Content="District"
+                FontWeight="Bold"
+                Margin="35 0" />
+            <Label
+                Content="Agency's Debt"
+                FontWeight="Bold"
+                Margin="155 0 0 0" />
+            <Label
+                Content="Proceeds"
+                FontWeight="Bold"
+                Margin="155 0 0 0" />
+        </WrapPanel>
+
+        <ScrollViewer
+            Grid.Row="1"
+            Width="1200"
+            Height="505"
+            VerticalAlignment="Center"
+            BorderBrush="Transparent"
+            Background="Transparent"
+            HorizontalAlignment="Left"
+            Margin="10 0 0 100"
+            VerticalScrollBarVisibility="Hidden">
+            
+            
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -63,10 +63,17 @@ public partial class MainWindow : Window
         FrContainer.Content = new Report();
     }
 
+    private void LbManage_OnMouseDown(object sender, MouseButtonEventArgs e)
+    {
+        ResetNavItemsToDefault();
+        LbManage.Style = Resources["NavItemClickedStyle"] as Style;
+        FrContainer.Content = new Manage();
+    }
     private void ResetNavItemsToDefault()
     {
         LbViews.Style = Resources["NavItemStyle"] as Style;
         LbAdding.Style = Resources["NavItemStyle"] as Style;
         LbReport.Style = Resources["NavItemStyle"] as Style;
+        LbManage.Style = Resources["NavItemStyle"] as Style;
     }
 }

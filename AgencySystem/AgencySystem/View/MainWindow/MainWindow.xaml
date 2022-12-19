@@ -124,6 +124,13 @@
                         MouseDown="LbReport_OnMouseDown">
                     </Label>
 
+                    <!--Manage item-->
+                    <Label
+                        Name="LbManage"
+                        Style="{StaticResource NavItemStyle}"
+                        Content="Manage"
+                        MouseDown="LbManage_OnMouseDown">
+                    </Label>
                 </WrapPanel>
 
                 <!--Navbar buttons-->

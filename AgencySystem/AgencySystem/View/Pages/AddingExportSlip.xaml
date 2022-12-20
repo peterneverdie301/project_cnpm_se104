@@ -17,26 +17,36 @@
         </Grid.ColumnDefinitions>
 
         <!--Confirm Button-->
-        <Button
-            Name="BtAddData"
+        <Border
             Grid.Column="1"
-            Style="{StaticResource TabButton}"
-            Content="Add Data" Height="30" HorizontalAlignment="Right"
-            Margin="0 0 70 160" VerticalAlignment="Bottom" Width="90" 
-            Click="BtAddData_Click"
-        />
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="0 0 50 170"
+            Style="{StaticResource ConfirmButtonBorderStyle}">
+            <Button
+                Name="BtAddData"
+                Grid.Column="1"
+                Style="{StaticResource ConfirmButtonStyle}"
+                Content="Add Data" 
+                Click="BtAddData_Click" />
+        </Border>
+
 
         <!--Confirm Button-->
-        <Button
-            Name="BtAddProduct"
+        <Border
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Margin="0 0 0 200"
             Grid.Column="0"
-            Style="{StaticResource TabButton}"
-            Content="Add Product" Height="30" HorizontalAlignment="Right"
-            VerticalAlignment="Bottom" 
-            Margin="0 0 200 230"
-            Width="90" 
-            Click="BtAddProduct_Click"
-        />
+            Style="{StaticResource CancelButtonBorderStyle}">
+            <Button
+                Name="BtAddProduct"
+                Grid.Column="0"
+                Style="{StaticResource CancelButtonStyle}"
+                Content="Add Product"
+                Click="BtAddProduct_Click" />
+        </Border>
+
 
         <Border Grid.Column="1"
                 Background="#80ECDABF"

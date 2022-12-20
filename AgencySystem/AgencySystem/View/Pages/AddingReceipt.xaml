@@ -5,19 +5,24 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
       mc:Ignorable="d"
-      Height="800" Width="1280">
+      Height="720" Width="1280">
     <Page.Resources>
         <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
     </Page.Resources>
     <Grid>
 
         <!--Confirm Button-->
-        <Button
-            Style="{StaticResource TabButton}"
-            Content="Confirm" Height="30" HorizontalAlignment="Right"
-            Margin="0 0 250 250" VerticalAlignment="Bottom" Width="90" 
-            Click="Handle_Add"
-        />
+        <Border
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="0 0 50 170"
+            Style="{StaticResource ConfirmButtonBorderStyle}">
+            <Button
+                Style="{StaticResource ConfirmButtonStyle}"
+                Click="Handle_Add"
+            />
+        </Border>
+        
 
         <!--About TourAdding-->
         <Border

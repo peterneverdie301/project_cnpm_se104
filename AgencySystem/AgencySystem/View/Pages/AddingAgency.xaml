@@ -15,13 +15,18 @@
         </Grid.ColumnDefinitions>
 
         <!--Confirm Button-->
-        <Button
+        <Border 
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="0 0 50 170"
             Grid.Column="1"
-            Style="{StaticResource TabButton}"
-            Content="Confirm" Height="30" HorizontalAlignment="Right"
-            Margin="0 0 70 160" VerticalAlignment="Bottom" Width="90"
-            Click="HandleAddAgency"
-        />
+            Style="{StaticResource ConfirmButtonBorderStyle}">
+            <Button
+                Style="{StaticResource ConfirmButtonStyle}"
+                Click="HandleAddAgency"
+            />
+        </Border>
+        
 
         <Border Grid.Column="0"
                 Background="#80ECDABF"

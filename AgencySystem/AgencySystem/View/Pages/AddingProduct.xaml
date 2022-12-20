@@ -16,13 +16,21 @@
         </Grid.ColumnDefinitions>
 
         <!--Confirm Button-->
-        <Button
+        <Border
             Grid.Column="1"
-            Style="{StaticResource TabButton}"
-            Content="Confirm" Height="30" HorizontalAlignment="Right"
-            Click="HandleAddItem"
-            Margin="0 0 70 160" VerticalAlignment="Bottom" Width="90" />
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="0 0 50 170"
+            Style="{StaticResource ConfirmButtonBorderStyle}">
+            
+            <Button
+                Grid.Column="1"
+                Content="Add Product"
+                Style="{StaticResource ConfirmButtonStyle}"
+                Click="HandleAddItem"/>
 
+        </Border>
+       
         <Border Grid.Column="0"
                 Background="#80ECDABF"
                 CornerRadius="30"

@@ -148,7 +148,7 @@
                     MaxWidth="375"
                     ItemContainerStyle="{DynamicResource theComboBoxItem}">
                 </ComboBox>
-                
+
                 <!--Quantity label-->
                 <Label
                     Content="Quantity"
@@ -182,7 +182,7 @@
                     MaxWidth="375"
                     ItemContainerStyle="{DynamicResource theComboBoxItem}">
                 </ComboBox>
-                
+
             </WrapPanel>
         </Border>
 
@@ -205,7 +205,7 @@
                     ShadowDepth="2" />
             </Border.Effect>
             <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330">
-                <Rectangle Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                <Rectangle Height="80" Stroke="White" Width="80" Margin="15,0,0,50" RadiusX="20" RadiusY="20">
                     <Rectangle.Fill>
 
                         <ImageBrush />
@@ -226,7 +226,7 @@
         <!--Amount-->
         <Border
             Grid.Column="1"
-            Margin="55  0 0 210"
+            Margin="55,0,0,180"
             Height="90"
             VerticalAlignment="Bottom" Width="300"
             HorizontalAlignment="Left"
@@ -242,7 +242,7 @@
                     ShadowDepth="2" />
             </Border.Effect>
             <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330">
-                <Rectangle Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                <Rectangle Height="80" Stroke="White" Width="80" Margin="15,0,10,50" RadiusX="20" RadiusY="20">
                     <Rectangle.Fill>
 
                         <ImageBrush />
@@ -251,7 +251,7 @@
                 </Rectangle>
                 <WrapPanel Height="150" Width="210"
                            Margin="0 -10 0 0">
-                    <Label Content="Amount" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0"
+                    <Label Content="Paid" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0"
                            FontFamily="Poppins"
                            FontSize="18" FontWeight="Bold" Foreground="#FFFFFF" />
                     <Border
@@ -287,7 +287,7 @@
                     ShadowDepth="2" />
             </Border.Effect>
             <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330">
-                <Rectangle Height="90" Stroke="White" Width="90" Margin="15,0,0,30" RadiusX="20" RadiusY="20">
+                <Rectangle Height="80" Stroke="White" Width="80" Margin="15,0,0,50" RadiusX="20" RadiusY="20">
                     <Rectangle.Fill>
 
                         <ImageBrush />

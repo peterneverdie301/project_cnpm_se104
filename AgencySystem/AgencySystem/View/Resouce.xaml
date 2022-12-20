@@ -273,7 +273,7 @@
          <Setter Property="Template">
              <Setter.Value>
                  <ControlTemplate TargetType="Button">
-                     <Border CornerRadius="10" Background="#3CA1FF" BorderBrush="#ccc" BorderThickness="0,1,1,0">
+                    <Border CornerRadius="10" Background="#ffa07a" BorderBrush="#ccc" BorderThickness="0,1,1,0">
                          <ContentPresenter x:Name="contentPresenter"
                                            ContentTemplate="{TemplateBinding ContentTemplate}"
                                            Content="{TemplateBinding Content}"
@@ -292,7 +292,7 @@
          <Setter Property="Template">
              <Setter.Value>
                  <ControlTemplate TargetType="Button">
-                     <Border CornerRadius="10" Background="#a6a6a6" BorderBrush="#ccc" BorderThickness="0,1,1,0">
+                    <Border CornerRadius="10" Background="#fffacd" BorderBrush="#ccc" BorderThickness="0,1,1,0">
                          <ContentPresenter x:Name="contentPresenter"
                                            ContentTemplate="{TemplateBinding ContentTemplate}"
                                            Content="{TemplateBinding Content}"

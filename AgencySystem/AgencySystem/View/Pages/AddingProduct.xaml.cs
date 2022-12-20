@@ -1,6 +1,7 @@
 ﻿using DataModels.Models;
 using DataModels.Services;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -12,9 +13,23 @@ namespace AgencySystem.View.Pages;
 public partial class AddingProduct : Page
 {
     private Firestore firestore = new Firestore();
+    List<object> units;
     public AddingProduct()
     {
         InitializeComponent();
+        setUp();
+    }
+    private async void setUp()
+    {
+        units = new List<object>();
+        units = await firestore.GetAllDocument(Utils.Collection.Units.ToString());
+        foreach (Unit unit in units)
+        {
+            if (unit.Value != null)
+            {
+                CbUnit.Items.Add(unit.Value);
+            }
+        }
     }
     private async void HandleAddItem(object sender, RoutedEventArgs e)
     {

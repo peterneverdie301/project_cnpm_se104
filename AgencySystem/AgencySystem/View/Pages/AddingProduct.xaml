@@ -79,27 +79,11 @@
                                 MinWidth="100"  
                                 MaxWidth="375"
                                 ItemContainerStyle="{DynamicResource theComboBoxItem}">
-                    <ComboBoxItem>1</ComboBoxItem>
-                    <ComboBoxItem>3</ComboBoxItem>
                 </ComboBox>
 
                 <!--Quantity label-->
-                <Label
-                    Content="Quantity"
-                    Style="{StaticResource AddItemStyle}" />
 
                 <!--Quantity textBox-->
-                <Border
-                    CornerRadius="10"
-                    BorderThickness="4"
-                    Width="350"
-                    Height="40"
-                    BorderBrush="white">
-                    <TextBox
-                        Name="TbQuantity"
-                        BorderThickness="0"
-                        Style="{StaticResource TextBoxStyle}" Height="32" VerticalAlignment="Top" PreviewTextInput="TbQuantity_PreviewTextInput" />
-                </Border>
 
                 <!--Price-->
                 <Label  

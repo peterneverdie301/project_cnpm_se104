@@ -17,6 +17,7 @@
         
         <WrapPanel
             Grid.Row="0"
+            Width="650"
             Orientation="Horizontal"
             VerticalAlignment="Top"
             HorizontalAlignment="Left"
@@ -32,13 +33,9 @@
                 Style="{StaticResource ViewLabel}"
                 Margin="145 0 0 0" />
             <Label
-                Content="Quantity"
-                Style="{StaticResource ViewLabel}" 
-                Margin="100 0 0 0"/>
-            <Label
                 Content="Price"
                 Style="{StaticResource ViewLabel}"
-                Margin="175 0 0 0"/>
+                Margin="200 0 0 0"/>
         </WrapPanel>
 
         <ScrollViewer

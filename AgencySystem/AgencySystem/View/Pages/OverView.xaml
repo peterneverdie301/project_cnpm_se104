@@ -37,7 +37,7 @@
                 Style="{StaticResource ViewLabel}"
                 Margin="60 0 0 0"/>
             <Label
-                Content="Agency's Debt"
+                Content="Agency's Phone"
                 Style="{StaticResource ViewLabel}"
                 Margin="175 0 0 0"/>
         </WrapPanel>

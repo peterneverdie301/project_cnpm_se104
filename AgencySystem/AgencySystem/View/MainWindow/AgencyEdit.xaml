@@ -24,6 +24,8 @@
             VerticalAlignment="Bottom"
             Margin="0 0 150 20">
             <Button
+                Name="btnCancel"
+                Click="btnCancel_Click"
                 Content="Cancel"
                 Style="{StaticResource CancelButtonStyle}"/>
         </Border>
@@ -35,6 +37,8 @@
             VerticalAlignment="Bottom"
             Margin="0 0 20 20">
             <Button
+                Name="btnConfirm"
+                Click="btnConfirm_Click"
                 Style="{StaticResource ConfirmButtonStyle}"/>
         </Border>
         <Border>

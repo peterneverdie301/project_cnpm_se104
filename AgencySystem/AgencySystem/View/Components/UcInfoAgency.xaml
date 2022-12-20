@@ -53,10 +53,10 @@
         <Label x:Name="LbDistrictOfAgency" Content="Quan 12" Grid.Column="3" HorizontalAlignment="Left"
                Margin="10,0,0,0"
                Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Foreground="#FFC5C7CD" FontWeight="Bold" />
-        <Label x:Name="LbAgencyDebt" Content="Agency's Debt" Grid.Column="4" HorizontalAlignment="Left"
+        <Label x:Name="LbAgencyPhone" Content="Agency's Phone" Grid.Column="4" HorizontalAlignment="Left"
                Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
                Foreground="#FF252733" FontSize="14" Width="235" />
-        <Label x:Name="LbDebt" Content="100.000$" Grid.Column="4" HorizontalAlignment="Left"
+        <Label x:Name="LbPhone" Content="0" Grid.Column="4" HorizontalAlignment="Left"
                Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
                Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
         

@@ -60,7 +60,8 @@ public partial class AddingExportSlip : Page
             }
         }
     }
-
+    
+    // Add data to database
     private async void BtAddData_Click(object sender, RoutedEventArgs e)
     {
         if (cbxAgency.Text == "" || TbDate.Text == "" || productDetails.Count == 0)
@@ -100,6 +101,7 @@ public partial class AddingExportSlip : Page
         MessageBox.Show("Thêm dữ liệu thành công");
     }
 
+    //Add product into table
     private void BtAddProduct_Click(object sender, RoutedEventArgs e)
     {
         if (CbProduct.Text == "" || CbUnit.Text == "" || TbQuantity.Text == "")
@@ -121,17 +123,22 @@ public partial class AddingExportSlip : Page
             UnitPrice = item.Price,
             LastPrice = item.Price * int.Parse(TbQuantity.Text),
         };
+        CbUnit.Text = "";
+        CbProduct.Text = "";
+        TbQuantity.Text = "";
         LbTotal.Content = double.Parse(LbTotal.Content.ToString()) + productDetail.LastPrice;
         productDetails.Add(productDetail);
         lvProduct.Items.Add(productDetail);
     }
 
+    //Check condition
     private void TbQuantity_PreviewTextInput(object sender, TextCompositionEventArgs e)
     {
         Regex regex = new Regex("[^0-9]+");
         e.Handled = regex.IsMatch(e.Text);
     }
 
+    //Caculate money
     private void TbPaid_TextChanged(object sender, TextChangedEventArgs e)
     {
         TextBox textBox = sender as TextBox;

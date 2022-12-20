@@ -35,10 +35,11 @@ public partial class OverView : Page
             ucInfo.LbCustomerId.Content = "Id: "  + agency.AgencyId;
             ucInfo.LbCustomerId.Tag = agency.AgencyId;
             ucInfo.LbDistrictOfAgency.Content = agency.District;
-            //ucInfo.LbTypeOfAgency.Content = agency.TypeId;
-            ucInfo.LbDebt.Content = "10000$";
+            ucInfo.LbTypeOfAgency.Content = agency.TypeId;
+            ucInfo.LbPhone.Content = agency.PhoneNumber;
             ucInfo.btnDelete.Tag = ucInfo;
             ucInfo.btnDelete.Click += BtnDelete_Click;
+            ucInfo.btnEdit.Tag = agency;
             ucInfo.btnEdit.Click += BtnEdit_Click;
             listBoxAgency.Items.Add(ucInfo);
         }
@@ -47,8 +48,23 @@ public partial class OverView : Page
 
     private void BtnEdit_Click(object sender, RoutedEventArgs e)
     {
+        var btn = sender as Button;
+        Agency agency = btn?.Tag as Agency;
         AgencyEdit agencyEdit = new AgencyEdit();
+        agencyEdit.TbName.Tag = agency?.AgencyId;
+        agencyEdit.TbName.Text = agency?.AgencyName;
+        agencyEdit.TbPhone.Text = agency?.PhoneNumber;
+        agencyEdit.TbAddress.Text = agency?.Address;
+        agencyEdit.TbTime.Text = agency?.DayReception;
+        agencyEdit.cbxType.Text = agency?.TypeId;
+        agencyEdit.cbxDistrict.Text = agency?.District;
+        agencyEdit.Closed += AgencyEdit_Closed;
         agencyEdit.Show();
+    }
+
+    private void AgencyEdit_Closed(object? sender, EventArgs e)
+    {
+        // Do later
     }
 
     private void BtnDelete_Click(object sender, RoutedEventArgs e)

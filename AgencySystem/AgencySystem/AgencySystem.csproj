@@ -47,8 +47,4 @@
     </Resource>
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MaterialDesignThemes" Version="4.7.0-ci399" />
-  </ItemGroup>
-
 </Project>

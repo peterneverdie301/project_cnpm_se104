@@ -4,7 +4,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:AgencySystem.View.MainWindow"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         FontFamily="roboto"
         Height="450" Width="800">
@@ -62,16 +61,11 @@
                     
                     <!--Icon User-->
                     <StackPanel Orientation="Horizontal" Margin="10">
-                        <materialDesign:PackIcon
-                            Kind="User"
-                            Width="25"
-                            Height="25"
-                            Foreground="#333333"/>
                         
                         <!--Username textBox-->
                         <TextBox 
                             Name="TbUserName"
-                            materialDesign:HintAssist.Hint="Enter UserName / Email" 
+                            
                             Foreground="#333333" 
                             Width="250" 
                             BorderBrush="White" 
@@ -82,17 +76,11 @@
                     
                     <!--Icon Lock-->
                     <StackPanel Orientation="Horizontal" Margin="10">
-                        <materialDesign:PackIcon 
-                            Kind="Lock" 
-                            Width="25" 
-                            Height="25" 
-                            Foreground="#333333"/>
                         
                         <!--PasswordBox-->
                         <PasswordBox 
                             Name="PbPassword"
                             Margin="10 0" 
-                            materialDesign:HintAssist.Hint="********" 
                             Foreground="#333333" Width="250" BorderBrush="White" 
                             CaretBrush="#FFD94448" 
                             SelectionBrush="#FFD94448" />
@@ -104,7 +92,6 @@
                             Content="Login"
                             Width="100" 
                             Height="40" 
-                            materialDesign:ButtonAssist.CornerRadius="20"
                             BorderThickness="2" 
                             BorderBrush="#D94448"
                             Background="#D94448" 

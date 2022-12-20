@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Cloud.Firestore" Version="3.0.0" />
-    <PackageReference Include="MaterialDesignThemes" Version="4.7.0-ci399" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

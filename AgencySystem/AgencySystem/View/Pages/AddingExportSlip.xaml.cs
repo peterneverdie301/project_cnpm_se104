@@ -25,7 +25,6 @@ public partial class AddingExportSlip : Page
     List<object> products;
     List<object> units;
     List<ProductDetail> productDetails = new List<ProductDetail>();
-    String Product = "Linh";
     public AddingExportSlip()
     {
         InitializeComponent();
@@ -79,7 +78,7 @@ public partial class AddingExportSlip : Page
         {
             AgencyId = agency.AgencyId,
             Date = TbDate.Text,
-            AmountPaid = 0,
+            AmountPaid = double.Parse(TbPaid.Text),
             ExportSlipId = await firestore.GetIdForObject(Utils.Collection.ExportSlip.ToString()),
         };
         firestore.AddData(Utils.Collection.ExportSlip.ToString(), exportSlip.ExportSlipId, exportSlip);
@@ -122,6 +121,7 @@ public partial class AddingExportSlip : Page
             UnitPrice = item.Price,
             LastPrice = item.Price * int.Parse(TbQuantity.Text),
         };
+        LbTotal.Content = double.Parse(LbTotal.Content.ToString()) + productDetail.LastPrice;
         productDetails.Add(productDetail);
         lvProduct.Items.Add(productDetail);
     }
@@ -132,6 +132,17 @@ public partial class AddingExportSlip : Page
         e.Handled = regex.IsMatch(e.Text);
     }
 
+    private void TbPaid_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        TextBox textBox = sender as TextBox;
+        if (textBox.Text != "")
+        {
+            LbRemaining.Content = double.Parse(LbTotal.Content.ToString()) - double.Parse(textBox.Text);
+        } else
+        {
+            LbRemaining.Content = double.Parse(LbTotal.Content.ToString());
+        }  
+    }
 
     private class ProductDetail
     {
@@ -148,4 +159,6 @@ public partial class AddingExportSlip : Page
         public double LastPrice { get; set; }
 
     }
+
+    
 }

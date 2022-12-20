@@ -227,7 +227,7 @@
                     <Label Content="Total" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0"
                            FontFamily="Poppins"
                            FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
-                    <Label Name="LbTotal" Content="12.255.2" Height="48" Width="165" Margin="20,10,0,0"
+                    <Label Name="LbTotal" Content="0" Height="48" Width="165" Margin="20,10,0,0"
                            FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
                 </WrapPanel>
             </WrapPanel>
@@ -271,7 +271,9 @@
                         Width="170"
                         Height="40">
                         <TextBox
+                            Name="TbPaid"
                             BorderThickness="0"
+                            TextChanged="TbPaid_TextChanged"
                             Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbQuantity_PreviewTextInput" />
                     </Border>
                 </WrapPanel>
@@ -309,7 +311,7 @@
                     <Label Content="Remaining" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0"
                            FontFamily="Poppins"
                            FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
-                    <Label Name="LbRemaining" Content="12.255.255" Height="48" Width="165" Margin="20,10,0,0"
+                    <Label Name="LbRemaining" Content="0" Height="48" Width="165" Margin="20,10,0,0"
                            FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
                 </WrapPanel>
             </WrapPanel>

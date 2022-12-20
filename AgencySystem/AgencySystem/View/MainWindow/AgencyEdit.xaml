@@ -5,24 +5,38 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:AgencySystem.View.MainWindow"
         mc:Ignorable="d"
-        Height="600" Width="800">
+        Height="600" Width="600"
+        Background="#5E8397">
     <Window.Resources>
         <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
     </Window.Resources>
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <!--Cancel Button-->
+        <Border
+            Grid.Row="1"
+            Style="{StaticResource CancelButtonBorderStyle}"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="0 0 150 20">
+            <Button
+                Content="Cancel"
+                Style="{StaticResource CancelButtonStyle}"/>
+        </Border>
         <!--Confirm Button-->
-        <Button
-            Style="{StaticResource TabButtonCancel}"
-            Content="Cancel" Height="30" HorizontalAlignment="Right"
-            Margin="0 0 110 10" VerticalAlignment="Bottom" Width="90" />
-        <!--Confirm Button-->
-        <Button
-            Style="{StaticResource TabButton}"
-            Content="Confirm" Height="30" HorizontalAlignment="Right"
-            Margin="0 0 10 10" VerticalAlignment="Bottom" Width="90" />
-        <Border CornerRadius="20"
-                Background="#705E8397">
+        <Border 
+            Grid.Row="1"
+            Style="{StaticResource ConfirmButtonBorderStyle}"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="0 0 20 20">
+            <Button
+                Style="{StaticResource ConfirmButtonStyle}"/>
+        </Border>
+        <Border>
 
             <WrapPanel
                 Orientation="Vertical"

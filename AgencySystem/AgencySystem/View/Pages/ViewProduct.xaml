@@ -6,6 +6,9 @@
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
       mc:Ignorable="d"
       Height="720" Width="1280">
+    <Page.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
@@ -15,27 +18,27 @@
         <WrapPanel
             Grid.Row="0"
             Orientation="Horizontal"
-            Margin="10 60 0 0"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Left">
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="0 50 0 0">
 
             <!--label-->
             <Label
                 Content="Product"
-                FontWeight="Bold"
-                Margin="50 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="100 0 0 0"/>
             <Label
                 Content="Unit"
-                FontWeight="Bold"
-                Margin="80 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="145 0 0 0" />
             <Label
                 Content="Quantity"
-                FontWeight="Bold"
-                Margin="35 0" />
+                Style="{StaticResource ViewLabel}" 
+                Margin="100 0 0 0"/>
             <Label
                 Content="Price"
-                FontWeight="Bold"
-                Margin="155 0 0 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="175 0 0 0"/>
         </WrapPanel>
 
         <ScrollViewer
@@ -43,11 +46,11 @@
             Grid.Row="1"
             Width="1200"
             Height="505"
-            VerticalAlignment="Center"
+            VerticalAlignment="top"
             BorderBrush="Transparent"
-            Background="Transparent"
-            HorizontalAlignment="Left"
-            Margin="10 0 0 100"
+            Background="#FFF4F4F4"
+            HorizontalAlignment="center"
+            Margin="0 -50 0 0"
             VerticalScrollBarVisibility="Hidden">
             
             

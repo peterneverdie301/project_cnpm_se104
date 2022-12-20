@@ -5,49 +5,52 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
       mc:Ignorable="d"
-      Title="ViewExportSlip" Height="720" Width="1280">
+      Height="720" Width="1280">
+    <Page.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
             <RowDefinition Height="8*" />
         </Grid.RowDefinitions>
-        
+
         <WrapPanel
             Grid.Row="0"
             Orientation="Horizontal"
-            Margin="10 60 0 0"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Left">
+            VerticalAlignment="top"
+            HorizontalAlignment="left"
+            Margin="0 50 0 0">
 
             <!--label-->
             <Label
                 Content="Agency"
-                FontWeight="Bold"
-                Margin="20 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="120 0 0 0" />
             <Label
                 Content="Product"
-                FontWeight="Bold"
-                Margin="20 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="130 0 0 0"  />
             <Label
                 Content="Quantity"
-                FontWeight="Bold"
-                Margin="35 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="75 0 0 0"  />
             <Label
                 Content="Unit"
-                FontWeight="Bold"
-                Margin="70 0 0 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="15 0 0 0"  />
             <Label
                 Content="Unit Price"
-                FontWeight="Bold"
-                Margin="155 0 0 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="100 0 0 0"  />
             <Label
                 Content="Last Price"
-                FontWeight="Bold"
-                Margin="155 0 0 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="60 0 0 0"  />
             <Label
                 Content="Time to Receipt"
-                FontWeight="Bold"
-                Margin="155 0 0 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="50 0 0 0" />
         </WrapPanel>
 
         <ScrollViewer
@@ -55,11 +58,11 @@
             Grid.Row="1"
             Width="1200"
             Height="505"
-            VerticalAlignment="Center"
+            VerticalAlignment="top"
+            HorizontalAlignment="center"
             BorderBrush="Transparent"
-            Background="Transparent"
-            HorizontalAlignment="Left"
-            Margin="10 0 0 100"
+            Background="#FFF4F4F4"
+            Margin="0 -50 0 0"
             VerticalScrollBarVisibility="Hidden">
         </ScrollViewer>
     </Grid>

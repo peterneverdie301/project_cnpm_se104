@@ -5,6 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:AgencySystem.View.Components"
              mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70" />
@@ -56,28 +59,24 @@
         <Label x:Name="LbDebt" Content="100.000$" Grid.Column="4" HorizontalAlignment="Left"
                Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
                Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
+        
         <Border Grid.Column="6" HorizontalAlignment="Left" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center"
-                Width="81" Height="30" Grid.RowSpan="2" Background="#FF29CC97" BorderThickness="1"
-                CornerRadius="14">
+                Width="81" Height="30" Grid.RowSpan="2" BorderThickness="1"
+                CornerRadius="14"
+                Style="{StaticResource ConfirmButtonBorderStyle}">
             <Button
                 Name="btnEdit"
-                Content="EDIT"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Foreground="White"
-                FontSize="14" />
+                Content="Edit"
+                Style="{StaticResource ConfirmButtonStyle}" />
         </Border>
         <Border
                 Grid.Column="7" HorizontalAlignment="Left"
                 Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="81" Height="30" Grid.RowSpan="2"
-                Background="#FF7F57" CornerRadius="14" BorderThickness="1">
+                CornerRadius="14" BorderThickness="1" Style="{StaticResource CancelButtonBorderStyle}">
             <Button
                 Name="btnDelete"
                 Content="Delete"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Foreground="White"
-                FontSize="14" />
+                Style="{StaticResource CancelButtonStyle}" />
         </Border>
     </Grid>
 </UserControl>

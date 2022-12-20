@@ -10,11 +10,12 @@
             <ColumnDefinition Width="70" />
             <ColumnDefinition Width="200" />
             <ColumnDefinition Width="150" />
-            <ColumnDefinition Width="250" />
-            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
             <ColumnDefinition Width="50" />
-            <ColumnDefinition Width="85" />
-            <ColumnDefinition Width="90" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="2" />
@@ -22,7 +23,7 @@
             <RowDefinition Height="5*" />
         </Grid.RowDefinitions>
         <Rectangle Fill="#FFC4C4C4" HorizontalAlignment="Left" Height="2" Stroke="#00000000"
-                   VerticalAlignment="Top" Width="2000" Grid.ColumnSpan="8" RadiusX="1" RadiusY="0.4"
+                   VerticalAlignment="Top" Width="2000" Grid.ColumnSpan="9" RadiusX="1" RadiusY="0.4"
                    Grid.RowSpan="2" />
         <Label x:Name="LbAgency" Content="Agency" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0"
                Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733"
@@ -59,6 +60,12 @@
                Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
                Foreground="#FF252733" FontSize="14" Width="235" />
         <Label x:Name="LbLastPriceofAgency" Content="350" Grid.Column="7" HorizontalAlignment="Left"
+               Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
+               Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
+        <Label x:Name="LbTime" Content="Time" Grid.Column="8" HorizontalAlignment="Left"
+               Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
+               Foreground="#FF252733" FontSize="14" Width="235" />
+        <Label x:Name="LbTimeofAgency" Content="24-12-2022" Grid.Column="8" HorizontalAlignment="Left"
                Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
                Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
     </Grid>

@@ -82,9 +82,11 @@
                     Content="Add" Height="30" Width="90" />
                     <!--Remove Button-->
                     <Button
+                    Name="BtRemove"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Margin="20 20 0 0"
+                    Click="HandleRemoveType"
                     Style="{StaticResource TabButtonCancel}"
                     Content="Remove" Height="30" Width="90" />
                 </WrapPanel>
@@ -130,7 +132,7 @@
                         Name="CbTypeList"
                         BorderThickness="0"
                         ItemContainerStyle="{DynamicResource theComboBoxItem}"
-                        Style="{StaticResource ComboBoxStyle}" />
+                        Style="{StaticResource theComboBox}" />
                 </Border>
 
                 <!--Add Button-->
@@ -192,6 +194,7 @@
                     <Button
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
+                    Click="HandleRemoveUnit"
                     Margin="20 20 0 0"
                     Style="{StaticResource TabButtonCancel}"
                     Content="Remove" Height="30" Width="90" />
@@ -231,7 +234,7 @@
                         Name="CbUnitList"
                         BorderThickness="0"
                         ItemContainerStyle="{DynamicResource theComboBoxItem}"
-                        Style="{StaticResource ComboBoxStyle}" />
+                        Style="{StaticResource theComboBox}" />
                 </Border>
                 <!--Add Button-->
             </WrapPanel>

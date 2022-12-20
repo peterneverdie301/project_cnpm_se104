@@ -73,7 +73,20 @@ public partial class Manage : Page
             MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Agency Management");
         }
     }
-
+    private async void HandleRemoveType(object sender, RoutedEventArgs e)
+    {
+            TypeOfAgency typeOfAgency = new TypeOfAgency();
+            typeOfAgency.Id = TbType.Text;
+            firestore.DeleteData(Utils.Collection.TypeOfAngency.ToString(), typeOfAgency.Id);
+            MessageBox.Show("Xóa loại đại lý thành công", "Agency Management");
+    }
+    private async void HandleRemoveUnit(object sender, RoutedEventArgs e)
+    {
+        Unit unit = new Unit();
+        unit.Id = TbUnit.Text;
+        firestore.DeleteData(Utils.Collection.Units.ToString(), unit.Id);
+        MessageBox.Show("Xóa đơn vị tính thành công", "Agency Management");
+    }
     private void TbType_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
     {
         Regex regex = new Regex("[^0-9]+");
@@ -85,4 +98,5 @@ public partial class Manage : Page
         Regex regex = new Regex("[^0-9]+");
         e.Handled = regex.IsMatch(e.Text);
     }
+
 }

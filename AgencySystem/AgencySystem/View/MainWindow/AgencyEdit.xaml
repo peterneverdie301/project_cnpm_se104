@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:AgencySystem.View.MainWindow"
         mc:Ignorable="d"
         Height="600" Width="600"
-        Background="#5E8397">
+        Background="#5E8397"
+        WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
     </Window.Resources>

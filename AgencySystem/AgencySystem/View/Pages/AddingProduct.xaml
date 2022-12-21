@@ -91,5 +91,78 @@
                 </Border>
             </WrapPanel>
         </Border>
+        
+        <Image 
+            Height="200"
+            Width="200"
+            Source="../Assets/image/decor_product.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="left"
+            IsEnabled="False"
+            Margin="180 0 0 200"/>
+        <Image 
+            Height="150"
+            Width="150"
+            Source="../Assets/image/decor_product_snack.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            IsEnabled="False"
+            Margin="240 0 0 180"/>
+        <Image 
+            Height="150"
+            Width="150"
+            Source="../Assets/image/decor_product_candy.png"
+            VerticalAlignment="top"
+            HorizontalAlignment="left"
+            IsEnabled="False"
+            Margin="300 0 0 0"/>
+        <Image 
+            Height="150"
+            Width="150"
+            Source="../Assets/image/decor_product_coca.png"
+            VerticalAlignment="bottom"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="0 0 180 180"/>
+        <Image 
+            Height="100"
+            Width="100"
+            Source="../Assets/image/decor_product_gum.png"
+            VerticalAlignment="top"
+            HorizontalAlignment="right"
+            IsEnabled="False"
+            Margin="0 -10 300 0"/>
+        <Image 
+            Height="200"
+            Width="200"
+            Source="../Assets/image/decor_product_tumlum.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="right"
+            IsEnabled="False"
+            Margin="0 0 160 210"/>
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_product_new.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 170 0 0"/>
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_product_unit.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 245 0 0"/>
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_product_price.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 320 0 0"/>
     </Grid>
 </Page>

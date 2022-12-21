@@ -106,5 +106,55 @@
                 </Grid>
             </Grid>
         </Border>
+        
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_name.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 173 0 0"/>
+        
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_receipt_proceed.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 250 0 0"/>
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_time.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 321 0 0"/>
+        <Image 
+            Height="200"
+            Width="200"
+            Source="../Assets/image/decor_export.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="left"
+            IsEnabled="False"
+            Margin="180 0 0 200"/>
+        <Image 
+            Height="200"
+            Width="200"
+            Source="../Assets/image/decor_receipt_bill.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="right"
+            IsEnabled="False"
+            Margin="0 0 160 210"/>
+        <Image 
+            Height="100"
+            Width="100"
+            Source="../Assets/image/decor_receipt_arrow.png"
+            VerticalAlignment="top"
+            HorizontalAlignment="right"
+            IsEnabled="False"
+            Margin="0 -10 250 0"/>
     </Grid>
 </Page>

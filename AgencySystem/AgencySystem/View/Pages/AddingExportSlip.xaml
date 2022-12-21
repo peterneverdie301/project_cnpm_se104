@@ -21,7 +21,7 @@
             Grid.Column="1"
             VerticalAlignment="Bottom"
             HorizontalAlignment="Right"
-            Margin="0 0 50 170"
+            Margin="0 0 70 170"
             Style="{StaticResource ConfirmButtonBorderStyle}">
             <Button
                 Name="BtAddData"
@@ -218,7 +218,7 @@
                 <Rectangle Height="80" Stroke="White" Width="80" Margin="15,0,0,50" RadiusX="20" RadiusY="20">
                     <Rectangle.Fill>
 
-                        <ImageBrush />
+                        <ImageBrush ImageSource="../Assets/image/decor_exportslip_total.png"/>
 
                     </Rectangle.Fill>
                 </Rectangle>
@@ -252,10 +252,10 @@
                     ShadowDepth="2" />
             </Border.Effect>
             <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330">
-                <Rectangle Height="80" Stroke="White" Width="80" Margin="15,0,10,50" RadiusX="20" RadiusY="20">
+                <Rectangle Height="80" Stroke="Transparent" Width="80" Margin="15,0,10,50" RadiusX="20" RadiusY="20">
                     <Rectangle.Fill>
 
-                        <ImageBrush />
+                        <ImageBrush ImageSource="../Assets/image/decor_exportslip_paid.png"/>
 
                     </Rectangle.Fill>
                 </Rectangle>
@@ -302,7 +302,7 @@
                 <Rectangle Height="80" Stroke="White" Width="80" Margin="15,0,0,50" RadiusX="20" RadiusY="20">
                     <Rectangle.Fill>
 
-                        <ImageBrush />
+                        <ImageBrush ImageSource="../Assets/image/decor_exportslip_remaining.png"/>
 
                     </Rectangle.Fill>
                 </Rectangle>
@@ -316,6 +316,70 @@
                 </WrapPanel>
             </WrapPanel>
         </Border>
+        
+        <Image 
+            Grid.Column="0"
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_name.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="440 44 0 0"/>
+        <Image 
+            Grid.Column="0"
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_time.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="440 110 0 0"/>
+        <Image 
+            Grid.Column="0"
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_product_new.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="400 225 0 0"/>
+        
+        <Image 
+            Grid.Column="0"
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_exportslip_quantity.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="400 300 0 0"/>
+        <Image 
+            Grid.Column="0"
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_product_unit.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="400 375 0 0"/>
+        <Image 
+            Grid.Column="1"
+            Height="100"
+            Width="60"
+            Source="../Assets/image/decor_exportslip_arrow.png"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            IsEnabled="False"
+            Margin="0 0 0 200"/>
+        <Image 
+            Grid.Column="1"
+            Height="100"
+            Width="100"
+            Source="../Assets/image/decor_exportslip_car.png"
+            VerticalAlignment="center"
+            HorizontalAlignment="right"
+            IsEnabled="False"
+            Margin="0 0 0 200"/>
     </Grid>
-
 </Page>

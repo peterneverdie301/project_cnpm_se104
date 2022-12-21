@@ -92,16 +92,11 @@ public partial class AddingExportSlip : Page
         //Adding export slip detail
         foreach (var item in productDetails)
         {
-            Item product = (Item)products.Find((value) =>
-            {
-                Item data = value as Item;
-                return data.ItemsName == CbProduct.Text;
-            });
             ExportSlipDetail detail = new ExportSlipDetail()
             {
                 Amount = item.Quantity,
                 ExportSlipId = exportSlip.ExportSlipId,
-                ItemsId = product?.ItemsId,
+                ItemsId = item.Id,
             };
             firestore.AddData(Utils.Collection.ExportSlipDetail.ToString(), exportSlip.ExportSlipId + "-" + item.Id, detail);
         }
@@ -117,7 +112,7 @@ public partial class AddingExportSlip : Page
         } else
         {
             dataDebt = new AgencyDebt();
-            dataDebt.Year = TbDate.DisplayDate.Month;
+            dataDebt.Month = TbDate.DisplayDate.Month;
             dataDebt.Year = TbDate.DisplayDate.Year;
             dataDebt.AgencyId = agency.AgencyId;
             dataDebt.FirsDebt = double.Parse(LbRemaining.Content.ToString());
@@ -139,7 +134,7 @@ public partial class AddingExportSlip : Page
         Item item = (Item)products.Find((value) =>
         {
             Item data = value as Item;
-            return data?.ItemsName == CbProduct.Text;
+            return data?.ItemsName == CbProduct.SelectedItem;
         });
         ProductDetail productDetail = new ProductDetail()
         {

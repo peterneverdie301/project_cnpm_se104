@@ -9,17 +9,11 @@
         <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
     </Page.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*" />
-            <ColumnDefinition Width="4*" />
-        </Grid.ColumnDefinitions>
-
         <!--Confirm Button-->
         <Border 
             VerticalAlignment="Bottom"
             HorizontalAlignment="Right"
             Margin="0 0 50 170"
-            Grid.Column="1"
             Style="{StaticResource ConfirmButtonBorderStyle}">
             <Button
                 Style="{StaticResource ConfirmButtonStyle}"
@@ -28,7 +22,7 @@
         </Border>
         
 
-        <Border Grid.Column="0"
+        <Border
                 Background="#80ECDABF"
                 CornerRadius="30"
                 BorderThickness="1"
@@ -46,7 +40,8 @@
                 <!--Agent's Name label-->
                 <Label
                     Content="Agent's Name"
-                    Style="{StaticResource AddItemStyle}" />
+                    Style="{StaticResource AddItemStyle}">
+                </Label>
 
                 <!--Agent's Name textBox-->
                 <Border
@@ -157,18 +152,72 @@
                 </ComboBox>
             </WrapPanel>
         </Border>
-
-        <!--listView Agency -->
-        <Border Grid.Column="1"
-                Background="#6F8875"
-                BorderBrush="#6F8875"
-                BorderThickness="1"
-                CornerRadius="30"
-                Width="500"
-                Height="500"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center">
-
-        </Border>
+        
+        <Image 
+            Height="200"
+            Width="200"
+            Source="../Assets/image/decor_agency.png"
+            VerticalAlignment="center"
+            HorizontalAlignment="right"
+            IsEnabled="False"
+            Margin="0 0 50 250"/>
+        
+        <Image 
+            Height="300"
+            Width="300"
+            Source="../Assets/image/decor_agency1.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            IsEnabled="False"
+            Margin="120 -50 0 0"/>
+        
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_name.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 63 0 0"/>
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_phone.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 140 0 0"/>
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_address.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 215 0 0"/>
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_type.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 292 0 0"/>
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_time.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 360 0 0"/>
+        <Image 
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_district.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="center"
+            IsEnabled="False"
+            Margin="420 420 0 0"/>
     </Grid>
 </Page>

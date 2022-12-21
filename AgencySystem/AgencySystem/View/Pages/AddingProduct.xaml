@@ -10,36 +10,29 @@
         <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
     </Page.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*" />
-            <ColumnDefinition Width="4*" />
-        </Grid.ColumnDefinitions>
 
         <!--Confirm Button-->
         <Border
-            Grid.Column="1"
             VerticalAlignment="Bottom"
             HorizontalAlignment="Right"
             Margin="0 0 50 170"
             Style="{StaticResource ConfirmButtonBorderStyle}">
-            
             <Button
-                Grid.Column="1"
                 Content="Add Product"
                 Style="{StaticResource ConfirmButtonStyle}"
-                Click="HandleAddItem"/>
+                Click="HandleAddItem" />
 
         </Border>
-       
-        <Border Grid.Column="0"
-                Background="#80ECDABF"
-                CornerRadius="30"
-                BorderThickness="1"
-                BorderBrush="#ECDABF"
-                Width="650"
-                Height="500"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center">
+
+        <Border
+            Background="#80ECDABF"
+            CornerRadius="30"
+            BorderThickness="1"
+            BorderBrush="#ECDABF"
+            Width="650"
+            Height="500"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center">
 
             <WrapPanel
                 Orientation="Vertical"
@@ -66,27 +59,23 @@
 
                 <!--Unit label-->
                 <Label
-                                Content="Unit"
-                                Style="{StaticResource AddItemStyle}" />
+                    Content="Unit"
+                    Style="{StaticResource AddItemStyle}" />
 
                 <!--Unit textBox-->
                 <ComboBox
-                                Name="CbUnit"
-                                Style="{DynamicResource theComboBox}"
-                                Padding="15,5,15,5"
-                                HorizontalContentAlignment="Left"
-                                VerticalAlignment="Center"
-                                MinWidth="100"  
-                                MaxWidth="375"
-                                ItemContainerStyle="{DynamicResource theComboBoxItem}">
+                    Name="CbUnit"
+                    Style="{DynamicResource theComboBox}"
+                    Padding="15,5,15,5"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    MaxWidth="375"
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
                 </ComboBox>
 
-                <!--Quantity label-->
-
-                <!--Quantity textBox-->
-
                 <!--Price-->
-                <Label  
+                <Label
                     Content="Price"
                     Style="{StaticResource AddItemStyle}" />
                 <Border
@@ -101,19 +90,6 @@
                         Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbPrice_PreviewTextInput" />
                 </Border>
             </WrapPanel>
-        </Border>
-
-        <!--listView Agency -->
-        <Border Grid.Column="1"
-                Background="#6F8875"
-                BorderBrush="#6F8875"
-                BorderThickness="1"
-                CornerRadius="30"
-                Width="500"
-                Height="500"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center">
-
         </Border>
     </Grid>
 </Page>

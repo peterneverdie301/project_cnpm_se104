@@ -17,7 +17,8 @@ go
 create table TypeOfAgency
 (
 	Id varchar(10) primary key not null,
-	Type int
+	Type int,
+	MaxDebt money,
 )
 go
 

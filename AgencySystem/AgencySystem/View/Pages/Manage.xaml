@@ -183,7 +183,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom" 
-                    RenderTransformOrigin="0.482,0.935" Margin="0,50,0,0">
+                    RenderTransformOrigin="0.482,0.935" Margin="0,60,0,0">
                     <!--Add Button-->
                     <Border
                         Margin="0 0 15 0"

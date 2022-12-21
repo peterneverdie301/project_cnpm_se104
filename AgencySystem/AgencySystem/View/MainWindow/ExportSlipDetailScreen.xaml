@@ -1,0 +1,24 @@
+﻿<Window x:Class="AgencySystem.View.MainWindow.ExportSlipDetailScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgencySystem.View.MainWindow"
+        mc:Ignorable="d"
+        Title="ExportSlipDetail" Height="450" Width="626">
+    <Grid>
+        <ListView Margin="10" FontFamily="Poppins" FontWeight="Bold" Name="lvProduct" Background="Transparent"
+                      BorderBrush="Transparent">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" Width="30" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Product" Width="120" DisplayMemberBinding="{Binding Product}" />
+                    <GridViewColumn Header="Quantity" Width="70" DisplayMemberBinding="{Binding Quantity}" />
+                    <GridViewColumn Header="Unit" Width="150" DisplayMemberBinding="{Binding Unit}" />
+                    <GridViewColumn Header="Unit Price" Width="120" DisplayMemberBinding="{Binding UnitPrice}" />
+                    <GridViewColumn Header="Last Price" Width="120" DisplayMemberBinding="{Binding LastPrice}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

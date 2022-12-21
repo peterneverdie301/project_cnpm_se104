@@ -28,12 +28,8 @@
                 Style="{StaticResource ViewLabel}"
                 Margin="100 0 0 0"/>
             <Label
-                Content="Type of Agency"
+                Content="Time to receipt"
                 Style="{StaticResource ViewLabel}"
-                Margin="200 0 0 0"/>
-            <Label
-                Content="District"
-                Style="{StaticResource ViewLabel}" 
                 Margin="200 0 0 0"/>
             <Label
                 Content="Proceeds"

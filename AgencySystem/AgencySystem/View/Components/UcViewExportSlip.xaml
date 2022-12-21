@@ -66,6 +66,7 @@
             CornerRadius="14" BorderThickness="1"
             Style="{DynamicResource ConfirmButtonBorderStyle}">
             <Button
+                x:Name="BtDetail"
                 Content="Detail"
                 Style="{StaticResource ConfirmButtonStyle}"/>
         </Border>

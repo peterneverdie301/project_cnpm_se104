@@ -14,7 +14,6 @@
             <ColumnDefinition Width="275" />
             <ColumnDefinition Width="335" />
             <ColumnDefinition Width="275" />
-            <ColumnDefinition Width="250" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="2" />
@@ -35,24 +34,17 @@
                Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Width="185" Foreground="#FFC5C7CD"
                FontWeight="Bold" />
 
-        <Label x:Name="LbType" Content="Type" Grid.Column="2" HorizontalAlignment="Left"
+        <Label Content="Time" Grid.Column="2" HorizontalAlignment="Left"
                Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
                Foreground="#FF252733" FontSize="14" Width="140" />
-        <Label x:Name="LbTypeOfAgency" Content="1" Grid.Column="2" HorizontalAlignment="Left" Margin="10,0,0,0"
+        <Label x:Name="LbTime" Content="1" Grid.Column="2" HorizontalAlignment="Left" Margin="10,0,0,0"
                Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Width="138" Foreground="#FFC5C7CD"
                FontWeight="Bold" Height="34" />
 
-        <Label x:Name="LbDistrict" Content="District" Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0"
-               Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733"
-               FontSize="14" Width="240" />
-        <Label x:Name="LbDistrictOfAgency" Content="Quan 12" Grid.Column="3" HorizontalAlignment="Left"
-               Margin="10,0,0,0"
-               Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Foreground="#FFC5C7CD" FontWeight="Bold" />
-
-        <Label x:Name="LbProceeds" Content="Proceeds" Grid.Column="4" HorizontalAlignment="Left"
+        <Label  Content="Proceeds" Grid.Column="3" HorizontalAlignment="Left"
                Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
                Foreground="#FF252733" FontSize="14" Width="235" />
-        <Label x:Name="LbProceedsofAgency" Content="120.000$" Grid.Column="4" HorizontalAlignment="Left"
+        <Label x:Name="LbProceeds" Content="120.000$" Grid.Column="3" HorizontalAlignment="Left"
                Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
                Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
     </Grid>

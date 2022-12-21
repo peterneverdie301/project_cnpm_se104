@@ -14,6 +14,9 @@ namespace DataModels.Models
         [FirestoreProperty]
         public string Name { get; set; }
         [FirestoreProperty]
-        public int? Value { get; set; }
+        public int Current { get; set; }
+        [FirestoreProperty]
+        public int Max { get; set; }
+
     }
 }

@@ -439,7 +439,7 @@
             Grid.Column="2"
             Height="100"
             Width="120"
-            Source="../Assets/image/decor_product_milk_face.png"
+            Source="../Assets/image/decor_view_receipt_guy.png"
             VerticalAlignment="Bottom"
             HorizontalAlignment="right"
             IsEnabled="False"

@@ -20,7 +20,7 @@
             Orientation="Horizontal"
             VerticalAlignment="top"
             HorizontalAlignment="left"
-            Margin="0 50 0 0">
+            Margin="0 60 0 0">
 
             <!--label-->
             <Label
@@ -61,5 +61,95 @@
             Margin="0 -50 0 0"
             VerticalScrollBarVisibility="Hidden">
         </ScrollViewer>
+        <Image 
+            Grid.Row="0"
+            Height="100"
+            Width="150"
+            Source="../Assets/image/decor_street.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="240 -20 0 0"
+            IsEnabled="False"/>
+        <Image 
+            Grid.Row="0"
+            Height="100"
+            Width="150"
+            Source="../Assets/image/decor_street.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="320 -20 0 0"
+            IsEnabled="False"/>
+        <Image 
+            Grid.Row="0"
+            Height="100"
+            Width="150"
+            Source="../Assets/image/decor_street.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="400 -20 0 0"
+            IsEnabled="False"/>
+        <Image 
+            Grid.Row="0"
+            Height="100"
+            Width="150"
+            Source="../Assets/image/decor_street.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="480 -20 0 0"
+            IsEnabled="False"/>
+        <Image 
+            Grid.Row="0"
+            Height="100"
+            Width="150"
+            Source="../Assets/image/decor_street.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="560 -20 0 0"
+            IsEnabled="False"/>
+        <Image 
+            Grid.Row="0"
+            Height="100"
+            Width="150"
+            Source="../Assets/image/decor_street.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="640 -20 0 0"
+            IsEnabled="False"/>
+        <Image 
+            Grid.Row="0"
+            Height="100"
+            Width="150"
+            Source="../Assets/image/decor_street.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="720 -20 0 0"
+            IsEnabled="False"/>
+        <Image 
+            Grid.Row="0"
+            Height="100"
+            Width="150"
+            Source="../Assets/image/decor_street.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="800 -20 0 0"
+            IsEnabled="False"/>
+        <Image 
+            Grid.Row="0"
+            Height="100"
+            Width="100"
+            Source="../Assets/image/decor_overview_girl.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="-20 0 0 0"
+            IsEnabled="False"/>
+        <Image 
+            Grid.Row="0"
+            Height="70"
+            Width="70"
+            Source="../Assets/image/decor_exportslip_car.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="right"
+            Margin="0 -22 100 0"
+            IsEnabled="False"/>
     </Grid>
 </Page>

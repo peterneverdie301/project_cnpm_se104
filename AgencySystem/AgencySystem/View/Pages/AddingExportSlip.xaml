@@ -183,15 +183,26 @@
                     Style="{StaticResource AddItemStyle}" />
 
                 <!--Unit textBox-->
-                <Label
-                    Name="CbUnit"
-                    Padding="15,5,15,5"
-                    HorizontalContentAlignment="Left"
-                    VerticalAlignment="Center"
-                    MinWidth="100"
-                    MaxWidth="375"
-                />
-
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    BorderBrush="white"
+                    Width="350"
+                    Height="40">
+                    <Label
+                        Name="CbUnit"
+                        Background="white"
+                        VerticalContentAlignment="Center"
+                        Width="350"
+                        Height="40"
+                        FontSize="20"
+                        FontFamily="Mulish"
+                        HorizontalContentAlignment="Left"
+                        VerticalAlignment="Center"
+                        MinWidth="100"
+                        MaxWidth="375"
+                    />
+                </Border>
             </WrapPanel>
         </Border>
 

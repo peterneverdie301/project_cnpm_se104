@@ -21,6 +21,6 @@ public partial class ReportDebt : Page
         listView.Items.Add(new UcDebt());
         listView.Items.Add(new UcDebt());
         listView.Items.Add(new UcDebt());
-        LvReportDebt.Content = listView;
+        SvReportDebt.Content = listView;
     }
 }

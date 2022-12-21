@@ -6,7 +6,10 @@
       xmlns:local="clr-namespace:AgencySystem.View.Pages"
       xmlns:controls="clr-namespace:AgencySystem.View.Components"
       mc:Ignorable="d"
-      Title="ReportSales" Height="720" Width="1280">
+      Height="650" Width="1280">
+    <Page.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*" />
@@ -15,38 +18,56 @@
         <WrapPanel
             Grid.Row="0"
             Orientation="Horizontal"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center">
+            VerticalAlignment="top"
+            HorizontalAlignment="Left"
+            Margin="0 50 0 0">
 
             <!--label-->
             <Label
                 Content="Agency"
-                FontWeight="Bold"
-                Margin="50 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="280 0 0 0" />
             <Label
                 Content="First Debt"
-                FontWeight="Bold"
-                Margin="40 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="120 0 0 0" />
             <Label
                 Content="Incurred"
-                FontWeight="Bold"
-                Margin="50 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="70 0 0 0" />
             <Label
                 Content="Final Debt"
-                FontWeight="Bold"
-                Margin="50 0" />
+                Style="{StaticResource ViewLabel}"
+                Margin="160 0 0 0"/>
+            
+            <!--Pick time label-->
+            <Label
+                Content="Time"
+                Style="{StaticResource ViewLabel}"
+                Margin="130 0 0 0"/>
+            <ComboBox
+                Style="{DynamicResource theComboBox}"
+                Padding="15,0,15,15"
+                Background="#705E8397"
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Center"
+                MinWidth="100"
+                MaxWidth="375"
+                ItemContainerStyle="{DynamicResource theComboBoxItem}">
+            </ComboBox>
         </WrapPanel>
 
         <ScrollViewer
-            Name="WpListOfAgency"
             Grid.Row="1"
-            Width="800"
-            Height="505"
-            VerticalAlignment="Center"
+            Name="SvListOfAgency"
+            Width="850"
+            Height="450"
+            VerticalAlignment="Top"
             HorizontalAlignment="center"
-            Margin="10 0 0 120"
+            VerticalContentAlignment="center"
+            Margin="0 -50 0 0"
             VerticalScrollBarVisibility="Hidden">
-            
+
         </ScrollViewer>
     </Grid>
 </Page>

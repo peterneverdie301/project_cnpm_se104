@@ -21,7 +21,7 @@
             <RowDefinition Height="5*" />
             <RowDefinition Height="5*" />
         </Grid.RowDefinitions>
-        <Rectangle Fill="#FFC4C4C4" HorizontalAlignment="Left" Height="2" Stroke="#00000000"
+        <Rectangle Fill="#FFC4C4C4" HorizontalAlignment="Left" Height="4" Stroke="#00000000"
                    VerticalAlignment="Top" Width="2000" Grid.ColumnSpan="8" RadiusX="1" RadiusY="0.4"
                    Grid.RowSpan="2" />
         <Label x:Name="LbRequestId" Visibility="Collapsed" Grid.Column="1" HorizontalAlignment="Left"

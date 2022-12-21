@@ -17,6 +17,8 @@ namespace DataModels.Models
         public string Date { get; set; }
         [FirestoreProperty]
         public double? AmountPaid { get; set; }
+        [FirestoreProperty]
+        public double? Total { get; set; }
 
     }
 }

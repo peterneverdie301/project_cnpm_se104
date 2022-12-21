@@ -38,7 +38,10 @@ public partial class AddingExportSlip : Page
         {
             if (agency.AgencyName != null)
             {
-                cbxAgency.Items.Add(agency.AgencyName);
+                Label lbl = new Label();
+                lbl.Content = agency.AgencyName;
+                lbl.Tag = agency;
+                cbxAgency.Items.Add(lbl);
             }
         }
         products = new List<object>();
@@ -50,15 +53,15 @@ public partial class AddingExportSlip : Page
                 CbProduct.Items.Add(item.ItemsName);
             }
         }
-        units = new List<object>();
-        units = await firestore.GetAllDocument(Utils.Collection.Units.ToString());
-        foreach (Unit unit in units)
-        {
-            if (unit.Value != null)
-            {
-                CbUnit.Items.Add(unit.Value);
-            }
-        }
+        //units = new List<object>();
+        //units = await firestore.GetAllDocument(Utils.Collection.Units.ToString());
+        //foreach (Unit unit in units)
+        //{
+        //    if (unit.Value != null)
+        //    {
+        //        CbUnit.Items.Add(unit.Value);
+        //    }
+        //}
     }
     
     // Add data to database
@@ -82,6 +85,7 @@ public partial class AddingExportSlip : Page
             Date = TbDate.Text,
             AmountPaid = double.Parse(TbPaid.Text),
             ExportSlipId = await firestore.GetIdForObject(Utils.Collection.ExportSlip.ToString()),
+            Total = double.Parse(LbTotal.Content.ToString()),
         };
         firestore.AddData(Utils.Collection.ExportSlip.ToString(), exportSlip.ExportSlipId, exportSlip);
 
@@ -127,7 +131,7 @@ public partial class AddingExportSlip : Page
     //Add product into table
     private void BtAddProduct_Click(object sender, RoutedEventArgs e)
     {
-        if (CbProduct.Text == "" || CbUnit.Text == "" || TbQuantity.Text == "")
+        if (CbProduct.Text == "" || TbQuantity.Text == "")
         {
             MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             return;
@@ -142,11 +146,11 @@ public partial class AddingExportSlip : Page
             Id = item.ItemsId,
             Product = item.ItemsName,
             Quantity = int.Parse(TbQuantity.Text),
-            Unit = CbUnit.Text,
+            Unit = CbUnit.Content?.ToString(),
             UnitPrice = item.Price,
             LastPrice = item.Price * int.Parse(TbQuantity.Text),
         };
-        CbUnit.Text = "";
+        CbUnit.Content = "";
         CbProduct.Text = "";
         TbQuantity.Text = "";
         LbTotal.Content = double.Parse(LbTotal.Content.ToString()) + productDetail.LastPrice;
@@ -172,6 +176,17 @@ public partial class AddingExportSlip : Page
         {
             LbRemaining.Content = double.Parse(LbTotal.Content.ToString());
         }  
+    }
+
+    private void CbProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        ComboBox comboBox = sender as ComboBox;
+        Item sp = (Item)products.Find((value) =>
+        {
+            Item temp = value as Item;
+            return temp.ItemsName == comboBox.SelectedItem;
+        });
+        CbUnit.Content = sp?.UnitId;
     }
 
     private class ProductDetail

@@ -31,6 +31,8 @@ public partial class ViewExportSlip : Page
             ucInfo.LbId.Content = "Id: " + slip.AgencyId;
             ucInfo.LbPaid.Content = slip.AmountPaid+ " VNĐ";
             ucInfo.LbTime.Content = slip.Date;
+            ucInfo.LbTotal.Content = slip.Total + "VNĐ";
+            ucInfo.LbRemaining.Content = (slip.Total - slip.AmountPaid) + "VNĐ";
             ucInfo.BtDetail.Tag = slip;
             ucInfo.BtDetail.Click += BtnDetail_Click;
             listBoxSlip.Items.Add(ucInfo);
@@ -41,7 +43,7 @@ public partial class ViewExportSlip : Page
     {
         var btn = sender as Button;
         ExportSlip slip = btn?.Tag as ExportSlip;
-        ExportSlipDetailScreen exportSlipDetail = new ExportSlipDetailScreen();
+        ExportSlipDetailScreen exportSlipDetail = new ExportSlipDetailScreen(slip.ExportSlipId);
         exportSlipDetail.Show();
     }
 }

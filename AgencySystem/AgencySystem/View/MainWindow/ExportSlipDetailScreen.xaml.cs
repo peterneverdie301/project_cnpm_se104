@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataModels.Models;
+using DataModels.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,65 @@ namespace AgencySystem.View.MainWindow
     /// </summary>
     public partial class ExportSlipDetailScreen : Window
     {
-        public ExportSlipDetailScreen()
+        private List<object> listDetail;
+        private List<object> listDataProduct;
+        string exportSlipId;
+        Firestore firestore = new Firestore();
+        public ExportSlipDetailScreen(string exportSlipId)
         {
+
             InitializeComponent();
+            this.exportSlipId = exportSlipId;
+            setUp();
+        }
+
+        private async void setUp()
+        {
+            listDetail = await firestore.GetAllDocument(Utils.Collection.ExportSlipDetail.ToString());
+            listDataProduct = await firestore.GetAllDocument(Utils.Collection.Items.ToString());
+            foreach (var value in listDetail)
+            {
+                ExportSlipDetail exportSlipDetail = value as ExportSlipDetail;
+                if (exportSlipDetail != null && exportSlipDetail.ExportSlipId == exportSlipId)
+                {
+                    Item product = (Item)listDataProduct.Find((value) =>
+                    {
+                        Item item = value as Item;
+                        return item.ItemsId == exportSlipDetail.ItemsId;
+                    });
+                    if (product == null) continue;
+                    ProductDetail detail = new ProductDetail()
+                    {
+                        Id = exportSlipDetail.ItemsId,
+                        Quantity = int.Parse(exportSlipDetail.Amount.ToString()),
+                        Product = product.ItemsName,
+                        Unit = product.UnitId,
+                        UnitPrice = product.Price,
+                        LastPrice = product.Price * int.Parse(exportSlipDetail.Amount.ToString()),
+                    };
+                    lvProduct.Items.Add(detail);
+                } else
+                {
+                    continue;
+                }
+            }
+        }
+
+        private class ProductDetail
+        {
+            public string Id { get; set; }
+
+            public string Product { get; set; }
+
+            public int Quantity { get; set; }
+
+            public string Unit { get; set; }
+
+            public double UnitPrice { get; set; }
+
+            public double LastPrice { get; set; }
+
         }
     }
+
 }

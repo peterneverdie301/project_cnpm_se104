@@ -57,7 +57,7 @@ public partial class ViewProduct : Page
         ProductEdit productEdit = new ProductEdit();
         productEdit.TbProduct.Tag = item?.ItemsId;
         productEdit.TbProduct.Text = item?.ItemsName;
-        productEdit.cbxUnit.Text = item?.UnitId;
+        productEdit.cbxUnit.SelectedItem = item?.UnitId;
         productEdit.TbPrice.Text = item?.Price.ToString();
         productEdit.Show();
     }

@@ -156,6 +156,7 @@
                     VerticalAlignment="Center"
                     MinWidth="100"
                     MaxWidth="375"
+                    SelectionChanged="CbProduct_SelectionChanged"
                     ItemContainerStyle="{DynamicResource theComboBoxItem}">
                 </ComboBox>
 
@@ -182,16 +183,14 @@
                     Style="{StaticResource AddItemStyle}" />
 
                 <!--Unit textBox-->
-                <ComboBox
+                <Label
                     Name="CbUnit"
-                    Style="{DynamicResource theComboBox}"
                     Padding="15,5,15,5"
                     HorizontalContentAlignment="Left"
                     VerticalAlignment="Center"
                     MinWidth="100"
                     MaxWidth="375"
-                    ItemContainerStyle="{DynamicResource theComboBoxItem}">
-                </ComboBox>
+                />
 
             </WrapPanel>
         </Border>

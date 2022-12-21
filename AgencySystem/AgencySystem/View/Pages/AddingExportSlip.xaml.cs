@@ -75,6 +75,7 @@ public partial class AddingExportSlip : Page
             return data.AgencyName == cbxAgency.Text;
         });
 
+        // Adding export slip
         ExportSlip exportSlip = new ExportSlip()
         {
             AgencyId = agency.AgencyId,
@@ -83,6 +84,8 @@ public partial class AddingExportSlip : Page
             ExportSlipId = await firestore.GetIdForObject(Utils.Collection.ExportSlip.ToString()),
         };
         firestore.AddData(Utils.Collection.ExportSlip.ToString(), exportSlip.ExportSlipId, exportSlip);
+
+        //Adding export slip detail
         foreach (var item in productDetails)
         {
             Item product = (Item)products.Find((value) =>
@@ -98,6 +101,26 @@ public partial class AddingExportSlip : Page
             };
             firestore.AddData(Utils.Collection.ExportSlipDetail.ToString(), exportSlip.ExportSlipId + "-" + item.Id, detail);
         }
+
+        //Chang debt agency if has
+        var docId = TbDate.DisplayDate.Month + "-" + TbDate.DisplayDate.Year + "-" + agency.AgencyId;
+
+        var dataDebt = await firestore.GetData(Utils.Collection.AgencyDebt.ToString(), docId) as AgencyDebt;
+        if (dataDebt != null)
+        {
+            dataDebt.Incurred += double.Parse(LbRemaining.Content.ToString());
+            firestore.UpdateData(Utils.Collection.AgencyDebt.ToString(), docId, dataDebt);
+        } else
+        {
+            dataDebt = new AgencyDebt();
+            dataDebt.Year = TbDate.DisplayDate.Month;
+            dataDebt.Year = TbDate.DisplayDate.Year;
+            dataDebt.AgencyId = agency.AgencyId;
+            dataDebt.FirsDebt = double.Parse(LbRemaining.Content.ToString());
+            dataDebt.Incurred = 0;
+            firestore.AddData(Utils.Collection.AgencyDebt.ToString(), docId, dataDebt);
+        }
+
         MessageBox.Show("Thêm dữ liệu thành công");
     }
 

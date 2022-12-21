@@ -273,10 +273,32 @@
                     "
                     Height="40"
                     BorderBrush="white" Margin="0,5,0,0">
-                    <TextBox
-                        Name="T"
+                    <ComboBox Name="CbDistrict"
                         BorderThickness="0"
-                        Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbType_PreviewTextInput" />
+                        ItemContainerStyle="{DynamicResource theComboBoxItem}"
+                        Style="{StaticResource theComboBox}">
+                        <ComboBoxItem>Quan 1</ComboBoxItem>
+                        <ComboBoxItem>Quan 2</ComboBoxItem>
+                        <ComboBoxItem>Quan 3</ComboBoxItem>
+                        <ComboBoxItem>Quan 4</ComboBoxItem>
+                        <ComboBoxItem>Quan 5</ComboBoxItem>
+                        <ComboBoxItem>Quan 6</ComboBoxItem>
+                        <ComboBoxItem>Quan 7</ComboBoxItem>
+                        <ComboBoxItem>Quan 8</ComboBoxItem>
+                        <ComboBoxItem>Quan 9</ComboBoxItem>
+                        <ComboBoxItem>Quan 10</ComboBoxItem>
+                        <ComboBoxItem>Quan 11</ComboBoxItem>
+                        <ComboBoxItem>Quan Binh Thanh</ComboBoxItem>
+                        <ComboBoxItem>Quan Phu Nhuan</ComboBoxItem>
+                        <ComboBoxItem>Quan Tan Binh</ComboBoxItem>
+                        <ComboBoxItem>Quan Tan Phu</ComboBoxItem>
+                        <ComboBoxItem>Quan Go Vap</ComboBoxItem>
+                        <ComboBoxItem>Quan Binh Tan</ComboBoxItem>
+                        <ComboBoxItem>Quan Binh Chanh</ComboBoxItem>
+                        <ComboBoxItem>Quan Nha Be</ComboBoxItem>
+                        <ComboBoxItem>Quan Cu Chi</ComboBoxItem>
+                    </ComboBox>
+                        
                 </Border>
 
 
@@ -291,7 +313,7 @@
                     Height="40"
                     BorderBrush="white" Margin="0,5,0,0">
                     <TextBox
-                        Name="TbD"
+                        Name="TbMaxAgency"
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbDebt_PreviewTextInput" />
                 </Border>
@@ -307,19 +329,13 @@
                         Margin="0 0 15 0"
                         Style="{StaticResource ConfirmButtonBorderStyle}">
                         <Button
-                            Content="Add"
+                            x:Name="BtConfirm"
+                            Content="Confirm"
                             Style="{StaticResource ConfirmButtonStyle}"
                             Click="HandleAddType"/>
                     </Border>
 
                     <!--Remove Button-->
-                    <Border Style="{StaticResource CancelButtonBorderStyle}">
-                        <Button
-                            Name="BtRemo"
-                            Click="HandleRemoveType"
-                            Content="Remove"
-                            Style="{StaticResource CancelButtonStyle}"/>
-                    </Border>
 
                 </WrapPanel>
             </WrapPanel>
@@ -345,19 +361,19 @@
 
                 <!--set number of unit-->
                 <Label
-                    Content="Unit list"
+                    Content="Total max agency"
                     Style="{StaticResource AddItemStyle}" />
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
-                    Width="300"
+                    Width="300
+                    "
                     Height="40"
-                    BorderBrush="white" Margin="0,20,0,0">
-                    <ComboBox
-                        Name="CbUn"
+                    BorderBrush="white" Margin="0,5,0,0">
+                    <TextBox
+                        Name="TbTotalMaxAgency"
                         BorderThickness="0"
-                        ItemContainerStyle="{DynamicResource theComboBoxItem}"
-                        Style="{StaticResource theComboBox}" />
+                        Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbDebt_PreviewTextInput" />
                 </Border>
                 <!--Add Button-->
             </WrapPanel>

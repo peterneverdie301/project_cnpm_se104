@@ -41,20 +41,6 @@
                 Margin="160 0 0 0"/>
             
             <!--Pick time label-->
-            <Label
-                Content="Time"
-                Style="{StaticResource ViewLabel}"
-                Margin="150 0 0 0"/>
-            <ComboBox
-                Style="{DynamicResource theComboBox}"
-                Padding="15,0,15,15"
-                Background="#705E8397"
-                HorizontalContentAlignment="Left"
-                VerticalAlignment="Center"
-                MinWidth="100"
-                MaxWidth="375"
-                ItemContainerStyle="{DynamicResource theComboBoxItem}">
-            </ComboBox>
         </WrapPanel>
 
         <ScrollViewer

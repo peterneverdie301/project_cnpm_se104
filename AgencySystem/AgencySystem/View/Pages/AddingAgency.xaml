@@ -144,11 +144,25 @@
                     MaxWidth="375"
                     ItemContainerStyle="{DynamicResource theComboBoxItem}">
                     <ComboBoxItem>Quan 1</ComboBoxItem>
+                    <ComboBoxItem>Quan 2</ComboBoxItem>
                     <ComboBoxItem>Quan 3</ComboBoxItem>
+                    <ComboBoxItem>Quan 4</ComboBoxItem>
+                    <ComboBoxItem>Quan 5</ComboBoxItem>
+                    <ComboBoxItem>Quan 6</ComboBoxItem>
+                    <ComboBoxItem>Quan 7</ComboBoxItem>
+                    <ComboBoxItem>Quan 8</ComboBoxItem>
+                    <ComboBoxItem>Quan 9</ComboBoxItem>
                     <ComboBoxItem>Quan 10</ComboBoxItem>
                     <ComboBoxItem>Quan 11</ComboBoxItem>
                     <ComboBoxItem>Quan Binh Thanh</ComboBoxItem>
                     <ComboBoxItem>Quan Phu Nhuan</ComboBoxItem>
+                    <ComboBoxItem>Quan Tan Binh</ComboBoxItem>
+                    <ComboBoxItem>Quan Tan Phu</ComboBoxItem>
+                    <ComboBoxItem>Quan Go Vap</ComboBoxItem>
+                    <ComboBoxItem>Quan Binh Tan</ComboBoxItem>
+                    <ComboBoxItem>Quan Binh Chanh</ComboBoxItem>
+                    <ComboBoxItem>Quan Nha Be</ComboBoxItem>
+                    <ComboBoxItem>Quan Cu Chi</ComboBoxItem>
                 </ComboBox>
             </WrapPanel>
         </Border>

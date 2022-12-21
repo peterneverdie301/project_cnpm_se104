@@ -37,6 +37,12 @@
                 <Label
                     Content="Agent type"
                     Style="{StaticResource AddItemStyle}" />
+                <Image 
+                    Height="40"
+                    Width="40"
+                    Source="../Assets/image/decor_name.png"
+                    IsEnabled="False" 
+                    Margin="0 -45 0 0"/>
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
@@ -54,6 +60,12 @@
                 <Label
                     Content="Max Debt"
                     Style="{StaticResource AddItemStyle}" Margin="0,10,0,0" />
+                <Image 
+                    Height="40"
+                    Width="40"
+                    Source="../Assets/image/decor_max.png"
+                    IsEnabled="False" 
+                    Margin="-20 -45 0 0"/>
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
@@ -116,6 +128,12 @@
                 <Label
                     Content="Agent type list"
                     Style="{StaticResource AddItemStyle}" />
+                <Image 
+                    Height="40"
+                    Width="40"
+                    Source="../Assets/image/decor_type.png"
+                    IsEnabled="False" 
+                    Margin="75 -45 0 0"/>
                 <Border
                     
                     CornerRadius="10"
@@ -166,6 +184,12 @@
                 <Label
                     Content="Unit"
                     Style="{StaticResource AddItemStyle}" Margin="0,65,0,0" />
+                <Image 
+                    Height="40"
+                    Width="40"
+                    Source="../Assets/image/decor_product_unit.png"
+                    IsEnabled="False" 
+                    Margin="-120 -50 0 0"/>
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
@@ -229,6 +253,12 @@
                 <Label
                     Content="Unit list"
                     Style="{StaticResource AddItemStyle}" />
+                <Image 
+                    Height="40"
+                    Width="40"
+                    Source="../Assets/image/decor_unit_list.png"
+                    IsEnabled="False" 
+                    Margin="-60 -45 0 0"/>
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
@@ -266,6 +296,12 @@
                 <Label
                     Content="District"
                     Style="{StaticResource AddItemStyle}" />
+                <Image 
+                    Height="40"
+                    Width="40"
+                    Source="../Assets/image/decor_district.png"
+                    IsEnabled="False" 
+                    Margin="-80 -45 0 0"/>
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
@@ -305,6 +341,12 @@
                 <Label
                     Content="Max number of Agency"
                     Style="{StaticResource AddItemStyle}" Margin="0,10,0,0" />
+                <Image 
+                    Height="40"
+                    Width="40"
+                    Source="../Assets/image/decor_max.png"
+                    IsEnabled="False" 
+                    Margin="260 -45 0 0"/>
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
@@ -363,6 +405,12 @@
                 <Label
                     Content="Total max agency"
                     Style="{StaticResource AddItemStyle}" />
+                <Image 
+                    Height="40"
+                    Width="40"
+                    Source="../Assets/image/decor_max.png"
+                    IsEnabled="False" 
+                    Margin="120 -45 0 0"/>
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
@@ -378,6 +426,23 @@
                 <!--Add Button-->
             </WrapPanel>
         </Border>
+        <Image
+            Grid.Column="0"
+            Height="100"
+            Width="100"
+            Source="../Assets/image/decor_product_price.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="right"
+            IsEnabled="False"
+            Margin="0 0 300 180"/>
+        <Image
+            Grid.Column="2"
+            Height="100"
+            Width="120"
+            Source="../Assets/image/decor_product_milk_face.png"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="right"
+            IsEnabled="False"
+            Margin="300 0 0 170"/>
     </Grid>
-
 </Page>

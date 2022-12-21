@@ -225,4 +225,16 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Include="View\Assets\image\decor_unit_list.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Assets\image\decor_max.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

@@ -27,7 +27,7 @@ public partial class ViewExportSlip : Page
         {
             if (slip.ExportSlipId == null) continue;
             UcViewExportSlip ucInfo = new UcViewExportSlip();
-            //ucInfo.Lb.Content = item.ItemsName;
+            //ucInfo.LbAgency.Content = item.ItemsName;
             ucInfo.LbId.Content = "Id: " + slip.AgencyId;
             ucInfo.LbPaid.Content = slip.AmountPaid+ " VNĐ";
             ucInfo.LbTime.Content = slip.Date;

@@ -13,6 +13,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
         <!--Create a new agent's type-->
@@ -21,7 +22,7 @@
             CornerRadius="30"
             BorderThickness="1"
             BorderBrush="#ECDABF"
-            Width="550"
+            Width="350"
             Height="323"
             VerticalAlignment="Top"
             HorizontalAlignment="Center" Margin="0,10,0,0">
@@ -39,7 +40,7 @@
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
-                    Width="500
+                    Width="300
                     "
                     Height="40"
                     BorderBrush="white" Margin="0,5,0,0">
@@ -56,7 +57,7 @@
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
-                    Width="500
+                    Width="300
                     "
                     Height="40"
                     BorderBrush="white" Margin="0,5,0,0">
@@ -100,7 +101,7 @@
             CornerRadius="30"
             BorderThickness="1"
             BorderBrush="#ECDABF"
-            Width="550"
+            Width="350"
             Height="180"
             VerticalAlignment="Top"
             HorizontalAlignment="Center" Margin="0,394,0,0">
@@ -119,7 +120,7 @@
                     
                     CornerRadius="10"
                     BorderThickness="4"
-                    Width="500"
+                    Width="300"
                     Height="40"
                     BorderBrush="white" RenderTransformOrigin="0.5,0.5" Margin="0,20,0,0">
                     <Border.RenderTransform>
@@ -149,7 +150,7 @@
             CornerRadius="30"
             BorderThickness="1"
             BorderBrush="#ECDABF"
-            Width="550"
+            Width="350"
             Height="323"
             VerticalAlignment="Top"
             HorizontalAlignment="Center" Margin="0,10,0,0">
@@ -168,7 +169,7 @@
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
-                    Width="500
+                    Width="300
                     "
                     Height="40"
                     BorderBrush="white" Margin="0,5,0,0">
@@ -213,7 +214,7 @@
             BorderBrush="#a6a6a6"
             BorderThickness="1"
             CornerRadius="30"
-            Width="550"
+            Width="350"
             Height="180"
             VerticalAlignment="Top"
             HorizontalAlignment="Center"
@@ -231,11 +232,129 @@
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
-                    Width="500"
+                    Width="300"
                     Height="40"
                     BorderBrush="white" Margin="0,20,0,0">
                     <ComboBox
                         Name="CbUnitList"
+                        BorderThickness="0"
+                        ItemContainerStyle="{DynamicResource theComboBoxItem}"
+                        Style="{StaticResource theComboBox}" />
+                </Border>
+                <!--Add Button-->
+            </WrapPanel>
+        </Border>
+
+        <Border
+            Grid.Column="2"
+            Background="#80ECDABF"
+            CornerRadius="30"
+            BorderThickness="1"
+            BorderBrush="#ECDABF"
+            Width="350"
+            Height="323"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center" Margin="0,10,0,0">
+
+            <WrapPanel
+                Orientation="Vertical"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="30,30,0,0" Height="249">
+
+                <!--Max number of agents-->
+                <Label
+                    Content="District"
+                    Style="{StaticResource AddItemStyle}" />
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    Width="300
+                    "
+                    Height="40"
+                    BorderBrush="white" Margin="0,5,0,0">
+                    <TextBox
+                        Name="T"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbType_PreviewTextInput" />
+                </Border>
+
+
+                <Label
+                    Content="Max number of Agency"
+                    Style="{StaticResource AddItemStyle}" Margin="0,10,0,0" />
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    Width="300
+                    "
+                    Height="40"
+                    BorderBrush="white" Margin="0,5,0,0">
+                    <TextBox
+                        Name="TbD"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbDebt_PreviewTextInput" />
+                </Border>
+
+
+                <WrapPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom" 
+                    RenderTransformOrigin="0.482,0.935" Margin="0,20,0,0">
+                    <!--Add Button-->
+                    <Border
+                        Margin="0 0 15 0"
+                        Style="{StaticResource ConfirmButtonBorderStyle}">
+                        <Button
+                            Content="Add"
+                            Style="{StaticResource ConfirmButtonStyle}"
+                            Click="HandleAddType"/>
+                    </Border>
+
+                    <!--Remove Button-->
+                    <Border Style="{StaticResource CancelButtonBorderStyle}">
+                        <Button
+                            Name="BtRemo"
+                            Click="HandleRemoveType"
+                            Content="Remove"
+                            Style="{StaticResource CancelButtonStyle}"/>
+                    </Border>
+
+                </WrapPanel>
+            </WrapPanel>
+        </Border>
+
+        <!--Manage Unit-->
+        <Border
+            Grid.Column="2"
+            Background="#80ECDABF"
+            BorderBrush="#a6a6a6"
+            BorderThickness="1"
+            CornerRadius="30"
+            Width="350"
+            Height="180"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Margin="0,394,0,0">
+            <WrapPanel
+                Orientation="Vertical"
+                VerticalAlignment="top"
+                HorizontalAlignment="Left"
+                Margin="30,30,0,30">
+
+                <!--set number of unit-->
+                <Label
+                    Content="Unit list"
+                    Style="{StaticResource AddItemStyle}" />
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    Width="300"
+                    Height="40"
+                    BorderBrush="white" Margin="0,20,0,0">
+                    <ComboBox
+                        Name="CbUn"
                         BorderThickness="0"
                         ItemContainerStyle="{DynamicResource theComboBoxItem}"
                         Style="{StaticResource theComboBox}" />

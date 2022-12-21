@@ -1,0 +1,109 @@
+﻿<Window x:Class="AgencySystem.View.MainWindow.ProductEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgencySystem.View.MainWindow"
+        mc:Ignorable="d"
+        Title="ProductEdit" Height="500" Width="600"
+        Background="#5E8397"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <!--Cancel Button-->
+        <Border
+            Grid.Row="1"
+            Style="{StaticResource CancelButtonBorderStyle}"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="0 0 150 20">
+            <Button
+                Name="btnCancel"
+                Content="Cancel"
+                Style="{StaticResource CancelButtonStyle}" Click="btnCancel_Click"/>
+        </Border>
+        <!--Confirm Button-->
+        <Border 
+            Grid.Row="1"
+            Style="{StaticResource ConfirmButtonBorderStyle}"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="0 0 20 20">
+            <Button
+                Name="btnConfirm"
+                Style="{StaticResource ConfirmButtonStyle}" Click="btnConfirm_Click"/>
+        </Border>
+        <Border>
+
+            <WrapPanel
+                Orientation="Vertical"
+                VerticalAlignment="center"
+                HorizontalAlignment="Center">
+
+                <!--Agent's Name label-->
+
+                <!--Agent's Name textBox-->
+
+                <!--Phone label-->
+                <Label
+                    Content="Product"
+                    Style="{StaticResource AddItemStyle}" />
+
+                <!--Phone textBox-->
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    BorderBrush="white"
+                    Width="350"
+                    Height="40" Margin="0,5,0,0">
+                    <TextBox
+                        Name="TbProduct"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" />
+                </Border>
+
+                <!--Address label-->
+                <Label
+                    Content="Price"
+                    Style="{StaticResource AddItemStyle}" Margin="0,10,0,0" />
+
+                <!--Address textBox-->
+                <Border
+                    CornerRadius="10"
+                    BorderThickness="4"
+                    Width="350"
+                    Height="40"
+                    BorderBrush="white" Margin="0,5,0,0">
+                    <TextBox
+                        Name="TbPrice"
+                        BorderThickness="0"
+                        Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbPrice_PreviewTextInput" />
+                </Border>
+
+                <!--Type label-->
+                <Label
+                    Content="Unit"
+                    Style="{StaticResource AddItemStyle}" Margin="0,10,0,0" />
+
+                <!--Type comboBox-->
+                <ComboBox
+                    Name="cbxUnit"
+                    Style="{DynamicResource theComboBox}"
+                    Padding="15,5,15,5"
+                    HorizontalContentAlignment="Left"
+                    VerticalAlignment="Center"
+                    MinWidth="100"
+                    MaxWidth="375"
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}" Margin="0,5,0,0">
+
+                </ComboBox>
+            </WrapPanel>
+        </Border>
+    </Grid>
+</Window>

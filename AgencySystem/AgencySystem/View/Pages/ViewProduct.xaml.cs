@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using AgencySystem.View.Components;
+using AgencySystem.View.MainWindow;
 using DataModels.Models;
 using DataModels.Services;
 
@@ -34,7 +35,8 @@ public partial class ViewProduct : Page
             ucInfo.LbUnit.Content = item.UnitId;
             ucInfo.BtnDelete.Tag = ucInfo;
             ucInfo.BtnDelete.Click += BtnDelete_Click;
-            //ucInfo.BtnEdit.Click += BtnEdit_Click;
+            ucInfo.BtnEdit.Tag = item;
+            ucInfo.BtnEdit.Click += BtnEdit_Click;
             listBoxProduct.Items.Add(ucInfo);
         }
         ScViewProduct.Content = listBoxProduct;
@@ -47,5 +49,16 @@ public partial class ViewProduct : Page
         ScViewProduct.Content = listBoxProduct;
         firestore.DeleteData(Utils.Collection.Items.ToString(), ucInfo?.LbId.Tag.ToString());
         MessageBox.Show("Xóa thành công");
+    }
+    private void BtnEdit_Click(object sender, RoutedEventArgs e)
+    {
+        var btn = sender as Button;
+        Item item = btn?.Tag as Item;
+        ProductEdit productEdit = new ProductEdit();
+        productEdit.TbProduct.Tag = item?.ItemsId;
+        productEdit.TbProduct.Text = item?.ItemsName;
+        productEdit.cbxUnit.Text = item?.UnitId;
+        productEdit.TbPrice.Text = item?.Price.ToString();
+        productEdit.Show();
     }
 }

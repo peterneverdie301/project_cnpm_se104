@@ -5,17 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:AgencySystem.View.Components"
              mc:Ignorable="d">
-        <Grid>
+    <UserControl.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70" />
             <ColumnDefinition Width="200" />
-            <ColumnDefinition Width="150" />
-            <ColumnDefinition Width="100" />
-            <ColumnDefinition Width="100" />
-            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="245" />
             <ColumnDefinition Width="150" />
             <ColumnDefinition Width="150" />
-            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="90" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="2" />
@@ -23,51 +24,50 @@
             <RowDefinition Height="5*" />
         </Grid.RowDefinitions>
         <Rectangle Fill="#FFC4C4C4" HorizontalAlignment="Left" Height="2" Stroke="#00000000"
-                   VerticalAlignment="Top" Width="2000" Grid.ColumnSpan="9" RadiusX="1" RadiusY="0.4"
+                   VerticalAlignment="Top" Width="2000" Grid.ColumnSpan="8" RadiusX="1" RadiusY="0.4"
                    Grid.RowSpan="2" />
         <Label x:Name="LbAgency" Content="Agency" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0"
                Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733"
                FontSize="14" Width="185" />
-        <Label x:Name="LbAgencyID" Content="Id: 1" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0"
+        <Label x:Name="LbId" Content="Id: 1" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0"
                Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Width="185" Foreground="#FFC5C7CD"
                FontWeight="Bold" />
-        <Label x:Name="LbProduct" Content="Product" Grid.Column="2" HorizontalAlignment="Left"
+
+        <Label  Content="Time" Grid.Column="2" HorizontalAlignment="Left"
                Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
                Foreground="#FF252733" FontSize="14" Width="140" />
-        <Label x:Name="LbProductofAgency" Content="Sua Chua" Grid.Column="2" HorizontalAlignment="Left" Margin="10,0,0,0"
+        <Label x:Name="LbTime" Content="1" Grid.Column="2" HorizontalAlignment="Left" Margin="10,0,0,0"
                Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Width="138" Foreground="#FFC5C7CD"
                FontWeight="Bold" Height="34" />
-        <Label x:Name="LbQuantity" Content="Quantity" Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0"
+
+        <Label  Content="Total" Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0"
                Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold" Foreground="#FF252733"
                FontSize="14" Width="240" />
-        <Label x:Name="LbQuantityofAgency" Content="9" Grid.Column="3" HorizontalAlignment="Left"
+        <Label x:Name="LbTotal" Content="Quan 12" Grid.Column="3" HorizontalAlignment="Left"
                Margin="10,0,0,0"
                Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Foreground="#FFC5C7CD" FontWeight="Bold" />
-        <Label x:Name="LbUnit" Content="Unit" Grid.Column="4" HorizontalAlignment="Left"
-               Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
-               Foreground="#FF252733" FontSize="14" Width="235" />
-        <Label x:Name="LbUnitofAgency" Content="Kg" Grid.Column="4" HorizontalAlignment="Left"
-               Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
-               Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
-        
-        <Label x:Name="LbUnitPrice" Content="Unit Price" Grid.Column="6" HorizontalAlignment="Left"
-               Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
-               Foreground="#FF252733" FontSize="14" Width="235" />
-        <Label x:Name="LbUnitPriceofAgency" Content="2000" Grid.Column="6" HorizontalAlignment="Left"
-               Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
-               Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
-        <Label x:Name="LbLastPrice" Content="Last Price" Grid.Column="7" HorizontalAlignment="Left"
-               Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
-               Foreground="#FF252733" FontSize="14" Width="235" />
-        <Label x:Name="LbLastPriceofAgency" Content="350" Grid.Column="7" HorizontalAlignment="Left"
-               Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
-               Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
-        <Label x:Name="LbTime" Content="Time" Grid.Column="8" HorizontalAlignment="Left"
-               Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
-               Foreground="#FF252733" FontSize="14" Width="235" />
-        <Label x:Name="LbTimeofAgency" Content="24-12-2022" Grid.Column="8" HorizontalAlignment="Left"
-               Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
-               Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
-    </Grid>
 
+        <Label Content="Paid" Grid.Column="4" HorizontalAlignment="Left"
+               Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
+               Foreground="#FF252733" FontSize="14" Width="235" />
+        <Label x:Name="LbPaid" Content="120.000$" Grid.Column="4" HorizontalAlignment="Left"
+               Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
+               Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
+
+        <Label Content="Remaining" Grid.Column="5" HorizontalAlignment="Left"
+               Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Bottom" FontFamily="Ubuntu" FontWeight="Bold"
+               Foreground="#FF252733" FontSize="14" Width="235" />
+        <Label x:Name="LbRemaining" Content="120.000$" Grid.Column="5" HorizontalAlignment="Left"
+               Margin="10,0,0,0.4" Grid.Row="2" VerticalAlignment="Top" FontFamily="Poppins" Grid.ColumnSpan="2"
+               Width="240" Foreground="#FFC5C7CD" FontWeight="Bold" />
+        <Border
+            Grid.Column="6" HorizontalAlignment="Left"
+            Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" Width="81" Height="30" Grid.RowSpan="2"
+            CornerRadius="14" BorderThickness="1"
+            Style="{DynamicResource ConfirmButtonBorderStyle}">
+            <Button
+                Content="Detail"
+                Style="{StaticResource ConfirmButtonStyle}"/>
+        </Border>
+    </Grid>
 </UserControl>

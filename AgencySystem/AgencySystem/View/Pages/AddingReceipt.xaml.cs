@@ -65,7 +65,10 @@ public partial class AddingReceipt : Page
             }
             MessageBox.Show("Thêm phiếu thu tiền thành công");
         }
-        MessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
+        else
+        {
+            MessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
+        }
 
     }
 

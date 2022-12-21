@@ -28,29 +28,25 @@
                 Style="{StaticResource ViewLabel}"
                 Margin="120 0 0 0" />
             <Label
-                Content="Product"
+                Content="Time to Reciept"
                 Style="{StaticResource ViewLabel}"
                 Margin="130 0 0 0"  />
             <Label
-                Content="Quantity"
-                Style="{StaticResource ViewLabel}"
-                Margin="75 0 0 0"  />
-            <Label
-                Content="Unit"
-                Style="{StaticResource ViewLabel}"
-                Margin="15 0 0 0"  />
-            <Label
-                Content="Unit Price"
+                Content="Total"
                 Style="{StaticResource ViewLabel}"
                 Margin="100 0 0 0"  />
             <Label
-                Content="Last Price"
+                Content="Paid"
                 Style="{StaticResource ViewLabel}"
-                Margin="60 0 0 0"  />
+                Margin="100 0 0 0"  />
             <Label
-                Content="Time to Receipt"
+                Content="Remaining"
                 Style="{StaticResource ViewLabel}"
-                Margin="50 0 0 0" />
+                Margin="100 0 0 0"  />
+            <Label
+                Content="Detail"
+                Style="{StaticResource ViewLabel}"
+                Margin="150 0 0 0"  />
         </WrapPanel>
 
         <ScrollViewer

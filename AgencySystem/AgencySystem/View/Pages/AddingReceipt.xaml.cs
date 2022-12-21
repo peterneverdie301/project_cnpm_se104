@@ -50,20 +50,21 @@ public partial class AddingReceipt : Page
             AgencyDebt agencyDebt = (AgencyDebt)await firestore.GetData(Utils.Collection.AgencyDebt.ToString(), idAgencyDebt);
             if (agencyDebt != null)
             {
+                double TotalDebt = double.Parse(agencyDebt.FirsDebt.ToString())
+                    + double.Parse(agencyDebt.Incurred.ToString());
                 double money = double.Parse(TbMoney.Text);
+                if (TotalDebt < money)
+                {
+                    MessageBox.Show("Tiền thu không được vượt quá tiền nợ");
+                    return;
+                }
                 agencyDebt.Incurred -= money;
                 firestore.UpdateData(Utils.Collection.AgencyDebt.ToString(), idAgencyDebt, agencyDebt);
+                MessageBox.Show("Thêm phiếu thu tiền thành công");
             } else
             {
-                AgencyDebt debt = new AgencyDebt();
-                debt.Incurred = 0; 
-                debt.AgencyId = agency?.AgencyId;
-                debt.Year = TbDate.DisplayDate.Year;
-                debt.Month = TbDate.DisplayDate.Month;
-                debt.FirsDebt = 0;
-                firestore.AddData(Utils.Collection.AgencyDebt.ToString(), idAgencyDebt, debt);
+                MessageBox.Show("Đại lí không có nợ");
             }
-            MessageBox.Show("Thêm phiếu thu tiền thành công");
         }
         else
         {

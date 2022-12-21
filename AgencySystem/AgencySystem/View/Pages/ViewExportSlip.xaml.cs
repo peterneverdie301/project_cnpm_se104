@@ -12,6 +12,7 @@ public partial class ViewExportSlip : Page
 {
     Firestore firestore = new Firestore();
     private List<object> listSlip;
+    private List<object> listAgency;
     ListView listBoxSlip;
     public ViewExportSlip()
     {
@@ -22,6 +23,7 @@ public partial class ViewExportSlip : Page
     private async void setUp()
     {
         listSlip = await firestore.GetAllDocument(Utils.Collection.ExportSlip.ToString());
+        listAgency = await firestore.GetAllDocument(Utils.Collection.Agency.ToString());
         listBoxSlip = new ListView();
         foreach (ExportSlip slip in listSlip)
         {
@@ -35,6 +37,12 @@ public partial class ViewExportSlip : Page
             ucInfo.LbRemaining.Content = (slip.Total - slip.AmountPaid) + "VNĐ";
             ucInfo.BtDetail.Tag = slip;
             ucInfo.BtDetail.Click += BtnDetail_Click;
+            Agency agency = (Agency)listAgency.Find(data =>
+            {
+                Agency temp = data as Agency;
+                return temp.AgencyId == slip.AgencyId;
+            });
+            ucInfo.LbAgency.Content = agency.AgencyName;
             listBoxSlip.Items.Add(ucInfo);
         }
         ScViewExportSlip.Content = listBoxSlip;

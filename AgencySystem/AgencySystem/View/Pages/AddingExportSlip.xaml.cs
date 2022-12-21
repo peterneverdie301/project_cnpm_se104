@@ -142,8 +142,8 @@ public partial class AddingExportSlip : Page
             Product = item.ItemsName,
             Quantity = int.Parse(TbQuantity.Text),
             Unit = CbUnit.Content?.ToString(),
-            UnitPrice = item.Price,
-            LastPrice = item.Price * int.Parse(TbQuantity.Text),
+            UnitPrice = item.Price * 1.02,
+            LastPrice = item.Price * 1.02  * int.Parse(TbQuantity.Text),
         };
         CbUnit.Content = "";
         CbProduct.Text = "";
@@ -166,7 +166,13 @@ public partial class AddingExportSlip : Page
         TextBox textBox = sender as TextBox;
         if (textBox.Text != "")
         {
-            LbRemaining.Content = double.Parse(LbTotal.Content.ToString()) - double.Parse(textBox.Text);
+            if(double.Parse(textBox.Text) <= double.Parse(LbTotal.Content.ToString()))
+            {
+                LbRemaining.Content = double.Parse(LbTotal.Content.ToString()) - double.Parse(textBox.Text);
+            } else
+            {
+                MessageBox.Show("Tiền trả không được vượt quá tổng tiền");
+            }
         } else
         {
             LbRemaining.Content = double.Parse(LbTotal.Content.ToString());

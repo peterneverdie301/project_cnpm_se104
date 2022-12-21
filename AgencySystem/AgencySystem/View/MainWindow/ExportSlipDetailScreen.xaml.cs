@@ -54,8 +54,8 @@ namespace AgencySystem.View.MainWindow
                         Quantity = int.Parse(exportSlipDetail.Amount.ToString()),
                         Product = product.ItemsName,
                         Unit = product.UnitId,
-                        UnitPrice = product.Price,
-                        LastPrice = product.Price * int.Parse(exportSlipDetail.Amount.ToString()),
+                        UnitPrice = product.Price * 1.02,
+                        LastPrice = product.Price * 1.02 * int.Parse(exportSlipDetail.Amount.ToString()),
                     };
                     lvProduct.Items.Add(detail);
                 } else

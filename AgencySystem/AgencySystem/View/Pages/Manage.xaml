@@ -332,7 +332,7 @@
                             x:Name="BtConfirm"
                             Content="Confirm"
                             Style="{StaticResource ConfirmButtonStyle}"
-                            Click="HandleAddType"/>
+                            Click="BtConfirm_Click"/>
                     </Border>
 
                     <!--Remove Button-->

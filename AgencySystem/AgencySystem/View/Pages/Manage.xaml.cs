@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -99,4 +100,28 @@ public partial class Manage : Page
         e.Handled = regex.IsMatch(e.Text);
     }
 
+    private async void BtConfirm_Click(object sender, RoutedEventArgs e)
+    {
+        if (TbMaxAgency.Text == "" || CbDistrict.Text == "")
+        {
+            MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+            return;
+        }
+        string districtId = String.Concat(CbDistrict.Text.Where(c => !Char.IsWhiteSpace(c)));
+        Reference reference = await firestore.GetData(Utils.Collection.Reference.ToString(), districtId) as Reference;
+        if (reference != null)
+        {
+            reference.Max = int.Parse(TbMaxAgency.Text);
+            firestore.UpdateData(Utils.Collection.Reference.ToString(), districtId, reference);
+        } else
+        {
+            reference = new Reference();
+            reference.Name = CbDistrict.Text;
+            reference.Current = 0;
+            reference.Max = int.Parse(TbMaxAgency.Text);
+            reference.Id = districtId;
+            firestore.AddData(Utils.Collection.Reference.ToString(), districtId, reference);
+        }
+        MessageBox.Show("Sửa thành công");
+    }
 }

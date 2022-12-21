@@ -121,6 +121,7 @@
                                 BorderBrush="#D94448"
                                 Background="#D94448" 
                                 Foreground="White" 
+                                Click="Button_Click"
                                 ToolTip="Login" >
                             </Button>
                         </StackPanel>

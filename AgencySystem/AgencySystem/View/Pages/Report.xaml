@@ -26,14 +26,14 @@
             <Label
                 Name="LbTurnoverReport"
                 Style="{StaticResource NavItemStyleReport}"
-                Content="Turnover Report "
+                Content="Debt Report "
                 MouseDown="LbTurnoverReport_OnMouseDown">
             </Label>
 
             <Label
                 Name="LbDebtReport"
                 Style="{StaticResource NavItemStyleReport}"
-                Content="Debt Report"
+                Content="Turnover Report"
                 MouseDown="LbDebtReport_OnMouseDown">
             </Label>
         </WrapPanel>

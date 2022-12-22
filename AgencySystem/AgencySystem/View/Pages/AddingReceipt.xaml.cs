@@ -86,4 +86,31 @@ public partial class AddingReceipt : Page
         Regex regex = new Regex("[^0-9]+");
         e.Handled = regex.IsMatch(e.Text);
     }
+
+    private async void cbxAgency_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (TbDate.Text == "")
+        {
+            MessageBox.Show("Vui lòng chọn ngày");
+            return;
+        }
+        string agencyName = e.AddedItems[0].ToString();
+        Agency agency = (Agency)agences.Find((a) => {
+            Agency temp = (Agency)a;
+            return temp.AgencyName == agencyName;
+        });
+        string idAgencyDebt = TbDate.DisplayDate.Month + "-" + TbDate.DisplayDate.Year + "-" + agency?.AgencyId;
+        AgencyDebt agencyDebt = (AgencyDebt)await firestore.GetData(Utils.Collection.AgencyDebt.ToString(), idAgencyDebt);
+        if (agencyDebt != null)
+        {
+            double TotalDebt = double.Parse(agencyDebt.FirsDebt.ToString())
+                        + double.Parse(agencyDebt.Incurred.ToString());
+            LbDebtAgency.Content = TotalDebt;
+        }
+        else
+        {
+            LbDebtAgency.Content = 0;
+        }
+    }
+
 }

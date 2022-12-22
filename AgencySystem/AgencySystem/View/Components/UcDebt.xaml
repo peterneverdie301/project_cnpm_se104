@@ -14,10 +14,10 @@
             <ColumnDefinition Width="250" />
         </Grid.ColumnDefinitions>
         
-        <Label Grid.Column="0" Content="stt" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
-        <Label Grid.Column="1" Content="Dai ly 1" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
-        <Label Grid.Column="2" Content="20" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
-        <Label Grid.Column="3" Content="150.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
-        <Label Grid.Column="4" Content="90%" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
+        <Label Name="lbSTT" Grid.Column="0" Content="stt" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
+        <Label Name="lbName" Grid.Column="1" Content="Dai ly 1" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
+        <Label Name="lbExportCount" Grid.Column="2" Content="20" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
+        <Label Name="lbTotalPrice" Grid.Column="3" Content="150.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
+        <Label Name="lbRate" Grid.Column="4" Content="90%" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
     </Grid>
 </UserControl>

@@ -72,7 +72,9 @@ public partial class ReportTurnOver : Page
                 ucInfo.LbFisrtDebt.Content = debts.FirsDebt + " VNĐ";
                 ucInfo.LbIncurred.Content = debts.Incurred + " VNĐ";
                 ucInfo.LbLastDebt.Content = Convert.ToDouble(debts.FirsDebt + debts.Incurred) + " VNĐ";
-                ucInfo.LbAgencyName.Content = agencies.Find((value) => value.AgencyId == debts.AgencyId)?.AgencyName;
+                var agency = agencies.Find((value) => value.AgencyId == debts.AgencyId);
+                ucInfo.LbAgencyName.Content = agency.AgencyName;
+                ucInfo.LbId.Content = agency.AgencyId;
                 listBoxDebt.Items.Add(ucInfo);
             }
         }

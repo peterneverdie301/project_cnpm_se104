@@ -54,20 +54,19 @@ public partial class AddingReceipt : Page
                 }
                 agencyDebt.Incurred -= money;
                 firestore.UpdateData(Utils.Collection.AgencyDebt.ToString(), idAgencyDebt, agencyDebt);
+                //Adding receipt
+                Receipt receipt = new Receipt();
+                receipt.Proceeds = double.Parse(TbMoney.Text);
+                receipt.ReceiptId = await firestore.GetIdForObject(Utils.Collection.Receipt.ToString());
+                receipt.Date = TbDate.Text;
+                receipt.AgencyId = agency?.AgencyId;
+                firestore.AddData(Utils.Collection.Receipt.ToString(), receipt.ReceiptId, receipt);
                 MessageBox.Show("Thêm phiếu thu tiền thành công");
             }
             else
             {
                 MessageBox.Show("Đại lí không có nợ");
             }
-
-            //Adding receipt
-            Receipt receipt = new Receipt();
-            receipt.Proceeds = double.Parse(TbMoney.Text);
-            receipt.ReceiptId = await firestore.GetIdForObject(Utils.Collection.Receipt.ToString());
-            receipt.Date = TbDate.Text;
-            receipt.AgencyId = agency?.AgencyId;
-            firestore.AddData(Utils.Collection.Receipt.ToString(), receipt.ReceiptId, receipt);
         }
         else
         {

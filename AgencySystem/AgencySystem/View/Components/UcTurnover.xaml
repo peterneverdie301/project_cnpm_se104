@@ -7,17 +7,17 @@
              mc:Ignorable="d">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="60" />
             <ColumnDefinition Width="200" />
-            <ColumnDefinition Width="150" />
-            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="240" />
             <ColumnDefinition Width="250" />
         </Grid.ColumnDefinitions>
         
-        <Label Grid.Column="0" x:Name="LbId" Content="stt" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
+        <Label Grid.Column="0" x:Name="LbId" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
         <Label Grid.Column="1" x:Name="LbAgencyName" Content="Dai ly 1" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
         <Label Grid.Column="2" x:Name="LbFisrtDebt" Content="200.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
-        <Label Grid.Column="3" x:Name="LbIncurred" Content="150.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
-        <Label Grid.Column="4" Content="350.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
+        <Label Grid.Column="3" x:Name="LbIncurred" Content="150.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
+        <Label Grid.Column="4" x:Name="LbLastDebt" Content="350.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
     </Grid>
 </UserControl>

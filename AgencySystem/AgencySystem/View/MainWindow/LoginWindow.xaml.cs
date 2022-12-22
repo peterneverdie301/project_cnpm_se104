@@ -24,6 +24,12 @@ public partial class LoginWindow : Window
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
-        this.Close();
+        if(PbPassword.Password.ToString() == TbUserName.Text && PbPassword.Password.ToString() != "" && TbUserName.Text != "") {
+            this.Close();
+        }
+        else
+        {
+            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+        }
     }
 }

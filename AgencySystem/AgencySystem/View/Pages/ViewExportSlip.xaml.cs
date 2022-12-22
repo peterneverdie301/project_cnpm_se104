@@ -54,4 +54,9 @@ public partial class ViewExportSlip : Page
         ExportSlipDetailScreen exportSlipDetail = new ExportSlipDetailScreen(slip.ExportSlipId);
         exportSlipDetail.Show();
     }
+
+    private void Image_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        setUp();
+    }
 }

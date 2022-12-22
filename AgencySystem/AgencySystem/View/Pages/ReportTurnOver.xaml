@@ -28,9 +28,13 @@
 
             <!--label-->
             <Label
+                Content="ID"
+                Style="{StaticResource ViewLabel}"
+                Margin="210 0 0 0" />
+            <Label
                 Content="Agency"
                 Style="{StaticResource ViewLabel}"
-                Margin="280 0 0 0" />
+                Margin="70 0 0 0" />
             <Label
                 Content="First Debt"
                 Style="{StaticResource ViewLabel}"
@@ -43,26 +47,32 @@
                 Content="Final Debt"
                 Style="{StaticResource ViewLabel}"
                 Margin="160 0 0 0"/>
-            <Label
-                Content="Month"
-                Style="{StaticResource ViewLabel}"
-                Margin="100 0 0 0"/>
-            <Label
-                Content="Year"
-                Style="{StaticResource ViewLabel}"
-                Margin="60 0 0 0"/>
 
             <!--Pick time label-->
         </WrapPanel>
-
+        <Label  Grid.Row="1"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Content="Month"
+                Style="{StaticResource ViewLabel}"
+                Margin="0,0,130,0"/>
+        <Label
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Grid.Row="1"
+                Content="Year"
+                Style="{StaticResource ViewLabel}"
+                Margin="0,100,145,0"/>
         <Border
                     Grid.Row="1"
                     CornerRadius="10"
                     BorderThickness="4"
-                    Width="70
+                                HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+                    Width="150
                     "
                     Height="40"
-                    BorderBrush="white" Margin="1200,0,0,460">
+                    BorderBrush="white" Margin="0,135,40,0">
             <ComboBox Name="CbYear"
                         SelectionChanged="CbYear_SelectionChanged"
                         BorderThickness="0"
@@ -82,10 +92,11 @@
                     Grid.Row="1"
                     CornerRadius="10"
                     BorderThickness="4"
-                    Width="70
-                    "
+                    Width="150"
+                    HorizontalAlignment="Right"
+            VerticalAlignment="Top"
                     Height="40"
-                    BorderBrush="white" Margin="970,0,0,460">
+                    BorderBrush="white" Margin="0,35,40,0">
             <ComboBox Name="CbMonth"
                       SelectionChanged="CbMonth_SelectionChanged"
                         BorderThickness="0"
@@ -144,7 +155,7 @@
             Source="../Assets/image/decor_turnover_1.png"
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
-            Margin="0,40,255,0"
+            Margin="0,40,210,0"
             IsEnabled="False" />
 
     </Grid>

@@ -61,4 +61,14 @@ public partial class ReportDebt : Page
         }
         SvReportDebt.Content = listView;
     }
+
+    private void CbYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+
+    }
+
+    private void CbMonth_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+
+    }
 }

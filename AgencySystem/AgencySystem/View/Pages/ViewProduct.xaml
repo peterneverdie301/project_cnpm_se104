@@ -27,11 +27,11 @@
             <Label
                 Content="Product"
                 Style="{StaticResource ViewLabel}"
-                Margin="100 0 0 0"/>
+                Margin="120 0 0 0"/>
             <Label
                 Content="Unit"
                 Style="{StaticResource ViewLabel}"
-                Margin="145 0 0 0" />
+                Margin="125 0 0 0" />
             <Label
                 Content="Price"
                 Style="{StaticResource ViewLabel}"

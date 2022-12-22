@@ -26,11 +26,11 @@
             <Label
                 Content="Agency"
                 Style="{StaticResource ViewLabel}"
-                Margin="100 0 0 0" />
+                Margin="110 0 0 0" />
             <Label
                 Content="Time to receipt"
                 Style="{StaticResource ViewLabel}"
-                Margin="200 0 0 0" />
+                Margin="190 0 0 0" />
             <Label
                 Content="Proceeds"
                 Style="{StaticResource ViewLabel}"

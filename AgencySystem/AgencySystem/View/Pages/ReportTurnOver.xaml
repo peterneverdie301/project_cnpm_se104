@@ -111,7 +111,7 @@
             HorizontalAlignment="Left"
             VerticalContentAlignment="center"
             Margin="215,80,0,0"
-            VerticalScrollBarVisibility="Hidden" Grid.RowSpan="2"/>
+            HorizontalScrollBarVisibility="Hidden" Grid.RowSpan="2"/>
 
         <Image
             Grid.Row="1"

@@ -64,11 +64,15 @@
                     Height="40"
                     BorderBrush="white" Margin="1200,0,0,460">
             <ComboBox Name="CbYear"
+                        SelectionChanged="CbYear_SelectionChanged"
                         BorderThickness="0"
                         ItemContainerStyle="{DynamicResource theComboBoxItem}"
                         Style="{StaticResource theComboBox}">
+                <ComboBoxItem>2024</ComboBoxItem>
+                <ComboBoxItem>2023</ComboBoxItem>
                 <ComboBoxItem>2022</ComboBoxItem>
                 <ComboBoxItem>2021</ComboBoxItem>
+                <ComboBoxItem>2020</ComboBoxItem>
             </ComboBox>
             
 
@@ -83,6 +87,7 @@
                     Height="40"
                     BorderBrush="white" Margin="970,0,0,460">
             <ComboBox Name="CbMonth"
+                      SelectionChanged="CbMonth_SelectionChanged"
                         BorderThickness="0"
                         ItemContainerStyle="{DynamicResource theComboBoxItem}"
                         Style="{StaticResource theComboBox}">

@@ -47,4 +47,62 @@ public partial class ReportTurnOver : Page
         }
         SvListOfAgency.Content = listBoxDebt;
     }
+
+    private void CbYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        ComboBoxItem item = e.AddedItems[0] as ComboBoxItem;
+        int year = int.Parse(item.Content.ToString());
+        int month;
+        if (CbMonth.Text == "")
+        {
+            month = 12;
+        }else
+        {
+            month = int.Parse(CbMonth.Text);
+        }
+        listBoxDebt = new ListView();
+        foreach (AgencyDebt debts in listDebt)
+        {
+            if (debts.AgencyId == null) continue;
+            if (debts.Month == month && debts.Year == year)
+            {
+                UcTurnover ucInfo = new UcTurnover();
+                ucInfo.LbFisrtDebt.Content = debts.FirsDebt + " VNĐ";
+                ucInfo.LbIncurred.Content = debts.Incurred + " VNĐ";
+                ucInfo.LbLastDebt.Content = Convert.ToDouble(debts.FirsDebt + debts.Incurred) + " VNĐ";
+                ucInfo.LbAgencyName.Content = agencies.Find((value) => value.AgencyId == debts.AgencyId)?.AgencyName;
+                listBoxDebt.Items.Add(ucInfo);
+            }
+        }
+        SvListOfAgency.Content = listBoxDebt;
+    }
+
+    private void CbMonth_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        ComboBoxItem item = e.AddedItems[0] as ComboBoxItem;
+        int month = int.Parse(item.Content.ToString());
+        int year;
+        if (CbYear.Text == "")
+        {
+            year = 2022;
+        } else
+        {
+            year = int.Parse(CbYear.Text);
+        }
+        listBoxDebt = new ListView();
+        foreach (AgencyDebt debts in listDebt)
+        {
+            if (debts.AgencyId == null) continue;
+            if (debts.Month == month && debts.Year == year)
+            {
+                UcTurnover ucInfo = new UcTurnover();
+                ucInfo.LbFisrtDebt.Content = debts.FirsDebt + " VNĐ";
+                ucInfo.LbIncurred.Content = debts.Incurred + " VNĐ";
+                ucInfo.LbLastDebt.Content = Convert.ToDouble(debts.FirsDebt + debts.Incurred) + " VNĐ";
+                ucInfo.LbAgencyName.Content = agencies.Find((value) => value.AgencyId == debts.AgencyId)?.AgencyName;
+                listBoxDebt.Items.Add(ucInfo);
+            }
+        }
+        SvListOfAgency.Content = listBoxDebt;
+    }
 }

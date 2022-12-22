@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:AgencySystem.View.MainWindow"
         mc:Ignorable="d"
         Title="Detail" Height="500" Width="800"
-        WindowStartupLocation="CenterScreen">
+        Background="#8A91A3"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True">
     <Window.Resources>
         <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
     </Window.Resources>
@@ -24,5 +27,16 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Border
+            Style="{StaticResource CancelButtonBorderStyle}"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="0 0 50 20">
+            <Button
+                Name="btnCancel"
+                Click="btnCancel_Click"
+                Content="Cancel"
+                Style="{StaticResource CancelButtonStyle}"/>
+        </Border>
     </Grid>
 </Window>

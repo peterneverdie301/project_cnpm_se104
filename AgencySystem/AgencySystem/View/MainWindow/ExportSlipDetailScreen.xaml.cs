@@ -80,6 +80,11 @@ namespace AgencySystem.View.MainWindow
             public double LastPrice { get; set; }
 
         }
+        
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

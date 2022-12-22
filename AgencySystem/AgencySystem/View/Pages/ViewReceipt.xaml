@@ -58,6 +58,7 @@
             HorizontalAlignment="Left"
             Margin="240 -20 0 0"
             IsEnabled="False" />
+        
         <Image
             Grid.Row="0"
             Height="100"
@@ -76,6 +77,17 @@
             HorizontalAlignment="Left"
             Margin="400 -20 0 0"
             IsEnabled="False" />
+        
+        <Image 
+            Grid.Row="0"
+            Height="70"
+            Width="70"
+            Source="../Assets/image/decor_exportslip_car.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="left"
+            Margin="400 -20 0 0"
+            IsEnabled="False"/>
+        
         <Image
             Grid.Row="0"
             Height="100"

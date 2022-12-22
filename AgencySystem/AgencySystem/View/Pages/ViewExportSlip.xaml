@@ -133,6 +133,18 @@
             HorizontalAlignment="Left"
             Margin="800 -20 0 0"
             IsEnabled="False"/>
+        
+        <Image 
+            Grid.Row="0"
+            Height="70"
+            Width="70"
+            Source="../Assets/image/decor_exportslip_car.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="left"
+            Margin="800 -20 0 0"
+            IsEnabled="False"/>
+
+        
         <Image 
             Grid.Row="0"
             Height="100"
@@ -144,12 +156,12 @@
             IsEnabled="False"/>
         <Image 
             Grid.Row="0"
-            Height="70"
-            Width="70"
-            Source="../Assets/image/decor_exportslip_car.png"
-            VerticalAlignment="Top"
+            Height="50"
+            Width="50"
+            Source="../Assets/image/decor_nav_report.png"
+            VerticalAlignment="bottom"
             HorizontalAlignment="right"
-            Margin="0 -22 100 0"
+            Margin="0 0 110 80"
             IsEnabled="False"/>
     </Grid>
 </Page>

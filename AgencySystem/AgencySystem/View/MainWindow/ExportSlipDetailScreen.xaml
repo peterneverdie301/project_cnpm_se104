@@ -5,18 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AgencySystem.View.MainWindow"
         mc:Ignorable="d"
-        Title="ExportSlipDetail" Height="450" Width="626">
+        Title="Detail" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary Source="../Resouce.xaml"></ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <ListView Margin="10" FontFamily="Poppins" FontWeight="Bold" Name="lvProduct" Background="Transparent"
-                      BorderBrush="Transparent">
+                  BorderBrush="Transparent" HorizontalContentAlignment="Center">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Id" Width="30" DisplayMemberBinding="{Binding Id}" />
-                    <GridViewColumn Header="Product" Width="120" DisplayMemberBinding="{Binding Product}" />
-                    <GridViewColumn Header="Quantity" Width="70" DisplayMemberBinding="{Binding Quantity}" />
-                    <GridViewColumn Header="Unit" Width="150" DisplayMemberBinding="{Binding Unit}" />
-                    <GridViewColumn Header="Unit Price" Width="120" DisplayMemberBinding="{Binding UnitPrice}" />
-                    <GridViewColumn Header="Last Price" Width="120" DisplayMemberBinding="{Binding LastPrice}" />
+                    <GridViewColumn Header="Id" HeaderContainerStyle="{StaticResource ListViewLabel}" Width="100" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Product" HeaderContainerStyle="{StaticResource ListViewLabel}" Width="120" DisplayMemberBinding="{Binding Product}" />
+                    <GridViewColumn Header="Quantity" HeaderContainerStyle="{StaticResource ListViewLabel}" Width="120" DisplayMemberBinding="{Binding Quantity}" />
+                    <GridViewColumn Header="Unit" HeaderContainerStyle="{StaticResource ListViewLabel}" Width="150" DisplayMemberBinding="{Binding Unit}" />
+                    <GridViewColumn Header="Unit Price" HeaderContainerStyle="{StaticResource ListViewLabel}" Width="120" DisplayMemberBinding="{Binding UnitPrice}" />
+                    <GridViewColumn Header="Last Price" Width="120" HeaderContainerStyle="{StaticResource ListViewLabel}" DisplayMemberBinding="{Binding LastPrice}" />
                 </GridView>
             </ListView.View>
         </ListView>

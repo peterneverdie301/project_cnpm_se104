@@ -50,7 +50,7 @@
             <Label
                 Content="Year"
                 Style="{StaticResource ViewLabel}"
-                Margin="70 0 0 0"/>
+                Margin="60 0 0 0"/>
 
             <!--Pick time label-->
         </WrapPanel>
@@ -63,30 +63,12 @@
                     "
                     Height="40"
                     BorderBrush="white" Margin="1200,0,0,460">
-            <ComboBox Name="CbDistrict"
+            <ComboBox Name="CbYear"
                         BorderThickness="0"
                         ItemContainerStyle="{DynamicResource theComboBoxItem}"
                         Style="{StaticResource theComboBox}">
-                <ComboBoxItem>Quan 1</ComboBoxItem>
-                <ComboBoxItem>Quan 2</ComboBoxItem>
-                <ComboBoxItem>Quan 3</ComboBoxItem>
-                <ComboBoxItem>Quan 4</ComboBoxItem>
-                <ComboBoxItem>Quan 5</ComboBoxItem>
-                <ComboBoxItem>Quan 6</ComboBoxItem>
-                <ComboBoxItem>Quan 7</ComboBoxItem>
-                <ComboBoxItem>Quan 8</ComboBoxItem>
-                <ComboBoxItem>Quan 9</ComboBoxItem>
-                <ComboBoxItem>Quan 10</ComboBoxItem>
-                <ComboBoxItem>Quan 11</ComboBoxItem>
-                <ComboBoxItem>Quan Binh Thanh</ComboBoxItem>
-                <ComboBoxItem>Quan Phu Nhuan</ComboBoxItem>
-                <ComboBoxItem>Quan Tan Binh</ComboBoxItem>
-                <ComboBoxItem>Quan Tan Phu</ComboBoxItem>
-                <ComboBoxItem>Quan Go Vap</ComboBoxItem>
-                <ComboBoxItem>Quan Binh Tan</ComboBoxItem>
-                <ComboBoxItem>Quan Binh Chanh</ComboBoxItem>
-                <ComboBoxItem>Quan Nha Be</ComboBoxItem>
-                <ComboBoxItem>Quan Cu Chi</ComboBoxItem>
+                <ComboBoxItem>2022</ComboBoxItem>
+                <ComboBoxItem>2021</ComboBoxItem>
             </ComboBox>
             
 
@@ -100,30 +82,22 @@
                     "
                     Height="40"
                     BorderBrush="white" Margin="970,0,0,460">
-            <ComboBox Name="CbDistr"
+            <ComboBox Name="CbMonth"
                         BorderThickness="0"
                         ItemContainerStyle="{DynamicResource theComboBoxItem}"
                         Style="{StaticResource theComboBox}">
-                <ComboBoxItem>Quan 1</ComboBoxItem>
-                <ComboBoxItem>Quan 2</ComboBoxItem>
-                <ComboBoxItem>Quan 3</ComboBoxItem>
-                <ComboBoxItem>Quan 4</ComboBoxItem>
-                <ComboBoxItem>Quan 5</ComboBoxItem>
-                <ComboBoxItem>Quan 6</ComboBoxItem>
-                <ComboBoxItem>Quan 7</ComboBoxItem>
-                <ComboBoxItem>Quan 8</ComboBoxItem>
-                <ComboBoxItem>Quan 9</ComboBoxItem>
-                <ComboBoxItem>Quan 10</ComboBoxItem>
-                <ComboBoxItem>Quan 11</ComboBoxItem>
-                <ComboBoxItem>Quan Binh Thanh</ComboBoxItem>
-                <ComboBoxItem>Quan Phu Nhuan</ComboBoxItem>
-                <ComboBoxItem>Quan Tan Binh</ComboBoxItem>
-                <ComboBoxItem>Quan Tan Phu</ComboBoxItem>
-                <ComboBoxItem>Quan Go Vap</ComboBoxItem>
-                <ComboBoxItem>Quan Binh Tan</ComboBoxItem>
-                <ComboBoxItem>Quan Binh Chanh</ComboBoxItem>
-                <ComboBoxItem>Quan Nha Be</ComboBoxItem>
-                <ComboBoxItem>Quan Cu Chi</ComboBoxItem>
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>10</ComboBoxItem>
+                <ComboBoxItem>11</ComboBoxItem>
+                <ComboBoxItem>12</ComboBoxItem>
             </ComboBox>
 
 

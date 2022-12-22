@@ -153,14 +153,25 @@
             Margin="0 -10 120 0"
             IsEnabled="False"/>
         
-        <Image 
+        <!--btn reload-->
+        <Border
             Grid.Row="0"
             Height="30"
             Width="30"
-            Source="../Assets/image/decor_reload.png"
             VerticalAlignment="Top"
             HorizontalAlignment="Left"
-            Margin="80 55 0 0"
-            IsEnabled="False"/>
+            Margin=" 65 50 0 0 "
+            Style="{StaticResource ConfirmButtonBorderStyle}"
+            Background="white">
+            <Button 
+                Style="{StaticResource CancelButtonStyle}"
+                Opacity="0.8"
+                Background="White">
+                <Image
+                    Grid.Row="0"
+                    Source="../Assets/image/decor_reload1.png"
+                    IsEnabled="False" />
+            </Button>
+        </Border>
     </Grid>
 </Page>

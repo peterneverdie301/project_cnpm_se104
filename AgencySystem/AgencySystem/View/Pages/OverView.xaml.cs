@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -67,13 +68,17 @@ public partial class OverView : Page
         // Do later
     }
 
-    private void BtnDelete_Click(object sender, RoutedEventArgs e)
+    private async void BtnDelete_Click(object sender, RoutedEventArgs e)
     {
         Button btnDelete = sender as Button;
         UcInfoAgency ucInfo = btnDelete?.Tag as UcInfoAgency;
         listBoxAgency.Items.Remove(ucInfo);
         viewAgency.Content = listBoxAgency;
         firestore.DeleteData(Utils.Collection.Agency.ToString(), ucInfo?.LbCustomerId.Tag.ToString());
+        string districtId = String.Concat(ucInfo.LbDistrictOfAgency.Content.ToString().Where(c => !Char.IsWhiteSpace(c)));
+        Reference reference = await firestore.GetData(Utils.Collection.Reference.ToString(), districtId) as Reference;
+        reference.Current -= 1;
+        firestore.UpdateData(Utils.Collection.Reference.ToString(), districtId, reference);
         MessageBox.Show("Xóa thành công");
     }
 }

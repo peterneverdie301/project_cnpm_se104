@@ -100,6 +100,11 @@ public partial class ReportDebt : Page
                 listView.Items.Add(ucDebt);
             }
         }
+        foreach (UcDebt item in listView.Items)
+        {
+            var rate = double.Parse(item.lbTotalPrice.Content.ToString()) / TotalTurnover * 100;
+            item.lbRate.Content = MathF.Round((float)rate, 2);
+        }
         SvReportDebt.Content = listView;
         LbTotal.Content = TotalTurnover;
     }
@@ -137,6 +142,11 @@ public partial class ReportDebt : Page
                 TotalTurnover += item.Total;
                 listView.Items.Add(ucDebt);
             }
+        }
+        foreach (UcDebt item in listView.Items)
+        {
+            var rate = double.Parse(item.lbTotalPrice.Content.ToString()) / TotalTurnover * 100;
+            item.lbRate.Content = MathF.Round((float)rate, 2);
         }
         SvReportDebt.Content = listView;
         LbTotal.Content = TotalTurnover;

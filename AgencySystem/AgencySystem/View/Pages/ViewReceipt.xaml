@@ -160,6 +160,15 @@
             HorizontalAlignment="right"
             Margin="0 0 50 300"
             IsEnabled="False" />
-
+        
+        <Image 
+            Grid.Row="0"
+            Height="30"
+            Width="30"
+            Source="../Assets/image/decor_reload.png"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="80 55 0 0"
+            IsEnabled="False"/>
     </Grid>
 </Page>

@@ -86,6 +86,7 @@ public partial class AddingExportSlip : Page
             AmountPaid = double.Parse(TbPaid.Text),
             ExportSlipId = await firestore.GetIdForObject(Utils.Collection.ExportSlip.ToString()),
             Total = double.Parse(LbTotal.Content.ToString()),
+            TotalItems = productDetails.Count,
         };
         firestore.AddData(Utils.Collection.ExportSlip.ToString(), exportSlip.ExportSlipId, exportSlip);
 

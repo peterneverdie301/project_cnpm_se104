@@ -75,7 +75,7 @@ public partial class AddingExportSlip : Page
         Agency agency = (Agency)agences.Find((value) =>
         {
             Agency data = (Agency)value;
-            return data.AgencyName == cbxAgency.Text;
+            return data.AgencyId == lbAgencyId.Content.ToString();
         });
 
         // Adding export slip
@@ -207,5 +207,10 @@ public partial class AddingExportSlip : Page
 
     }
 
-    
+    private void cbxAgency_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        Label label = e.AddedItems[0] as Label;
+        Agency agency = label.Tag as Agency;
+        lbAgencyId.Content = agency.AgencyId;
+    }
 }

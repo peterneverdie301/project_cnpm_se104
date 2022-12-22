@@ -48,17 +48,15 @@ public partial class ReportDebt : Page
 
         // Add data
         ListView listView = new ListView();
-        var stt = 1;
         foreach (var item in exportSlips)
         {
             UcDebt ucDebt = new UcDebt();
             ucDebt.lbName.Content = agencies.Find(value => value.AgencyId == item.AgencyId)?.AgencyName;
-            ucDebt.lbSTT.Content = stt;
+            ucDebt.lbSTT.Content = item.AgencyId;
             ucDebt.lbTotalPrice.Content = item.Total;
             var rate = item.Total / TotalTurnover * 100;
             ucDebt.lbRate.Content = MathF.Round((float)rate, 2);
             ucDebt.lbExportCount.Content = item.TotalItems;
-            stt += 1;
             listView.Items.Add(ucDebt);
         }
         SvReportDebt.Content = listView;

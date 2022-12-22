@@ -43,6 +43,7 @@ public partial class ReportTurnOver : Page
             ucInfo.LbLastDebt.Content = Convert.ToDouble(debts.FirsDebt + debts.Incurred) + " VNĐ";
             Agency agency = agencies.Find((value) => value.AgencyId == debts.AgencyId);
             ucInfo.LbAgencyName.Content = agency.AgencyName;
+            ucInfo.LbId.Content = agency.AgencyId;
             listBoxDebt.Items.Add(ucInfo);
         }
         SvListOfAgency.Content = listBoxDebt;
@@ -56,6 +57,7 @@ public partial class ReportTurnOver : Page
         if (CbMonth.Text == "")
         {
             month = 12;
+            CbMonth.Text = "12";
         }else
         {
             month = int.Parse(CbMonth.Text);
@@ -85,6 +87,7 @@ public partial class ReportTurnOver : Page
         if (CbYear.Text == "")
         {
             year = 2022;
+            CbYear.Text = "2022";
         } else
         {
             year = int.Parse(CbYear.Text);
@@ -99,7 +102,9 @@ public partial class ReportTurnOver : Page
                 ucInfo.LbFisrtDebt.Content = debts.FirsDebt + " VNĐ";
                 ucInfo.LbIncurred.Content = debts.Incurred + " VNĐ";
                 ucInfo.LbLastDebt.Content = Convert.ToDouble(debts.FirsDebt + debts.Incurred) + " VNĐ";
-                ucInfo.LbAgencyName.Content = agencies.Find((value) => value.AgencyId == debts.AgencyId)?.AgencyName;
+                var agency = agencies.Find((value) => value.AgencyId == debts.AgencyId);
+                ucInfo.LbAgencyName.Content = agency.AgencyName;
+                ucInfo.LbId.Content = agency.AgencyId;
                 listBoxDebt.Items.Add(ucInfo);
             }
         }

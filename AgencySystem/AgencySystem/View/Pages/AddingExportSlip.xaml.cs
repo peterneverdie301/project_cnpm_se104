@@ -185,7 +185,6 @@ public partial class AddingExportSlip : Page
             } else
             {
                 MessageBox.Show("Tiền trả không được vượt quá tổng tiền");
-                e.Changes.Clear();
             }
         } else
         {

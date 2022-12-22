@@ -123,7 +123,7 @@
             Background="White"
             CornerRadius="20"
             BorderThickness="0.3"
-            BorderBrush="white" Margin="0,0,0,0">
+            BorderBrush="white" Margin="15,0,0,0">
             <Border.Effect>
                 <DropShadowEffect
                     Color="Gray"
@@ -132,20 +132,13 @@
                     ShadowDepth="2" />
             </Border.Effect>
             <WrapPanel HorizontalAlignment="Left" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="330">
-                <Rectangle Height="80" Stroke="White" Width="80" Margin="15,0,0,50" RadiusX="20" RadiusY="20">
-                    <Rectangle.Fill>
-
-                        <ImageBrush ImageSource="../Assets/image/decor_exportslip_total.png"/>
-
-                    </Rectangle.Fill>
-                </Rectangle>
                 <WrapPanel Height="150" Width="210"
                            Margin="0 -10 0 0">
                     <Label Content="Total" Width="170" HorizontalAlignment="Left" Margin="20,20,0,0"
                            FontFamily="Poppins"
-                           FontSize="18" FontWeight="Bold" Foreground="#FF727272" />
+                           FontSize="18" FontWeight="Bold" Foreground="Black" />
                     <Label Name="LbTotal" Content="0" Height="48" Width="165" Margin="20,10,0,0"
-                           FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="#FF3CA1FF" />
+                           FontFamily="Poppins" FontWeight="Bold" FontSize="25" Foreground="Red" />
                 </WrapPanel>
             </WrapPanel>
         </Border>

@@ -125,4 +125,9 @@ public partial class Manage : Page
         }
         MessageBox.Show("Sửa thành công");
     }
+
+    private void btnReload_Click(object sender, RoutedEventArgs e)
+    {
+        setUp();
+    }
 }

@@ -35,16 +35,6 @@ public partial class AddingReceipt : Page
     {
         if (cbxAgency.Text != "" && TbDate.Text != "" && TbMoney.Text != "")
         {
-            Receipt receipt = new Receipt();
-            receipt.Proceeds = double.Parse(TbMoney.Text);
-            receipt.ReceiptId = await firestore.GetIdForObject(Utils.Collection.Receipt.ToString());
-            receipt.Date = TbDate.Text;
-            Agency agency = (Agency)agences.Find((a) => {
-                Agency temp = (Agency)a;
-                return temp.AgencyName == cbxAgency.Text;
-            });
-            receipt.AgencyId = agency?.AgencyId;
-            firestore.AddData(Utils.Collection.Receipt.ToString(), receipt.ReceiptId, receipt);
             // Change debt agency
             string idAgencyDebt = TbDate.DisplayDate.Month + "-" + TbDate.DisplayDate.Year + "-" + agency?.AgencyId;
             AgencyDebt agencyDebt = (AgencyDebt)await firestore.GetData(Utils.Collection.AgencyDebt.ToString(), idAgencyDebt);
@@ -61,10 +51,23 @@ public partial class AddingReceipt : Page
                 agencyDebt.Incurred -= money;
                 firestore.UpdateData(Utils.Collection.AgencyDebt.ToString(), idAgencyDebt, agencyDebt);
                 MessageBox.Show("Thêm phiếu thu tiền thành công");
-            } else
+            }
+            else
             {
                 MessageBox.Show("Đại lí không có nợ");
             }
+
+            //Adding receipt
+            Receipt receipt = new Receipt();
+            receipt.Proceeds = double.Parse(TbMoney.Text);
+            receipt.ReceiptId = await firestore.GetIdForObject(Utils.Collection.Receipt.ToString());
+            receipt.Date = TbDate.Text;
+            Agency agency = (Agency)agences.Find((a) => {
+                Agency temp = (Agency)a;
+                return temp.AgencyName == cbxAgency.Text;
+            });
+            receipt.AgencyId = agency?.AgencyId;
+            firestore.AddData(Utils.Collection.Receipt.ToString(), receipt.ReceiptId, receipt);
         }
         else
         {

@@ -164,6 +164,8 @@
             Style="{StaticResource ConfirmButtonBorderStyle}"
             Background="white">
             <Button 
+                Name="btnReload"
+                Click="btnReload_Click"
                 Style="{StaticResource CancelButtonStyle}"
                 Opacity="0.8"
                 Background="White">

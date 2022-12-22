@@ -81,4 +81,9 @@ public partial class OverView : Page
         firestore.UpdateData(Utils.Collection.Reference.ToString(), districtId, reference);
         MessageBox.Show("Xóa thành công");
     }
+
+    private void btnReload_Click(object sender, RoutedEventArgs e)
+    {
+        setUp();
+    }
 }

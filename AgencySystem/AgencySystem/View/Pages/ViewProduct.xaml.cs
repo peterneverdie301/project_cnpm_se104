@@ -61,4 +61,9 @@ public partial class ViewProduct : Page
         productEdit.TbPrice.Text = item?.Price.ToString();
         productEdit.Show();
     }
+
+    private void btnReload_Click(object sender, RoutedEventArgs e)
+    {
+        setUp();
+    }
 }

@@ -56,7 +56,7 @@ public partial class ReportDebt : Page
         {
             UcDebt ucDebt = new UcDebt();
             ucDebt.lbName.Content = agencies.Find(value => value.AgencyId == item.AgencyId)?.AgencyName;
-            ucDebt.lbSTT.Content = item.AgencyId;
+            ucDebt.lbSTT.Content = item.ExportSlipId;
             ucDebt.lbTotalPrice.Content = item.Total;
             var rate = item.Total / TotalTurnover * 100;
             ucDebt.lbRate.Content = MathF.Round((float)rate, 2);
@@ -91,7 +91,7 @@ public partial class ReportDebt : Page
             if (monthTurnover == month && yearTurnover == year)
             {
                 ucDebt.lbName.Content = agencies.Find(value => value.AgencyId == item.AgencyId)?.AgencyName;
-                ucDebt.lbSTT.Content = item.AgencyId;
+                ucDebt.lbSTT.Content = item.ExportSlipId;
                 ucDebt.lbTotalPrice.Content = item.Total;
                 var rate = item.Total / TotalTurnover * 100;
                 ucDebt.lbRate.Content = MathF.Round((float)rate, 2);
@@ -129,7 +129,7 @@ public partial class ReportDebt : Page
             if (monthTurnover == month && yearTurnover == year)
             {
                 ucDebt.lbName.Content = agencies.Find(value => value.AgencyId == item.AgencyId)?.AgencyName;
-                ucDebt.lbSTT.Content = item.AgencyId;
+                ucDebt.lbSTT.Content = item.ExportSlipId;
                 ucDebt.lbTotalPrice.Content = item.Total;
                 var rate = item.Total / TotalTurnover * 100;
                 ucDebt.lbRate.Content = MathF.Round((float)rate, 2);

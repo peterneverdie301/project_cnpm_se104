@@ -121,6 +121,7 @@ public partial class Manage : Page
             reference.Max = int.Parse(TbMaxAgency.Text);
             reference.Id = districtId;
             firestore.AddData(Utils.Collection.Reference.ToString(), districtId, reference);
+            TbUpdateMaxAgency.Text = CbDistrict.Text + " - tối đa " + TbMaxAgency.Text + " đại lý";
         }
         MessageBox.Show("Sửa thành công");
     }

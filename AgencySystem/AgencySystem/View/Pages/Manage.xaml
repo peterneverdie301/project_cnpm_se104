@@ -403,14 +403,14 @@
 
                 <!--set number of unit-->
                 <Label
-                    Content="Total max agency"
+                    Content="Update max agency"
                     Style="{StaticResource AddItemStyle}" />
                 <Image 
                     Height="40"
                     Width="40"
                     Source="../Assets/image/decor_max.png"
                     IsEnabled="False" 
-                    Margin="120 -45 0 0"/>
+                    Margin="180 -45 0 0" RenderTransformOrigin="0.6,0.871"/>
                 <Border
                     CornerRadius="10"
                     BorderThickness="4"
@@ -419,7 +419,7 @@
                     Height="40"
                     BorderBrush="white" Margin="0,5,0,0">
                     <TextBox
-                        Name="TbTotalMaxAgency"
+                        Name="TbUpdateMaxAgency"
                         BorderThickness="0"
                         Style="{StaticResource TextBoxStyle}" PreviewTextInput="TbDebt_PreviewTextInput" />
                 </Border>

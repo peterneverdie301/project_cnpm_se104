@@ -64,6 +64,32 @@
                                 MaxWidth="375"
                                 ItemContainerStyle="{DynamicResource theComboBoxItem}">
                             </ComboBox>
+                            <!--Debt label-->
+                            <Label
+                                Content="Debt"
+                                Style="{StaticResource AddItemStyle}" />
+
+                            <!--Debt textBox-->
+                            <Border
+                                CornerRadius="10"
+                                BorderThickness="4"
+                                BorderBrush="white"
+                                Width="350"
+                                Height="40">
+                                <Label
+                                    Name="CbUnit"
+                                    Background="white"
+                                    VerticalContentAlignment="Center"
+                                    Width="350"
+                                    Height="40"
+                                    FontSize="20"
+                                    FontFamily="Mulish"
+                                    HorizontalContentAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    MinWidth="100"
+                                    MaxWidth="375"
+                                />
+                            </Border>
                            
                             <!--Proceeds label-->
                             <Label

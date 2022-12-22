@@ -286,6 +286,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="View\Assets\image\decor_login.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="View\Assets\image\decor_reload.png" />
     <Resource Include="View\Assets\image\decor_reload1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

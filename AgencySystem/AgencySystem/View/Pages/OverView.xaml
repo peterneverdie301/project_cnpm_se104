@@ -53,7 +53,7 @@
             HorizontalAlignment="center"
             VerticalContentAlignment="Top"
             Margin="0 -50 0 0"
-            VerticalScrollBarVisibility="Hidden">
+            HorizontalScrollBarVisibility="Hidden">
         </ScrollViewer>
         
         <Image 

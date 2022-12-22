@@ -48,7 +48,7 @@
             Background="#FFF4F4F4"
             HorizontalAlignment="center"
             Margin="0 -50 0 0"
-            VerticalScrollBarVisibility="Hidden">
+            HorizontalScrollBarVisibility="Hidden">
         </ScrollViewer>
         
         <Image 

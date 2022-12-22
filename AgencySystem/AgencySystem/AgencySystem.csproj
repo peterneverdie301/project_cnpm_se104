@@ -279,4 +279,10 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Include="View\Assets\image\decor_exportslip_id.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

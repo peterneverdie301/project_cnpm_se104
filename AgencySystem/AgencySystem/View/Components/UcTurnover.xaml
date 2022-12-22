@@ -14,7 +14,7 @@
             <ColumnDefinition Width="250" />
         </Grid.ColumnDefinitions>
         
-        <Label Grid.Column="0" x:Name="LbId" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
+        <Label Grid.Column="0" x:Name="LbId" Content="stt" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
         <Label Grid.Column="1" x:Name="LbAgencyName" Content="Dai ly 1" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>
         <Label Grid.Column="2" x:Name="LbFisrtDebt" Content="200.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/> 
         <Label Grid.Column="3" x:Name="LbIncurred" Content="150.000$" FontFamily="Ubuntu" FontWeight="Bold" FontSize="14"/>

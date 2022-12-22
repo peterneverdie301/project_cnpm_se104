@@ -285,4 +285,10 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Include="View\Assets\image\decor_reload.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

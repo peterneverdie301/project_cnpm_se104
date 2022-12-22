@@ -35,6 +35,10 @@ public partial class AddingReceipt : Page
     {
         if (cbxAgency.Text != "" && TbDate.Text != "" && TbMoney.Text != "")
         {
+            Agency agency = (Agency)agences.Find((a) => {
+                Agency temp = (Agency)a;
+                return temp.AgencyName == cbxAgency.Text;
+            });
             // Change debt agency
             string idAgencyDebt = TbDate.DisplayDate.Month + "-" + TbDate.DisplayDate.Year + "-" + agency?.AgencyId;
             AgencyDebt agencyDebt = (AgencyDebt)await firestore.GetData(Utils.Collection.AgencyDebt.ToString(), idAgencyDebt);
@@ -62,10 +66,6 @@ public partial class AddingReceipt : Page
             receipt.Proceeds = double.Parse(TbMoney.Text);
             receipt.ReceiptId = await firestore.GetIdForObject(Utils.Collection.Receipt.ToString());
             receipt.Date = TbDate.Text;
-            Agency agency = (Agency)agences.Find((a) => {
-                Agency temp = (Agency)a;
-                return temp.AgencyName == cbxAgency.Text;
-            });
             receipt.AgencyId = agency?.AgencyId;
             firestore.AddData(Utils.Collection.Receipt.ToString(), receipt.ReceiptId, receipt);
         }

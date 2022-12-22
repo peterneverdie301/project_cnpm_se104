@@ -78,6 +78,37 @@ public partial class AddingExportSlip : Page
             return data.AgencyId == lbAgencyId.Content.ToString();
         });
 
+        //Chang debt agency if has
+        var docId = TbDate.DisplayDate.Month + "-" + TbDate.DisplayDate.Year + "-" + agency.AgencyId;
+
+        var dataDebt = await firestore.GetData(Utils.Collection.AgencyDebt.ToString(), docId) as AgencyDebt;
+        TypeOfAgency type = await firestore.GetData(Utils.Collection.TypeOfAngency.ToString(), agency.TypeId) as TypeOfAgency;
+        if (dataDebt != null)
+        {
+            if ((dataDebt.Incurred + dataDebt.FirsDebt + double.Parse(LbRemaining.Content.ToString())) > type.MaxDebt)
+            {
+                MessageBox.Show("Số tiền nợ không được vượt quá " + type.MaxDebt);
+                return;
+            }
+            dataDebt.Incurred += double.Parse(LbRemaining.Content.ToString());
+            firestore.UpdateData(Utils.Collection.AgencyDebt.ToString(), docId, dataDebt);
+        }
+        else
+        {
+            if (double.Parse(LbRemaining.Content.ToString()) > type.MaxDebt)
+            {
+                MessageBox.Show("Số tiền nợ không được vượt quá " + type.MaxDebt);
+                return;
+            }
+            dataDebt = new AgencyDebt();
+            dataDebt.Month = TbDate.DisplayDate.Month;
+            dataDebt.Year = TbDate.DisplayDate.Year;
+            dataDebt.AgencyId = agency.AgencyId;
+            dataDebt.FirsDebt = double.Parse(LbRemaining.Content.ToString());
+            dataDebt.Incurred = 0;
+            firestore.AddData(Utils.Collection.AgencyDebt.ToString(), docId, dataDebt);
+        }
+
         // Adding export slip
         ExportSlip exportSlip = new ExportSlip()
         {
@@ -100,25 +131,6 @@ public partial class AddingExportSlip : Page
                 ItemsId = item.Id,
             };
             firestore.AddData(Utils.Collection.ExportSlipDetail.ToString(), exportSlip.ExportSlipId + "-" + item.Id, detail);
-        }
-
-        //Chang debt agency if has
-        var docId = TbDate.DisplayDate.Month + "-" + TbDate.DisplayDate.Year + "-" + agency.AgencyId;
-
-        var dataDebt = await firestore.GetData(Utils.Collection.AgencyDebt.ToString(), docId) as AgencyDebt;
-        if (dataDebt != null)
-        {
-            dataDebt.Incurred += double.Parse(LbRemaining.Content.ToString());
-            firestore.UpdateData(Utils.Collection.AgencyDebt.ToString(), docId, dataDebt);
-        } else
-        {
-            dataDebt = new AgencyDebt();
-            dataDebt.Month = TbDate.DisplayDate.Month;
-            dataDebt.Year = TbDate.DisplayDate.Year;
-            dataDebt.AgencyId = agency.AgencyId;
-            dataDebt.FirsDebt = double.Parse(LbRemaining.Content.ToString());
-            dataDebt.Incurred = 0;
-            firestore.AddData(Utils.Collection.AgencyDebt.ToString(), docId, dataDebt);
         }
 
         MessageBox.Show("Thêm dữ liệu thành công");
@@ -173,6 +185,7 @@ public partial class AddingExportSlip : Page
             } else
             {
                 MessageBox.Show("Tiền trả không được vượt quá tổng tiền");
+                e.Changes.Clear();
             }
         } else
         {

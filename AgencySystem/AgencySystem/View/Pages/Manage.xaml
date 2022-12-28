@@ -90,7 +90,7 @@
                         Margin="0 0 15 0"
                         Style="{StaticResource ConfirmButtonBorderStyle}">
                         <Button
-                            Content="Add"
+                            Content="ADD"
                             Style="{StaticResource ConfirmButtonStyle}"
                             Click="HandleAddType"/>
                     </Border>
@@ -100,7 +100,7 @@
                         <Button
                             Name="BtRemove"
                             Click="HandleRemoveType"
-                            Content="Remove"
+                            Content="REMOVE"
                             Style="{StaticResource CancelButtonStyle}"/>
                     </Border>
                     
@@ -216,14 +216,14 @@
                         <Button
                             Click="HandleAddUnit"
                             Style="{StaticResource ConfirmButtonStyle}"
-                            Content="Add"/>
+                            Content="ADD"/>
                     </Border>
                     
                     <!--Remove Button-->
                     <Border Style="{StaticResource CancelButtonBorderStyle}">
                         <Button
                             Click="HandleRemoveUnit"
-                            Content="Remove" 
+                            Content="REMOVE" 
                             Style="{StaticResource CancelButtonStyle}"/>
                     </Border>
                     
@@ -372,7 +372,7 @@
                         Style="{StaticResource ConfirmButtonBorderStyle}">
                         <Button
                             x:Name="BtConfirm"
-                            Content="Confirm"
+                            Content="CONFIRM"
                             Style="{StaticResource ConfirmButtonStyle}"
                             Click="BtConfirm_Click"/>
                     </Border>

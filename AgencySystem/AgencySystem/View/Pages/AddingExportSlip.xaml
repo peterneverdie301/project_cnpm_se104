@@ -27,7 +27,7 @@
                 Name="BtAddData"
                 Grid.Column="1"
                 Style="{StaticResource ConfirmButtonStyle}"
-                Content="Add Data" 
+                Content="ADD" 
                 Click="BtAddData_Click" />
         </Border>
 
@@ -43,7 +43,7 @@
                 Name="BtAddProduct"
                 Grid.Column="0"
                 Style="{StaticResource CancelButtonStyle}"
-                Content="Add Product"
+                Content="ADD Product"
                 Click="BtAddProduct_Click" />
         </Border>
 

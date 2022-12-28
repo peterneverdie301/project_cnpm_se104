@@ -167,14 +167,14 @@
             HorizontalAlignment="Left"
             Margin=" 65 50 0 0 "
             Style="{StaticResource ConfirmButtonBorderStyle}"
-            Background="white">
+            Background="Transparent">
             <Button 
                 Name="btnReload"
                 Click="btnReload_Click"
                 Style="{StaticResource CancelButtonStyle}"
                 Opacity="0.8"
-                Background="White">
-                <Image
+                Background="transparent">
+                <Image  
                     Grid.Row="0"
                     Source="../Assets/image/decor_reload1.png"
                     IsEnabled="False" />

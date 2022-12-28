@@ -66,7 +66,7 @@
                 Style="{StaticResource ConfirmButtonBorderStyle}">
             <Button
                 Name="btnEdit"
-                Content="Edit"
+                Content="EDIT"
                 Style="{StaticResource ConfirmButtonStyle}" />
         </Border>
         <Border
@@ -75,7 +75,7 @@
                 CornerRadius="14" BorderThickness="1" Style="{StaticResource CancelButtonBorderStyle}">
             <Button
                 Name="btnDelete"
-                Content="Delete"
+                Content="DELETE"
                 Style="{StaticResource CancelButtonStyle}" />
         </Border>
     </Grid>

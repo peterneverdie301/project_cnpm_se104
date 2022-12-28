@@ -58,7 +58,7 @@
                 Style="{StaticResource ConfirmButtonBorderStyle}">
             <Button
                 x:Name="BtnEdit"
-                Content="Edit"
+                Content="EDIT"
                 Style="{StaticResource ConfirmButtonStyle}"/>
         </Border>
         <Border
@@ -68,7 +68,7 @@
             Style="{StaticResource CancelButtonBorderStyle}">
             <Button
                 Name="BtnDelete"
-                Content="Delete"
+                Content="DELETE"
                 Style="{StaticResource CancelButtonStyle}" />
         </Border>
     </Grid>

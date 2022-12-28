@@ -67,7 +67,7 @@
             Style="{DynamicResource ConfirmButtonBorderStyle}">
             <Button
                 x:Name="BtDetail"
-                Content="Detail"
+                Content="DETAIL"
                 Style="{StaticResource ConfirmButtonStyle}"/>
         </Border>
     </Grid>

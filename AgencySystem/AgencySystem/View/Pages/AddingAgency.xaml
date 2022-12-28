@@ -17,6 +17,7 @@
             Style="{StaticResource ConfirmButtonBorderStyle}">
             <Button
                 Style="{StaticResource ConfirmButtonStyle}"
+                Content="ADD"
                 Click="HandleAddAgency"
             />
         </Border>
